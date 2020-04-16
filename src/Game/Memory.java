@@ -108,27 +108,14 @@ public class Memory extends Attribute {
     }
 
     public static String ordinalFormat(int number){
-        String ordinal = "";
-        switch (number){
-            case 1:
-                ordinal = "1st";
-                break;
-            case 2:
-                ordinal = "2nd";
-                break;
-            case 3:
-                ordinal = "3rd";
-                break;
-            case 4:
-                ordinal = "4th";
-                break;
-            case 5:
-                ordinal = "5th";
-                break;
-            case 6:
-                ordinal = "6th";
-                break;
-        }
-        return ordinal;
+        return switch (number) {
+            case 1 -> "1st";
+            case 2 -> "2nd";
+            case 3 -> "3rd";
+            case 4 -> "4th";
+            case 5 -> "5th";
+            case 6 -> "6th";
+            default -> "";
+        };
     }
 }
