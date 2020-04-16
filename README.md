@@ -39,7 +39,7 @@ Input a letter sequence for each wire and the output will display what that wire
 Goes through the occurences of red, blue and black wires to determine which to cut. No more remembering or convering the manual with your fingers.
 
 ### Mazes Tab
-(From my personal experience being the expert) There are three notations possible for people who use coordinate systems with (1,1) being the top left or bottom left corner or for those who say rows as A,B,C,D,E or F and columns as numbers. Select the correct notation and input the coordinates for a circle on the right to find the correct maze, either circle works and just numbers, nothing else. There are places to put the coordinates to the dot and the target.
+**(From my personal experience being the expert)** There are three notations possible for people who use coordinate systems with (1,1) being the *top left* or *bottom left* corner or for those who say rows as A,B,C,D,E or F and columns as numbers. Select the correct notation and input the coordinates for a circle on the right to find the correct maze, either circle works and just numbers, nothing else. There are places to put the coordinates to the dot and the target.
 
 ### Password Tab
 Contains 5 input fields to take in the sets of letters in each row. Input the set of letters into the corresponding input and the Output area displays the possible passwords.
