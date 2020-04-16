@@ -7,59 +7,41 @@ public class Simon extends Attribute {
     public static String next(SimonSays color, double strikes){
         if (hasVowel) {
             if (strikes == 0){
-                switch (color) {
-                    case RED:
-                        return SimonSays.BLUE.getLabel();
-                    case YELLOW:
-                        return SimonSays.GREEN.getLabel();
-                    case GREEN:
-                        return SimonSays.YELLOW.getLabel();
-                    case BLUE:
-                        return SimonSays.RED.getLabel();
-                }
+                return switch (color) {
+                    case RED -> SimonSays.BLUE.getLabel();
+                    case YELLOW -> SimonSays.GREEN.getLabel();
+                    case GREEN -> SimonSays.YELLOW.getLabel();
+                    case BLUE -> SimonSays.RED.getLabel();
+                };
             } else if (strikes == 1){
                 return repeatedPattern(color);
             } else {
-                switch (color) {
-                    case RED:
-                        return SimonSays.GREEN.getLabel();
-                    case YELLOW:
-                        return SimonSays.BLUE.getLabel();
-                    case GREEN:
-                        return SimonSays.YELLOW.getLabel();
-                    case BLUE:
-                        return SimonSays.RED.getLabel();
-                }
+                return switch (color) {
+                    case RED -> SimonSays.GREEN.getLabel();
+                    case YELLOW -> SimonSays.BLUE.getLabel();
+                    case GREEN -> SimonSays.YELLOW.getLabel();
+                    case BLUE -> SimonSays.RED.getLabel();
+                };
             }
         } else {
             if (strikes == 0){
-                switch (color) {
-                    case RED:
-                        return SimonSays.BLUE.getLabel();
-                    case YELLOW:
-                        return SimonSays.RED.getLabel();
-                    case GREEN:
-                        return SimonSays.GREEN.getLabel();
-                    case BLUE:
-                        return SimonSays.YELLOW.getLabel();
-                }
+                return switch (color) {
+                    case RED -> SimonSays.BLUE.getLabel();
+                    case YELLOW -> SimonSays.RED.getLabel();
+                    case GREEN -> SimonSays.GREEN.getLabel();
+                    case BLUE -> SimonSays.YELLOW.getLabel();
+                };
             } else if (strikes == 1){
-                switch (color) {
-                    case RED:
-                        return SimonSays.RED.getLabel();
-                    case YELLOW:
-                        return SimonSays.GREEN.getLabel();
-                    case GREEN:
-                        return SimonSays.YELLOW.getLabel();
-                    case BLUE:
-                        return SimonSays.BLUE.getLabel();
-                }
+                return switch (color) {
+                    case RED -> SimonSays.RED.getLabel();
+                    case YELLOW -> SimonSays.GREEN.getLabel();
+                    case GREEN -> SimonSays.YELLOW.getLabel();
+                    case BLUE -> SimonSays.BLUE.getLabel();
+                };
             } else {
                 return repeatedPattern(color);
             }
         }
-
-        return "Will never reach this point";
     }
 
     public static String newOrder(String oldOrder, double strikes){
@@ -74,35 +56,20 @@ public class Simon extends Attribute {
     }
 
     private static SimonSays getColor(char label){
-        switch (label){
-            case 'R':
-                return SimonSays.RED;
-            case 'B':
-                return SimonSays.BLUE;
-            case 'G':
-                return SimonSays.GREEN;
-            default:
-                return SimonSays.YELLOW;
-        }
+        return switch (label) {
+            case 'R' -> SimonSays.RED;
+            case 'B' -> SimonSays.BLUE;
+            case 'G' -> SimonSays.GREEN;
+            default -> SimonSays.YELLOW;
+        };
     }
 
     private static String repeatedPattern(SimonSays color){
-        String temp = "";
-
-        switch (color) {
-            case RED:
-                temp = SimonSays.YELLOW.getLabel();
-                break;
-            case YELLOW:
-                temp = SimonSays.RED.getLabel();
-                break;
-            case GREEN:
-                temp = SimonSays.BLUE.getLabel();
-                break;
-            case BLUE:
-                temp = SimonSays.GREEN.getLabel();
-                break;
-        }
-        return temp;
+        return switch (color) {
+            case RED -> SimonSays.YELLOW.getLabel();
+            case YELLOW -> SimonSays.RED.getLabel();
+            case GREEN -> SimonSays.BLUE.getLabel();
+            case BLUE -> SimonSays.GREEN.getLabel();
+        };
     }
 }

@@ -9,30 +9,36 @@ public class Sequences extends Attribute {
             blackOcc = {"All", "AC", "B", "AC", "B", "BC", "AB", "C", "C"};
 
     public static Image nextOccurrence(SequencedWires currentWire){
-        switch (currentWire){
-            case RED:
+        switch (currentWire) {
+            case RED -> {
                 currentWire.setIndex(currentWire.getIdx() + 1);
                 return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
-            case BLUE:
+            }
+            case BLUE -> {
                 currentWire.setIndex(currentWire.getIdx() + 1);
                 return new Image(currentWire.getLabel() + blueOcc[currentWire.getIdx()] + ".PNG");
-            default:
+            }
+            default -> {
                 currentWire.setIndex(currentWire.getIdx() + 1);
                 return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
+            }
         }
     }
 
     public static Image prevOccurrence(SequencedWires currentWire){
-        switch (currentWire){
-            case BLACK:
+        switch (currentWire) {
+            case BLACK -> {
                 currentWire.setIndex(currentWire.getIdx() - 1);
                 return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
-            case BLUE:
+            }
+            case BLUE -> {
                 currentWire.setIndex(currentWire.getIdx() - 1);
                 return new Image(currentWire.getLabel() + blueOcc[currentWire.getIdx()] + ".PNG");
-            default:
+            }
+            default -> {
                 currentWire.setIndex(currentWire.getIdx() - 1);
                 return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
+            }
         }
     }
 }

@@ -634,19 +634,19 @@ public class Controller {
     }
 
     private void checkValue(SequencedWires currentWire){
-        switch (currentWire){
-            case BLUE:
+        switch (currentWire) {
+            case BLUE -> {
                 disableSet(currentWire, seqPrevBlue, seqNextBlue);
                 seqLabelBlue.setText(labelSet(currentWire));
-                break;
-            case RED:
+            }
+            case RED -> {
                 disableSet(currentWire, seqPrevRed, seqNextRed);
                 seqLabelRed.setText(labelSet(currentWire));
-                break;
-            default:
+            }
+            default -> {
                 disableSet(currentWire, seqPrevBlack, seqNextBlack);
                 seqLabelBlack.setText(labelSet(currentWire));
-                break;
+            }
         }
     }
 
@@ -662,28 +662,18 @@ public class Controller {
     }
 
     private String labelSet(SequencedWires currentWire){
-        switch (currentWire.getIdx()){
-            case 0:
-                return  "1st";
-            case 1:
-                return "2nd";
-            case 2:
-                return "3rd";
-            case 3:
-                return "4th";
-            case 4:
-                return "5th";
-            case 5:
-                return "6th";
-            case 6:
-                return "7th";
-            case 7:
-                return "8th";
-            case 8:
-                return "9th";
-            default:
-                return "10th";
-        }
+        return switch (currentWire.getIdx()) {
+            case 0 -> "1st";
+            case 1 -> "2nd";
+            case 2 -> "3rd";
+            case 3 -> "4th";
+            case 4 -> "5th";
+            case 5 -> "6th";
+            case 6 -> "7th";
+            case 7 -> "8th";
+            case 8 -> "9th";
+            default -> "10th";
+        };
     }
 
     //Maze methods
@@ -710,25 +700,13 @@ public class Controller {
 
     private String letNumNotation(String notation){
         StringBuilder out = new StringBuilder();
-        switch (notation.toUpperCase().charAt(0)){
-            case 'A':
-                out.append("10");
-                break;
-            case 'B':
-                out.append("11");
-                break;
-            case 'C':
-                out.append("12");
-                break;
-            case 'D':
-                out.append("13");
-                break;
-            case 'E':
-                out.append("14");
-                break;
-            case 'F':
-                out.append("15");
-                break;
+        switch (notation.toUpperCase().charAt(0)) {
+            case 'A' -> out.append("10");
+            case 'B' -> out.append("11");
+            case 'C' -> out.append("12");
+            case 'D' -> out.append("13");
+            case 'E' -> out.append("14");
+            case 'F' -> out.append("15");
         }
         out.append(notation.charAt(notation.length() - 1));
         return out.toString();
