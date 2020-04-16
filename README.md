@@ -29,11 +29,11 @@ Only reads dots and dashes in the input field (- and .) and outputs possible wor
 
 ### Complicated Wires Tab
 Input a letter sequence for each wire and the output will display what that wire is and whether to cut it or not. Be sure to check the sides of the bomb for parallel port, batteries and the serial number.
-r - Wire has red coloring
-b - Wire has blue coloring
-s - Wire has a star underneath
-l - Wire has a lit LED
-w - Only if the wire is completely bare (But we all know that you cut that wire)
+- r - Wire has red coloring
+- b - Wire has blue coloring
+- s - Wire has a star underneath
+- l - Wire has a lit LED
+- w - Only if the wire is completely bare (But we all know that you cut that wire)
 
 ### Wires Sequences Tab
 Goes through the occurences of red, blue and black wires to determine which to cut. No more remembering or convering the manual with your fingers.
