@@ -41,10 +41,8 @@ public class Mazes extends Attribute {
     }
 
     private static int[] cast(String inForm){
-        if (inForm.length() == 2) {
-            return new int[]{Character.getNumericValue(inForm.charAt(0)), Character.getNumericValue(inForm.charAt(1))};
-        } else {
-            return new int[]{Integer.parseInt(inForm.substring(0, 2)), Character.getNumericValue(inForm.charAt(2))};
-        }
+        return inForm.length() == 2 ?
+                new int[]{Character.getNumericValue(inForm.charAt(0)), Character.getNumericValue(inForm.charAt(1))} :
+                new int[]{Integer.parseInt(inForm.substring(0, 2)), Character.getNumericValue(inForm.charAt(2))};
     }
 }

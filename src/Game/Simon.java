@@ -46,12 +46,9 @@ public class Simon extends Attribute {
 
     public static String newOrder(String oldOrder, double strikes){
         StringBuilder next = new StringBuilder();
-
         for (char letter : oldOrder.toCharArray()){
             next.append(next(getColor(letter), strikes));
         }
-
-
         return next.toString();
     }
 

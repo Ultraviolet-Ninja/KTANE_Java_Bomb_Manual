@@ -42,99 +42,59 @@ public class Complex extends Attribute {
 
     private static String solve(ArrayList<ComplexWires> traits){
         String script = "";
-        switch (traits.size()){
+        switch (traits.size()){//All four
             case 4:
                 script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
                         + ComplexWires.STAR.getLabel() + "/" + ComplexWires.LIT.getLabel() + dont;
                 break;
             case 3:
                 if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.LIT)
-                        && traits.contains(ComplexWires.RED)){
-                    if (lastDigitEven){
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                                + ComplexWires.LIT.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                                + ComplexWires.LIT.getLabel() + dont;
-                    }
+                        && traits.contains(ComplexWires.RED)){//Red Blue LED
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
+                            + ComplexWires.LIT.getLabel() + (lastDigitEven?cut:dont);
                 } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.RED)
-                        && traits.contains(ComplexWires.STAR)){
-                    if (hasParallel){
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + dont;
-                    }
+                        && traits.contains(ComplexWires.STAR)){//Red Blue Star
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
+                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont);
                 } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.STAR)
-                        && traits.contains(ComplexWires.LIT)){
-                    if (hasParallel){
-                        script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + dont;
-                    }
+                        && traits.contains(ComplexWires.LIT)){//Blue Star LED
+                    script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
+                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont);
                 } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)
-                        && traits.contains(ComplexWires.LIT)){
-                    if (numBatteries > 1){
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                                + ComplexWires.STAR.getLabel() + dont;
-                    }
+                        && traits.contains(ComplexWires.LIT)){//Red Star LED
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
+                            + ComplexWires.STAR.getLabel() + (numBatteries >= 2?cut:dont);
                 }
                 break;
             case 2:
-                if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)){
+                if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)){//Red Star
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.STAR.getLabel() + cut;
-                } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.BLUE)){
-                    if (lastDigitEven){
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + dont;
-                    }
-                } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.LIT)){
-                    if (hasParallel){
-                        script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + dont;
-                    }
-                } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.STAR)){
-                    if (numBatteries > 1){
-                        script = ComplexWires.LIT.getLabel() + "/" + ComplexWires.STAR.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.LIT.getLabel() + "/" + ComplexWires.STAR.getLabel() + dont;
-                    }
-                } else if (traits.contains(ComplexWires.STAR) && traits.contains(ComplexWires.BLUE)){
+                } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.BLUE)){//Red Blue
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel()
+                            + (lastDigitEven?cut:dont);
+                } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.LIT)){//Blue LED
+                    script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel()
+                            + (hasParallel?cut:dont);
+                } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.STAR)){//LED Star
+                    script = ComplexWires.LIT.getLabel() + "/" + ComplexWires.STAR.getLabel()
+                            + (numBatteries >= 2?cut:dont);
+                } else if (traits.contains(ComplexWires.STAR) && traits.contains(ComplexWires.BLUE)){//Blue Star
                     script = ComplexWires.STAR.getLabel() + "/" + ComplexWires.BLUE.getLabel() + dont;
-                } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.RED)){
-                    if (numBatteries > 1){
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + dont;
-                    }
+                } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.RED)){//Red LED
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel()
+                            + (numBatteries >= 2?cut:dont);
                 }
                 break;
             default:
-                if (traits.contains(ComplexWires.BLANK)){
+                if (traits.contains(ComplexWires.BLANK)){//White
                     script = ComplexWires.BLANK.getLabel() + cut;
-                } else if (traits.contains(ComplexWires.RED)){
-                    if (lastDigitEven){
-                        script = ComplexWires.RED.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.RED.getLabel() + dont;
-                    }
-                } else if (traits.contains(ComplexWires.BLUE)){
-                    if (lastDigitEven){
-                        script = ComplexWires.BLUE.getLabel() + cut;
-                    } else {
-                        script = ComplexWires.BLUE.getLabel() + dont;
-                    }
-                } else if (traits.contains(ComplexWires.STAR)){
+                } else if (traits.contains(ComplexWires.RED)){//Red
+                    script = ComplexWires.RED.getLabel() + (lastDigitEven?cut:dont);
+                } else if (traits.contains(ComplexWires.BLUE)){//Blue
+                    script = ComplexWires.BLUE.getLabel() + (lastDigitEven?cut:dont);
+                } else if (traits.contains(ComplexWires.STAR)){//Star
                     script = ComplexWires.STAR.getLabel() + cut;
-                } else {
+                } else {//LED
                     script = ComplexWires.LIT.getLabel() + dont;
                 }
         }

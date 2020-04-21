@@ -8,7 +8,6 @@ public class Button extends Attribute {
 
     public static String evaluate(TheButton[] properties){
         boolean which;
-
         if (properties[0] == TheButton.BLUE && properties[1] == TheButton.ABORT){
             which = false;
         } else if (numBatteries > 1 && properties[1] == TheButton.DETONATE){
@@ -20,7 +19,6 @@ public class Button extends Attribute {
         } else if (properties[0] == TheButton.YELLOW){
             which = false;
         } else which = properties[0] == TheButton.RED && properties[1] == TheButton.HOLD;
-
 
         return which ? tap : hold;
     }

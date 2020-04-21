@@ -133,6 +133,7 @@ public class OnFirst extends Attribute {
             case "yre":
             case "y're":
             case "y'r":
+            case "yr'":
             case "yu're":
             case "youre":
                 initial = "you're";
