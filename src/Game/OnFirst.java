@@ -36,6 +36,7 @@ public class OnFirst extends Attribute {
             case "rdy":
                 initial = "ready";
                 break;
+            case "b":
             case "bl":
             case "bla":
             case "baln":
@@ -43,6 +44,7 @@ public class OnFirst extends Attribute {
             case "blan":
                 initial = "blank";
                 break;
+            case "p":
             case "pr":
             case "pre":
             case "ss":
@@ -70,6 +72,7 @@ public class OnFirst extends Attribute {
             case "su":
                 initial = "sure";
                 break;
+            case "e":
             case "ty":
             case "em":
             case "emp":
@@ -86,6 +89,7 @@ public class OnFirst extends Attribute {
             case "ree":
                 initial = "reed";
                 break;
+            case "rad":
             case "rea":
                 initial = "read";
                 break;
@@ -96,6 +100,8 @@ public class OnFirst extends Attribute {
             case "holdn":
             case "holdon":
             case "hod":
+            case "hoon":
+            case "holon":
             case "holn":
                 initial = "hold on";
                 break;
@@ -118,6 +124,9 @@ public class OnFirst extends Attribute {
                 initial = "uh uh";
                 break;
             case "yre":
+            case "y're":
+            case "y'r":
+            case "yu're":
             case "youre":
                 initial = "you're";
                 break;
@@ -142,6 +151,9 @@ public class OnFirst extends Attribute {
                 initial = "what?";
                 break;
             case "tyre":
+            case "th're":
+            case "ty're":
+            case "t're":
             case "thyr":
             case "thyre":
             case "theyr":
@@ -168,6 +180,7 @@ public class OnFirst extends Attribute {
                 initial = "yes";
                 break;
             case "yor":
+            case "our":
             case "yr":
                 initial = "your";
                 break;
@@ -186,14 +199,17 @@ public class OnFirst extends Attribute {
                 break;
             case "sa":
             case "say":
+            case "sys":
                 initial = "says";
                 break;
+            case "f":
             case "fir":
             case "firs":
             case "fi":
             case "1st":
                 initial = "first";
                 break;
+            case "not":
             case "noth":
                 initial = "nothing";
                 break;
