@@ -9,35 +9,25 @@ public class Sequences extends Attribute {
             blackOcc = {"All", "AC", "B", "AC", "B", "BC", "AB", "C", "C"};
 
     public static Image nextOccurrence(SequencedWires currentWire){
-        switch (currentWire) {
-            case RED -> {
-                currentWire.setIndex(currentWire.getIdx() + 1);
-                return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
-            }
-            case BLUE -> {
-                currentWire.setIndex(currentWire.getIdx() + 1);
-                return new Image(currentWire.getLabel() + blueOcc[currentWire.getIdx()] + ".PNG");
-            }
-            default -> {
-                currentWire.setIndex(currentWire.getIdx() + 1);
-                return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
-            }
-        }
+        currentWire.setIndex(currentWire.getIdx() + 1);
+        return guessColor(currentWire);
     }
 
     public static Image prevOccurrence(SequencedWires currentWire){
+        currentWire.setIndex(currentWire.getIdx() - 1);
+        return guessColor(currentWire);
+    }
+
+    private static Image guessColor(SequencedWires currentWire){
         switch (currentWire) {
-            case BLACK -> {
-                currentWire.setIndex(currentWire.getIdx() - 1);
-                return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
+            case RED -> {
+                return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
             }
             case BLUE -> {
-                currentWire.setIndex(currentWire.getIdx() - 1);
                 return new Image(currentWire.getLabel() + blueOcc[currentWire.getIdx()] + ".PNG");
             }
             default -> {
-                currentWire.setIndex(currentWire.getIdx() - 1);
-                return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
+                return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
             }
         }
     }

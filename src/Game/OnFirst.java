@@ -34,9 +34,13 @@ public class OnFirst extends Attribute {
                 break;
             case "redy":
             case "rdy":
+            case "ry":
                 initial = "ready";
                 break;
             case "b":
+            case "blk":
+            case "blnk":
+            case "bnk":
             case "bl":
             case "bla":
             case "baln":
@@ -70,6 +74,7 @@ public class OnFirst extends Attribute {
                 break;
             case "s":
             case "su":
+            case "ure":
                 initial = "sure";
                 break;
             case "e":
@@ -115,6 +120,8 @@ public class OnFirst extends Attribute {
                 break;
             case "do":
             case "don":
+            case "dne":
+            case "one":
                 initial = "done";
                 break;
             case "uh":
@@ -172,6 +179,7 @@ public class OnFirst extends Attribute {
                 initial = "they are";
                 break;
             case "wht":
+            case "wh":
             case "wnq":
                 initial = "what";
                 break;
@@ -223,7 +231,6 @@ public class OnFirst extends Attribute {
             default:
                 return initial;
         }
-
         return initial;
     }
 }
