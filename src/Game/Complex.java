@@ -1,7 +1,6 @@
 package Game;
 
 import Game.Mod.Attribute;
-
 import java.util.ArrayList;
 
 public class Complex extends Attribute {
