@@ -447,10 +447,10 @@ public class Controller {
     @FXML
     private void findPanel(){
         Image sample = OnFirst.findPanel(step1In.getText());
-        if (sample != null) {
-            currentPanel.setImage(sample);
-        } else {
+        if (sample == null || step1In.getText().isEmpty()) {
             currentPanel.imageProperty().set(null);
+        } else {
+            currentPanel.setImage(sample);
         }
     }
 
