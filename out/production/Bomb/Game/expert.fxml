@@ -859,7 +859,7 @@
                                     <Font size="18.0" />
                                  </font>
                               </Button>
-                              <Label>
+                              <Label fx:id="memInstructions">
                                  <HBox.margin>
                                     <Insets left="100.0" />
                                  </HBox.margin>
@@ -897,7 +897,8 @@
                                  </font>
                               </TextField>
                               <Line endX="-100.0" endY="-242.0" layoutX="383.0" layoutY="242.0" startX="-100.0" startY="18.5" />
-                              <Line endX="-100.0" endY="-242.0" layoutX="491.0" layoutY="247.0" startX="-100.0" startY="13.5" />
+                              <Line endX="-100.0" endY="-242.0" layoutX="491.0" layoutY="189.0" startX="-100.0" startY="71.0" />
+                              <Line endX="-100.0" endY="-242.0" layoutX="589.0" layoutY="189.0" startX="-100.0" startY="71.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -916,6 +917,7 @@
                               <Line endX="-100.0" endY="105.5" layoutX="282.0" layoutY="21.0" startX="-100.0" startY="-156.0" />
                               <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" startX="-100.0" />
+                              <Line endX="-100.0" endY="-263.0" layoutX="178.0" layoutY="99.0" startX="-100.0" startY="27.0" />
                            </children>
                         </Pane>
                      </children>

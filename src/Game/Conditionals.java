@@ -62,7 +62,7 @@ enum SequencedWires implements Index, Labeled{
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Occurrences\\";
+        return "file:src\\Occurrences\\";
     }
 
     SequencedWires(int index){
@@ -75,33 +75,33 @@ enum TheButton {
 }
 
 enum Keypads implements Labeled, Flaggable {
-    RACKET1("Empty Racket.PNG", false), A_T("A_T.PNG", false),
-    STROKED_LAMBDA1("Lambda.PNG", false), HARRY_POTTER("Harry Potter.PNG", false),
-    RUSSIAN_CAT1("Russian Cat.PNG", false), CURVY_H1("Curvy H.PNG", false),
-    BACK_C1("BackwardsC.PNG", false),
+    RACKET1("Empty Racket", false), A_T("A_T", false),
+    STROKED_LAMBDA1("Lambda", false), HARRY_POTTER("Harry Potter", false),
+    RUSSIAN_CAT1("Russian Cat", false), CURVY_H1("Curvy H", false),
+    BACK_C1("BackwardsC", false),
 
-    REVERSE_EURO1("Reverse Euro.PNG", false), RACKET2("Empty Racket.PNG", false),
-    BACK_C2("BackwardsC.PNG", false), DISNEY_Q1("Disney Q.PNG", false),
-    HOLLOW_STAR1("Hollow Star.PNG", false), CURVY_H2("Curvy H.PNG", false),
-    SPANISH_QUESTION1("Spanish Question.PNG", false),
+    REVERSE_EURO1("Reverse Euro", false), RACKET2("Empty Racket", false),
+    BACK_C2("BackwardsC", false), DISNEY_Q1("Disney Q", false),
+    HOLLOW_STAR1("Hollow Star", false), CURVY_H2("Curvy H", false),
+    SPANISH_QUESTION1("Spanish Question", false),
 
-    COPYRIGHT("Copyright.PNG", false), THE_SAC("Sac.PNG", false),
-    DISNEY_Q2("Disney Q.PNG", false), RUSSIAN_X1("Russian X.PNG", false),
-    NOT_THREE("Not3.PNG", false), STROKED_LAMBDA2("Lambda.PNG", false),
-    HOLLOW_STAR2("Hollow Star.PNG", false),
+    COPYRIGHT("Copyright", false), THE_SAC("Sac", false),
+    DISNEY_Q2("Disney Q", false), RUSSIAN_X1("Russian X", false),
+    NOT_THREE("Not3", false), STROKED_LAMBDA2("Lambda", false),
+    HOLLOW_STAR2("Hollow Star", false),
 
-    RUSSIAN_SIX1("Russian 6.PNG", false),PARAGRAPH1("Paragraph.PNG", false),
-    TB_1("Tb.PNG", false), RUSSIAN_CAT2("Russian Cat.PNG", false),
-    RUSSIAN_X2("Russian X.PNG", false), SPANISH_QUESTION2("Spanish Question.PNG", false),
-    SMILEY1("Smily.PNG", false),
+    RUSSIAN_SIX1("Russian 6", false),PARAGRAPH1("Paragraph", false),
+    TB_1("Tb", false), RUSSIAN_CAT2("Russian Cat", false),
+    RUSSIAN_X2("Russian X", false), SPANISH_QUESTION2("Spanish Question", false),
+    SMILEY1("Smily", false),
 
-    PSI1("Psi.PNG", false),SMILEY2("Smily.PNG", false), TB_2("Tb.PNG", false),
-    C_DOT("C.PNG", false), PARAGRAPH2("Paragraph.PNG", false),
-    ALIEN_THREE("Alien 3.PNG", false), STAR("Star.PNG", false),
+    PSI1("Psi", false),SMILEY2("Smily", false), TB_2("Tb", false),
+    C_DOT("C", false), PARAGRAPH2("Paragraph", false),
+    ALIEN_THREE("Alien 3", false), STAR("Star", false),
 
-    RUSSIAN_SIX2("Russian 6.PNG", false), REVERSE_EURO2("Reverse Euro.PNG", false),
-    PUZZLE("Puzzle.PNG", false), AE("ae.PNG", false), PSI2("Psi.PNG", false),
-    RUSSIAN_NH("Russian NH.PNG", false), OMEGA("Omega.PNG", false);
+    RUSSIAN_SIX2("Russian 6", false), REVERSE_EURO2("Reverse Euro", false),
+    PUZZLE("Puzzle", false), AE("ae.PNG", false), PSI2("Psi", false),
+    RUSSIAN_NH("Russian NH", false), OMEGA("Omega", false);
 
     private final String imageLocation;
     private boolean flag;
@@ -113,7 +113,7 @@ enum Keypads implements Labeled, Flaggable {
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Symbols\\" + imageLocation;
+        return "file:src\\Symbols\\" + imageLocation + ".PNG";
     }
 
     @Override
@@ -143,20 +143,20 @@ enum SimonSays implements Labeled{
 }
 
 enum WhosOnFirstPictures implements Labeled{
-    YES("Yes.PNG"), FIRST("First.PNG"), DISPLAY("Display.PNG"), OKAY("Okay.PNG"),
-    SAYS("Says.PNG"), NOTHING("Nothing.PNG"), EMPTY("Empty.PNG"),
-    BLANK("Blank.PNG"), NO("No.PNG"), LED("Led.PNG"),LEAD("Lead.PNG"),
-    READ("Read.PNG"), RED("Red.PNG"), REED("Reed.PNG"), LEED("Leed.PNG"),
-    HOLDON("Hold On.PNG"), YOU("You.PNG"), YOUARE("You Are.PNG"),
-    YOUR("Your.PNG"), YOURE("You're.PNG"),UR("ur.PNG"),THERE("There.PNG"),
-    THEIR("Their.PNG"), THEYRE("They're.PNG"),THEYARE("They Are.PNG"),
-    SEE("See.PNG"),C("C.PNG"),CEE("Cee.PNG");
+    YES("Yes"), FIRST("First"), DISPLAY("Display"), OKAY("Okay"),
+    SAYS("Says"), NOTHING("Nothing"), EMPTY("Empty"),
+    BLANK("Blank"), NO("No"), LED("Led"),LEAD("Lead"),
+    READ("Read"), RED("Red"), REED("Reed"), LEED("Leed"),
+    HOLDON("Hold On"), YOU("You"), YOUARE("You Are.PNG"),
+    YOUR("Your"), YOURE("You're"),UR("ur.PNG"),THERE("There"),
+    THEIR("Their"), THEYRE("They're"),THEYARE("They Are.PNG"),
+    SEE("See"),C("C"),CEE("Cee");
 
     private final String label;
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Step1_Panels\\" + label;
+        return "file:src\\Step1_Panels\\" + label + ".PNG";
     }
 
     WhosOnFirstPictures(String location){
@@ -243,7 +243,7 @@ enum MazeTop implements Coordinate, Labeled{
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Mazes\\" + label + ".PNG";
+        return "file:src\\Mazes\\" + label + ".PNG";
     }
 
     MazeTop(int x, int y, String label){
@@ -275,7 +275,7 @@ enum MazeBottom implements Coordinate, Labeled{
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Mazes\\" + label + ".PNG";
+        return "file:src\\Mazes\\" + label + ".PNG";
     }
 
     MazeBottom(int x, int y, String label){
@@ -307,7 +307,7 @@ enum MazeLetNum implements Coordinate, Labeled{
 
     @Override
     public String getLabel() {
-        return "file:\\D:\\Codes\\Bomb\\src\\Mazes\\" + label + ".PNG";
+        return "file:src\\Mazes\\" + label + ".PNG";
     }
 
     MazeLetNum(int x, int y, String label){

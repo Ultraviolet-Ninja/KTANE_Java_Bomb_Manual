@@ -8,10 +8,7 @@ public class OnFirst extends Attribute {
     public static Image findPanel(String text){
         text = format(text);
         for (WhosOnFirstPictures pic : WhosOnFirstPictures.values()){
-
-            if (pic.getLabel()
-                    .replace("file:\\D:\\Codes\\Bomb\\src\\Step1_Panels\\", "")
-                    .replace(".PNG", "").toLowerCase().equals(text)){
+            if (pic.getLabel().toLowerCase().contains(text)){
                 return new Image(pic.getLabel());
             }
         }
@@ -106,6 +103,8 @@ public class OnFirst extends Attribute {
             case "di":
             case "dis":
             case "disp":
+            case "displ":
+            case "displa":
                 initial = "display";
                 break;
             case "do":
