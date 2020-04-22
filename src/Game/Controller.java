@@ -538,7 +538,7 @@ public class Controller {
                 }
             }
             case 2 -> {
-                sample = memoryBuffer(memStage1.getText());
+                sample = memoryBuffer(memStage2.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -572,11 +572,7 @@ public class Controller {
             }
         }
     }
-    /**
-     * Check for validity
-     * Make the proper field editable
-     * Open up the next set
-     */
+
     @FXML
     private void labelSet(){
         String label;
@@ -810,11 +806,8 @@ public class Controller {
                 }
                 break;
             default:
-                if (which == 'P'){
-                    memPos5.setText(String.valueOf(instruct[1].charAt(1)));
-                } else {
-                    memLabel5.setText(String.valueOf(instruct[1].charAt(1)));
-                }
+                memLabel5.setText(String.valueOf(instruct[1].charAt(0)));
+                memPos5.setText(String.valueOf(instruct[1].charAt(0)));
                 break;
         }
     }
