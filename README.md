@@ -21,10 +21,10 @@ Tab contains a slider for the number of strikes earned during the current defuse
 Step 1 will find the correct panel based on what is typed. Step 2 will find the sequence of words that correspond to the typed word. Go through the words to find the one that the defuser has. Also a quick clear area for easy use
 
 ### Memory Tab
-The top row takes in the gieven number on the indicator. Based on that number, a label will prompt what button to press next and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules.
+The top row takes in the given number on the indicator. Based on that number, a label will prompt what button to press next and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules. **Module takes in only number 1-4**
 
 ### Morse Code Tab
-Only reads dots and dashes in the input field (- and .) and outputs possible words in the TextArea.
+Only reads dots, dashes and spaces in the input field (- and .) and outputs possible words in the TextArea.
 **[Module does not display correct results, needs further coding and testing]**
 
 ### Complicated Wires Tab
@@ -34,15 +34,16 @@ Input a letter sequence for each wire, and the output will display what that wir
 - s - Wire has a star underneath
 - l - Wire has a lit LED
 - w - Only if the wire is completely bare (But we all know that you cut that wire)
+**Spaces are used to seperate wires**
 
 ### Wires Sequences Tab
 Goes through the occurrences of red, blue and black wires to determine which to cut. No more remembering or covering the manual with your fingers.
 
 ### Mazes Tab
-**(From my personal experience being the expert)** There are three notations possible for people who use coordinate systems with (1,1) being the *top left* or *bottom left* corner or for those who say rows as A,B,C,D,E or F and columns as numbers. Select the correct notation and input the coordinates for a circle on the right to find the correct maze, either circle works and just numbers, nothing else. There are places to put the coordinates to the dot and the target.
+**(From my personal experience being the expert)** There are three notations possible for people who use coordinate systems with (1,1) being the *top left* or *bottom left* corner or for those who say rows as A,B,C,D,E or F and columns as numbers 1 through 6. Select the correct notation and input the coordinates for a circle on the right to find the correct maze, either circle works and just numbers, nothing else. There are places to put the coordinates to the dot and the target.
 
 ### Password Tab
-Contains 5 input fields to take in the sets of letters in each row. Input the set of letters into the corresponding input, and the Output area displays the possible passwords.
+Contains 5 input fields to take in the sets of letters in each row. Input the set of letters into the corresponding input, and the Output area displays the possible passwords. **Input fields take in lowercase letters only**
 
 ### Knobs Tab
 Displays the orientations for each knob from the original manual, nothing fancy.
