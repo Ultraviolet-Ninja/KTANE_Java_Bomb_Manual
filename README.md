@@ -2,7 +2,7 @@
  This is the Bomb Manual for Keep Talking and Nobody Explodes Vanilla (No Mods)
  The program is a variant of the original Bomb Manual (http://www.bombmanual.com/) that provides a quick way to solve each module. This project uses JDK 14 and language level 14 - Switch expressions
 
-### Traits Tab
+### Widgets Tab
 Tab displays options to toggle the important indicators "FRK" and "CAR", whether there's a parallel port on the bomb, a place to input the number of batteries, and whether the Serial Number contains a vowel and last digit odd number. The batteries TextField does not accept non-number values.
 
 ### Button Tab

@@ -27,8 +27,8 @@ public class Controller {
     private int step2Iterator = 0, memStage = 1;
     private StringBuilder simonColors = new StringBuilder();
     private String[] whosCurrentList;
-    private final String[] complicatedSet = {"r", "w", "b", "s", "l", " "},
-            lowercaseSet = {"a","b","c","d","e","f","g","h","i","j","k","l",
+    private final String[] complicatedRegex = {"r", "w", "b", "s", "l", " "},
+            lowercaseRegex = {"a","b","c","d","e","f","g","h","i","j","k","l",
             "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
     private final TheButton[] traits = new TheButton[2];
@@ -834,7 +834,7 @@ public class Controller {
     //Complex method
     @FXML
     private void solveCombos(){
-        complexOutput.setText(Complex.solve(ultimateFilter(complexInput.getText(), complicatedSet)));
+        complexOutput.setText(Complex.solve(ultimateFilter(complexInput.getText(), complicatedRegex)));
     }
 
     @FXML
@@ -1011,11 +1011,11 @@ public class Controller {
     @FXML
     private void passwordSolve(){
         passwordResults.setText(Passwords.solve(
-                ultimateFilter(password1st.getText().toLowerCase(), lowercaseSet),
-                ultimateFilter(password2nd.getText().toLowerCase(), lowercaseSet),
-                ultimateFilter(password3rd.getText().toLowerCase(), lowercaseSet),
-                ultimateFilter(password4th.getText().toLowerCase(), lowercaseSet),
-                ultimateFilter(password5th.getText().toLowerCase(), lowercaseSet)));
+                ultimateFilter(password1st.getText().toLowerCase(), lowercaseRegex),
+                ultimateFilter(password2nd.getText().toLowerCase(), lowercaseRegex),
+                ultimateFilter(password3rd.getText().toLowerCase(), lowercaseRegex),
+                ultimateFilter(password4th.getText().toLowerCase(), lowercaseRegex),
+                ultimateFilter(password5th.getText().toLowerCase(), lowercaseRegex)));
     }
 
     @FXML
