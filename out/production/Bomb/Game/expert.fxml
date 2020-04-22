@@ -851,7 +851,7 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" text="Reset">
+                              <Button fx:id="memButton" mnemonicParsing="false" onAction="#clearMem" style="-fx-background-color: lightgray;" text="Reset">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
@@ -871,36 +871,32 @@
                         </HBox>
                         <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <TextField layoutX="92.0" layoutY="37.0" prefHeight="77.0" prefWidth="71.0">
+                              <TextField fx:id="memStage1" layoutX="90.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="1st">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="196.0" layoutY="37.0" prefHeight="77.0" prefWidth="71.0">
+                              <TextField fx:id="memStage2" disable="true" layoutX="194.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="2nd">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="300.0" layoutY="37.0" prefHeight="77.0" prefWidth="71.0">
+                              <TextField fx:id="memStage3" disable="true" layoutX="300.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="3rd">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="405.0" layoutY="37.0" prefHeight="77.0" prefWidth="71.0">
+                              <TextField fx:id="memStage4" disable="true" layoutX="398.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="4th">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="502.0" layoutY="37.0" prefHeight="77.0" prefWidth="71.0">
+                              <TextField fx:id="memStage5" disable="true" layoutX="497.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="5th">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <Line endX="-100.0" endY="-242.0" layoutX="383.0" layoutY="242.0" startX="-100.0" startY="18.5" />
-                              <Line endX="-100.0" endY="-242.0" layoutX="491.0" layoutY="189.0" startX="-100.0" startY="71.0" />
-                              <Line endX="-100.0" endY="-242.0" layoutX="589.0" layoutY="189.0" startX="-100.0" startY="71.0" />
-                           </children>
-                        </Pane>
+                           </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
                               <Label layoutX="14.0" layoutY="14.0" text="Label">
@@ -914,10 +910,63 @@
                                  </font>
                               </Label>
                               <Line endX="499.0" layoutX="101.0" layoutY="66.0" startX="-100.0" />
-                              <Line endX="-100.0" endY="105.5" layoutX="282.0" layoutY="21.0" startX="-100.0" startY="-156.0" />
                               <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" startX="-100.0" />
-                              <Line endX="-100.0" endY="-263.0" layoutX="178.0" layoutY="99.0" startX="-100.0" startY="27.0" />
+                              <TextField fx:id="memLabel1" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memPos5" disable="true" editable="false" layoutX="500.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memLabel5" disable="true" editable="false" layoutX="500.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memPos1" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memPos2" disable="true" editable="false" layoutX="198.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memLabel2" disable="true" editable="false" layoutX="198.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memLabel4" disable="true" editable="false" layoutX="401.0" layoutY="12.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memPos4" disable="true" editable="false" layoutX="401.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memPos3" disable="true" editable="false" layoutX="300.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="memLabel3" disable="true" editable="false" layoutX="300.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="-100.0" endY="-114.5" layoutX="284.0" layoutY="115.0" startX="-100.0" startY="10.5" />
+                              <Line endX="-100.0" endY="-98.5" layoutX="388.0" layoutY="99.0" startX="-100.0" startY="26.5" />
+                              <Line endX="-100.0" endY="-108.5" layoutX="489.0" layoutY="109.0" startX="-100.0" startY="17.5" />
+                              <Line endX="-100.0" endY="-135.5" layoutX="589.0" layoutY="136.0" startX="-100.0" startY="-10.5" />
+                              <Line endX="-100.0" endY="-108.5" layoutX="704.0" layoutY="109.0" startX="-100.0" startY="16.5" />
                            </children>
                         </Pane>
                      </children>

@@ -23,13 +23,18 @@ public class Controller {
             EVEN = true;
     private final ArrayList<ToggleGroup> allGroups = new ArrayList<>();
     private final ArrayList<SimpleWires> wireList = new ArrayList<>();
-    private int step2Iterator = 0, memStage = 0;
+    private int step2Iterator = 0, memStage = 1;
     private StringBuilder simonColors = new StringBuilder();
     private String[] whosCurrentList;
+    private final String[] complicatedSet = {"r", "w", "b", "s", "l", " "},
+            lowercaseSet = {"a","b","c","d","e","f","g","h","i","j","k","l",
+            "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+
     private final TheButton[] traits = new TheButton[2];
 
     @FXML
     private Button whosButtonTabBack, whosButtonTabForward,
+            memButton,
             seqPrevRed, seqPrevBlue, seqPrevBlack, seqNextRed, seqNextBlue, seqNextBlack;
 
     @FXML
@@ -77,6 +82,7 @@ public class Controller {
             wireResponse,
             simonResults,
             complexInput,
+            memStage1, memStage2, memStage3, memStage4, memStage5,
             memLabel1,  memLabel2, memLabel3, memLabel4, memLabel5,
             memPos1, memPos2, memPos3, memPos4, memPos5,
             step1In, step2In, step2Out,
@@ -520,32 +526,192 @@ public class Controller {
     //Memory methods
     @FXML
     private void displaySet(){
+        String sample;
 
+        switch (memStage) {
+            case 1 -> {
+                sample = ultimateFilter(memStage1.getText(), "1", "2", "3", "4");
+                if (sample.length() == 1) {
+                    stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
+                } else {
+                    memStage1.setText("");
+                }
+            }
+            case 2 -> {
+                sample = ultimateFilter(memStage2.getText(), "1", "2", "3", "4");
+                if (sample.length() == 1) {
+                    stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
+                } else {
+                    memStage2.setText("");
+                }
+            }
+            case 3 -> {
+                sample = ultimateFilter(memStage3.getText(), "1", "2", "3", "4");
+                if (sample.length() == 1) {
+                    stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
+                } else {
+                    memStage3.setText("");
+                }
+            }
+            case 4 -> {
+                sample = ultimateFilter(memStage4.getText(), "1", "2", "3", "4");
+                if (sample.length() == 1) {
+                    stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
+                } else {
+                    memStage4.setText("");
+                }
+            }
+            default -> {
+                memButton.setStyle("-fx-background-color: orangered; -fx-text-fill: aliceblue");
+                sample = ultimateFilter(memStage5.getText(), "1", "2", "3", "4");
+                if (sample.length() == 1) {
+                    stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
+                } else {
+                    memStage5.setText("");
+                }
+            }
+        }
     }
-
+    /**
+     * Check for validity
+     * Make the proper field editable
+     * Open up the next set
+     */
     @FXML
     private void labelSet(){
+        switch (memStage){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        }
 
     }
 
     @FXML
     private void positionSet(){
-
+        switch (memStage){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        }
     }
 
     @FXML
     private void clearMem(){
-        memStage = 0;
+        memButton.setStyle("-fx-background-color: grey; -fx-text-fill: black");
+        memStage = 1;
+        memInstructions.setText("");
         Memory.clear();
+        clearAll();
+        disableSet();
+    }
+
+    private void clearAll(){
+        memStage1.setText("");
+        memStage2.setText("");
+        memStage3.setText("");
+        memStage4.setText("");
+        memStage5.setText("");
+        memPos1.setText("");
+        memPos2.setText("");
+        memPos3.setText("");
+        memPos4.setText("");
+        memPos5.setText("");
+        memLabel1.setText("");
+        memLabel2.setText("");
+        memLabel3.setText("");
+        memLabel4.setText("");
+        memLabel5.setText("");
+    }
+
+    private void disableSet(){
+        memStage2.setDisable(true);
+        memStage3.setDisable(true);
+        memStage4.setDisable(true);
+        memStage5.setDisable(true);
+        memPos2.setDisable(true);
+        memPos3.setDisable(true);
+        memPos4.setDisable(true);
+        memPos5.setDisable(true);
+        memLabel2.setDisable(true);
+        memLabel3.setDisable(true);
+        memLabel4.setDisable(true);
+        memLabel5.setDisable(true);
+
+        memStage1.setDisable(false);
+        memPos1.setDisable(false);
+        memLabel1.setDisable(false);
+    }
+
+    private void stageOperation (String[] instruct){
+        memInstructions.setText(instruct[0]);
+        char which = instruct[1].charAt(0);
+        switch (memStage){
+            case 1:
+                if (which == 'P'){
+                    memPos1.setText(String.valueOf(instruct[1].charAt(1)));
+                    memLabel1.setEditable(true);
+                } else {
+                    memLabel1.setText(String.valueOf(instruct[1].charAt(1)));
+                    memPos1.setEditable(true);
+                }
+                break;
+            case 2:
+                if (which == 'P'){
+                    memPos2.setText(String.valueOf(instruct[1].charAt(1)));
+                    memLabel2.setEditable(true);
+                } else {
+                    memLabel2.setText(String.valueOf(instruct[1].charAt(1)));
+                    memPos2.setEditable(true);
+                }
+                break;
+            case 3:
+                if (which == 'P'){
+                    memPos3.setText(String.valueOf(instruct[1].charAt(1)));
+                    memLabel3.setEditable(true);
+                } else {
+                    memLabel3.setText(String.valueOf(instruct[1].charAt(1)));
+                    memPos3.setEditable(true);
+                }
+                break;
+            case 4:
+                if (which == 'P'){
+                    memPos4.setText(String.valueOf(instruct[1].charAt(1)));
+                    memLabel4.setEditable(true);
+                } else {
+                    memLabel4.setText(String.valueOf(instruct[1].charAt(1)));
+                    memPos4.setEditable(true);
+                }
+                break;
+            default:
+                if (which == 'P'){
+                    memPos5.setText(String.valueOf(instruct[1].charAt(1)));
+                } else {
+                    memLabel5.setText(String.valueOf(instruct[1].charAt(1)));
+                }
+                break;
+        }
     }
 
     //Morse methods
     @FXML
     private void typeTrigger() {
-        String input = morseInput.getText().replaceAll("([a-z])", "")
-                .replaceAll("([A-Z])", "").replaceAll("([0-9])", "");
-
-        input = enhancedReplace(input);
+        String input = ultimateFilter(morseInput.getText(),
+                " ", "-", ".");
 
         if (!input.isEmpty()) {
             StringBuilder builder = new StringBuilder();
@@ -556,34 +722,10 @@ public class Controller {
         }
     }
 
-    private String enhancedReplace(String input){
-        for (int i = 33; i < 45; i++){
-            String a = String.valueOf((char)i);
-            input = input.replace(a, "");
-        }
-        input = input.replace("/", "");
-        input = input.replace("{", "");
-        input = input.replace("|", "");
-        input = input.replace("}", "");
-        input = input.replace("~", "");
-
-        for (int i = 58; i < 65; i++){
-            String a = String.valueOf((char)i);
-            input = input.replace(a, "");
-        }
-
-        for (int i = 91; i < 97; i++){
-            String a = String.valueOf((char)i);
-            input = input.replace(a, "");
-        }
-
-        return input;
-    }
-
     //Complex method
     @FXML
     private void solveCombos(){
-        complexOutput.setText(Complex.solve(complexInput.getText()));
+        complexOutput.setText(Complex.solve(ultimateFilter(complexInput.getText(), complicatedSet)));
     }
 
     @FXML
@@ -759,9 +901,12 @@ public class Controller {
     //Password methods
     @FXML
     private void passwordSolve(){
-        passwordResults.setText(Passwords.solve(password1st.getText(),
-                password2nd.getText(), password3rd.getText(),
-                password4th.getText(), password5th.getText()));
+        passwordResults.setText(Passwords.solve(
+                ultimateFilter(password1st.getText().toLowerCase(), lowercaseSet),
+                ultimateFilter(password2nd.getText().toLowerCase(), lowercaseSet),
+                ultimateFilter(password3rd.getText().toLowerCase(), lowercaseSet),
+                ultimateFilter(password4th.getText().toLowerCase(), lowercaseSet),
+                ultimateFilter(password5th.getText().toLowerCase(), lowercaseSet)));
     }
 
     @FXML
@@ -771,5 +916,17 @@ public class Controller {
         password3rd.setText("");
         password4th.setText("");
         password5th.setText("");
+    }
+
+    private String ultimateFilter(String input, String ...exceptions){
+        StringBuilder builder = new StringBuilder();
+        for (char in : input.toCharArray()){
+            for (String exception : exceptions){
+                if (String.valueOf(in).equals(exception)){
+                    builder.append(in);
+                }
+            }
+        }
+        return builder.toString();
     }
 }

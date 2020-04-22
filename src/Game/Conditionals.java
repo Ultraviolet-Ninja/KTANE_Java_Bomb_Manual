@@ -214,7 +214,7 @@ enum WhosOnFirstWords implements Labeled, Listed{
         return stream;
     }
 
-    WhosOnFirstWords(String label ,String ... wordStream){
+    WhosOnFirstWords(String label, String ... wordStream){
         this.label = label;
         stream = wordStream;
     }
