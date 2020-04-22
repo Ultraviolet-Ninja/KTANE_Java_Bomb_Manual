@@ -530,7 +530,7 @@ public class Controller {
 
         switch (memStage) {
             case 1 -> {
-                sample = ultimateFilter(memStage1.getText(), "1", "2", "3", "4");
+                sample = memoryBuffer(memStage1.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -538,7 +538,7 @@ public class Controller {
                 }
             }
             case 2 -> {
-                sample = ultimateFilter(memStage2.getText(), "1", "2", "3", "4");
+                sample = memoryBuffer(memStage1.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -546,7 +546,7 @@ public class Controller {
                 }
             }
             case 3 -> {
-                sample = ultimateFilter(memStage3.getText(), "1", "2", "3", "4");
+                sample = memoryBuffer(memStage3.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -554,7 +554,7 @@ public class Controller {
                 }
             }
             case 4 -> {
-                sample = ultimateFilter(memStage4.getText(), "1", "2", "3", "4");
+                sample = memoryBuffer(memStage4.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -563,7 +563,7 @@ public class Controller {
             }
             default -> {
                 memButton.setStyle("-fx-background-color: orangered; -fx-text-fill: aliceblue");
-                sample = ultimateFilter(memStage5.getText(), "1", "2", "3", "4");
+                sample = memoryBuffer(memStage5.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
@@ -579,14 +579,43 @@ public class Controller {
      */
     @FXML
     private void labelSet(){
+        String label;
         switch (memStage){
             case 1:
+                label = memoryBuffer(memLabel1.getText());
+                if (!label.isEmpty()){
+                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memLabel1.setText("");
+                }
                 break;
             case 2:
+                label = memoryBuffer(memLabel2.getText());
+                if (!label.isEmpty()){
+                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memLabel2.setText("");
+                }
                 break;
             case 3:
+                label = memoryBuffer(memLabel3.getText());
+                if (!label.isEmpty()){
+                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memLabel3.setText("");
+                }
                 break;
             case 4:
+                label = memoryBuffer(memLabel4.getText());
+                if (!label.isEmpty()){
+                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memLabel4.setText("");
+                }
                 break;
             default:
                 break;
@@ -596,16 +625,47 @@ public class Controller {
 
     @FXML
     private void positionSet(){
+        String label;
         switch (memStage){
             case 1:
+                label = memoryBuffer(memPos1.getText());
+                if (!label.isEmpty()){
+                    Memory.setPosition(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memPos1.setText("");
+                }
                 break;
             case 2:
+                label = memoryBuffer(memPos2.getText());
+                if (!label.isEmpty()){
+                    Memory.setPosition(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memPos2.setText("");
+                }
                 break;
             case 3:
+                label = memoryBuffer(memPos3.getText());
+                if (!label.isEmpty()){
+                    Memory.setPosition(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memPos3.setText("");
+                }
                 break;
             case 4:
+                label = memoryBuffer(memPos4.getText());
+                if (!label.isEmpty()){
+                    Memory.setPosition(memStage-1, Integer.parseInt(label));
+                    nextStage();
+                } else {
+                    memPos4.setText("");
+                }
                 break;
             default:
+
+
                 break;
         }
     }
@@ -626,6 +686,11 @@ public class Controller {
         memStage3.setText("");
         memStage4.setText("");
         memStage5.setText("");
+        memStage1.setStyle("-fx-background-color: white");
+        memStage2.setStyle("-fx-background-color: white");
+        memStage3.setStyle("-fx-background-color: white");
+        memStage4.setStyle("-fx-background-color: white");
+        memStage5.setStyle("-fx-background-color: white");
         memPos1.setText("");
         memPos2.setText("");
         memPos3.setText("");
@@ -655,6 +720,53 @@ public class Controller {
         memStage1.setDisable(false);
         memPos1.setDisable(false);
         memLabel1.setDisable(false);
+    }
+
+    private void nextStage(){
+        String color = "-fx-background-color: greenyellow";
+        memInstructions.setText("");
+        switch (memStage) {
+            case 1 -> {
+                memStage1.setDisable(true);
+                memStage1.setStyle(color);
+                memLabel1.setDisable(true);
+                memPos1.setDisable(true);
+                memStage2.setDisable(false);
+                memLabel2.setDisable(false);
+                memPos2.setDisable(false);
+                memStage = 2;
+            }
+            case 2 -> {
+                memStage2.setDisable(true);
+                memStage2.setStyle(color);
+                memLabel2.setDisable(true);
+                memPos2.setDisable(true);
+                memStage3.setDisable(false);
+                memLabel3.setDisable(false);
+                memPos3.setDisable(false);
+                memStage = 3;
+            }
+            case 3 -> {
+                memStage3.setDisable(true);
+                memStage3.setStyle(color);
+                memLabel3.setDisable(true);
+                memPos3.setDisable(true);
+                memStage4.setDisable(false);
+                memLabel4.setDisable(false);
+                memPos4.setDisable(false);
+                memStage = 4;
+            }
+            default -> {
+                memStage4.setDisable(true);
+                memStage4.setStyle(color);
+                memLabel4.setDisable(true);
+                memPos4.setDisable(true);
+                memStage5.setDisable(false);
+                memLabel5.setDisable(false);
+                memPos5.setDisable(false);
+                memStage = 5;
+            }
+        }
     }
 
     private void stageOperation (String[] instruct){
@@ -928,5 +1040,9 @@ public class Controller {
             }
         }
         return builder.toString();
+    }
+
+    private String memoryBuffer(String text){
+        return ultimateFilter(text, "1", "2", "3", "4");
     }
 }

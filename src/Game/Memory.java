@@ -6,7 +6,7 @@ public class Memory extends Attribute {
     private static int[] positions = new int[4],
             labels = new int[4];
 
-    private static final String pos = " position", lab = " label";
+    private static final String pos = " position", lab = " Label";
 
     public static String[] setInstruction(int stage, int display){
         String[] instructions = new String[2];
