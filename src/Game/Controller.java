@@ -524,6 +524,8 @@ public class Controller {
     }
 
     //Memory methods
+    //TODO - Indicator 2 on Stage 3 could be wrong, might've misclicked
+    //TODO - When Fields become editable needs to change
     @FXML
     private void displaySet(){
         String sample;
@@ -813,6 +815,7 @@ public class Controller {
     }
 
     //Morse methods
+    //TODO - Need to be able to match all letters to a word
     @FXML
     private void typeTrigger() {
         String input = ultimateFilter(morseInput.getText(),
