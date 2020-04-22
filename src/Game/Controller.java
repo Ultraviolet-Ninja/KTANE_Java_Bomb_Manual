@@ -24,7 +24,7 @@ public class Controller {
             EVEN = true;
     private final ArrayList<ToggleGroup> allGroups = new ArrayList<>();
     private final ArrayList<SimpleWires> wireList = new ArrayList<>();
-    private int step2Iterator = 0, memStage = 1;
+    private int step2Iterator = 0, memStage = 1, manualPage = 1;
     private StringBuilder simonColors = new StringBuilder();
     private String[] whosCurrentList;
     private final String[] complicatedRegex = {"r", "w", "b", "s", "l", " "},
@@ -47,7 +47,8 @@ public class Controller {
             russianSix2, backEuro2, puzzle, aeyyLmao, psi2, russianHN, ohms,
             currentPanel,
             seqRed, seqBlue, seqBlack,
-            currentMaze;
+            currentMaze,
+            manual;
 
     @FXML
     private Label frk, car,
@@ -65,7 +66,8 @@ public class Controller {
     @FXML
     private Rectangle initializer,
             stripRed, stripYellow, stripBlue, stripWhite,
-            simpleWireRed, simpleWireYellow, simpleWireBlack, simpleWireBlue, simpleWireWhite;
+            simpleWireRed, simpleWireYellow, simpleWireBlack, simpleWireBlue, simpleWireWhite,
+            manualPrev, manualNext;
 
     @FXML
     private Slider strikes,
@@ -1024,6 +1026,20 @@ public class Controller {
         password3rd.setText("");
         password4th.setText("");
         password5th.setText("");
+    }
+
+    @FXML
+    private void tabManual(){
+        if (manualPrev.isHover()){
+            if (manualPage != 1){
+                manualPage--;
+            }
+        } else if (manualNext.isHover()){
+            if (manualPage != 23){
+                manualPage++;
+            }
+        }
+        manual.setImage(new Image("file:src\\Manual\\Manual-" + manualPage + ".png"));
     }
 
     private String ultimateFilter(String input, String ...exceptions){
