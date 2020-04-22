@@ -529,7 +529,6 @@ public class Controller {
     @FXML
     private void displaySet(){
         String sample;
-
         switch (memStage) {
             case 1 -> {
                 sample = memoryBuffer(memStage1.getText());
