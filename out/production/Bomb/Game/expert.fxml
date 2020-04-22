@@ -1003,24 +1003,81 @@
                                     <Insets left="15.0" top="25.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField fx:id="morseInput" onKeyTyped="#typeTrigger" promptText="Dots and Dashes" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                           <children>
-                              <Label text="Result List:">
+                              <TextField fx:id="morseInput" onKeyTyped="#typeTrigger" promptText="Dots and Dashes">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                              <Label text="Resulting Letters:">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="20.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextArea fx:id="morseOutput" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Output Signals">
+                              <TextField fx:id="morseLetters" editable="false">
                                  <font>
-                                    <Font size="18.0" />
-                                 </font></TextArea>
-                           </children></VBox>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="375.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="241.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Result List:">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea fx:id="morseOutput" editable="false" onMouseClicked="#clearMorseFields" prefHeight="200.0" prefWidth="200.0" promptText="Output Signals">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Manual Override:">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="morseManual" onKeyTyped="#searchWord" promptText="Manual Input">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="30.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="morseManOut" editable="false" promptText="Frequency">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="40.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
                      </children>
                   </GridPane>
                </children></GridPane>

@@ -89,7 +89,7 @@ public class Controller {
             memPos1, memPos2, memPos3, memPos4, memPos5,
             step1In, step2In, step2Out,
             password1st, password2nd, password3rd, password4th, password5th,
-            morseInput,
+            morseInput, morseLetters, morseManual, morseManOut,
             mazeCoords, mazeWhiteDot, mazeTarget;
 
     @FXML
@@ -817,19 +817,52 @@ public class Controller {
     }
 
     //Morse methods
-    //TODO - Need to be able to match all letters to a word
     @FXML
     private void typeTrigger() {
         String input = ultimateFilter(morseInput.getText(),
-                " ", "-", ".");
+                "-", ".", " ");
 
         if (!input.isEmpty()) {
             StringBuilder builder = new StringBuilder();
-            for (String words : Morse.translate(input)) {
+            String[] outputs = Morse.translate(input);
+            for (String words : outputs[0].split("/")) {
                 builder.append(words).append("\n");
             }
             morseOutput.setText(builder.toString());
+            morseLetters.setText(outputs[1]);
+        } else {
+            morseOutput.setText("");
+            morseInput.setText(input);
         }
+    }
+
+    @FXML
+    private void searchWord(){
+        String takeIn = ultimateFilter(morseManual.getText().toLowerCase(), lowercaseRegex);
+        if (!takeIn.isEmpty()){
+            takeIn = Morse.predict(takeIn);
+            MorseCodeFrequencies[] freqs = MorseCodeFrequencies.values();
+
+            for (int i = 0; i < freqs.length; i++){
+                if (takeIn.equals(freqs[i].getLabel())){
+                    morseManOut.setText(freqs[i].getLabel() + " - " + freqs[i].frequency() + "MHz");
+                    i = MorseCodeFrequencies.values().length;
+                } else {
+                    morseManOut.setText("");
+                }
+            }
+        } else {
+            morseManOut.setText("");
+        }
+    }
+
+    @FXML
+    private void clearMorseFields(){
+        morseOutput.setText("");
+        morseInput.setText("");
+        morseManOut.setText("");
+        morseManual.setText("");
+        morseLetters.setText("");
     }
 
     //Complex method

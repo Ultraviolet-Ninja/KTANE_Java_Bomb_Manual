@@ -1,58 +1,62 @@
 package Game;
 
 import Game.Mod.Attribute;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Morse extends Attribute {
 
-
-    public static ArrayList<String> translate(String sample){
-        String[] inputs = sample.split(" ");
-        return findWords(transcode(inputs, Arrays.asList(MorseCodeLetter.values())),
-                Arrays.asList(MorseCodeFrequencies.values()));
+    public static String predict(String in){
+        return switch (in) {
+            case "she", "shel" -> "shell";
+            case "ha", "hal", "hall" -> "halls";
+            case "sl", "sli", "slic" -> "slick";
+            case "t", "tr", "tri", "tric" -> "trick";
+            case "box", "boxe" -> "boxes";
+            case "l", "le", "lea", "leak" -> "leaks";
+            case "str", "stro", "strob", "strb" -> "strobe";
+            case "f", "fl", "fli", "flic" -> "flick";
+            case "bom", "bomb" -> "bombs";
+            case "bre", "brea", "break" -> "breaks";
+            case "bri", "bric", "brick" -> "bricks";
+            case "ste", "stea" -> "steak";
+            case "st", "sti", "stin" -> "sting";
+            case "v", "ve", "vec", "vect", "vecto" -> "vector";
+            case "be", "bea", "beat" -> "beats";
+            default -> in;
+        };
     }
 
-    private static ArrayList<String> transcode(String[] inputs, List<MorseCodeLetter> list){
-        ArrayList<String> results = new ArrayList<>();
+    public static String[] translate(String sample){
+        String[] out = new String[2];
+        out[1] = transcode(sample.split(" "), Arrays.asList(MorseCodeLetter.values()));
+        out[0] = findWords(out[1], Arrays.asList(MorseCodeFrequencies.values()));
+        return out;
+    }
 
-        for (MorseCodeLetter morseCodeLetter : list) {
-            for (String input : inputs) {
+    private static String transcode(String[] inputs, List<MorseCodeLetter> list){
+        StringBuilder results = new StringBuilder();
+
+        for (String input : inputs) {
+            for (MorseCodeLetter morseCodeLetter : list) {
                 if (input.equals(morseCodeLetter.getLabel())) {
-                    results.add(morseCodeLetter.getLetter());
+                    results.append(morseCodeLetter.getLetter());
                 }
             }
         }
 
-        return results;
+        return results.toString();
     }
 
-    private static ArrayList<String> findWords(ArrayList<String> letters, List<MorseCodeFrequencies> frequencies){
-        ArrayList<String> testWords = new ArrayList<>(),
-                finalWords = new ArrayList<>();
+    private static String findWords(String letters, List<MorseCodeFrequencies> frequencies){
+        StringBuilder finalWords = new StringBuilder();
 
-        for (MorseCodeFrequencies frequency : frequencies) {
-           if (frequency.getLabel().contains(letters.get(0))) {
-                testWords.add(frequency.getLabel() + " - " + frequency.frequency() + "MHz");
-           }
-        }
-
-        if (letters.size() > 1){
-            for (int i = 1; i < letters.size(); i++){
-                for (String word : testWords){
-                    if (word.contains(letters.get(i))){
-                        finalWords.add(word);
-                    }
-                }
-                if (i != letters.size() -1) {
-                    testWords = finalWords;
-                    finalWords.clear();
-                }
+        for (MorseCodeFrequencies frequency : frequencies){
+            if (frequency.getLabel().contains(letters)){
+                finalWords.append(frequency.getLabel()).append(" - ").append(frequency.frequency())
+                        .append("MHz").append("/");
             }
-        } else {
-            finalWords = testWords;
         }
-        return finalWords;
+        return finalWords.toString();
     }
 }
