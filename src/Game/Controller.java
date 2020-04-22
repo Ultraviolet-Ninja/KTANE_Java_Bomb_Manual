@@ -16,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 
+//TODO - Make complete Java Documentation
 public class Controller {
     private static final boolean YES = true,
             NO = false,
@@ -119,6 +120,7 @@ public class Controller {
             Attribute.setParallel(NO);
             parallelPort.setStyle("-fx-background-color: crimson; -fx-text-fill: seashell");
         }
+        cautionComplex.setText("");
     }
 
     @FXML
