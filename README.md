@@ -21,7 +21,7 @@ Tab contains a slider for the number of strikes earned during the current defuse
 Step 1 will find the correct panel based on what is typed. Step 2 will find the sequence of words that correspond to the typed word. Go through the words to find the one that the defuser has. Also a quick clear area for easy use
 
 ### Memory Tab
-**[Unfinished]**
+The top row takes in the gieven number on the indicator. Based on that number, a label will prompt what button to press next and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules.
 
 ### Morse Code Tab
 Only reads dots and dashes in the input field (- and .) and outputs possible words in the TextArea.
