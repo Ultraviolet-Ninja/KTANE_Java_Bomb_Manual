@@ -8,9 +8,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="683.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
   <tabs>
-    <Tab text="Traits">
+    <Tab text="Widgets">
         <content>
             <GridPane>
                <columnConstraints>
@@ -1575,5 +1575,10 @@
                </children></GridPane>
       </content>
       </Tab>
+     <Tab text="Manual">
+        <GridPane>
+           
+        </GridPane>
+     </Tab>
   </tabs>
 </TabPane>

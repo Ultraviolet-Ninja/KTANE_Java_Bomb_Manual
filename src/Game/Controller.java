@@ -30,7 +30,6 @@ public class Controller {
     private final String[] complicatedRegex = {"r", "w", "b", "s", "l", " "},
             lowercaseRegex = {"a","b","c","d","e","f","g","h","i","j","k","l",
             "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-
     private final TheButton[] traits = new TheButton[2];
 
     @FXML
