@@ -55,7 +55,7 @@ public class OnFirst extends Attribute {
             case "w", "wa", "wai", "wt", "wat", "wit" -> "wait";
             case "redy", "rdy", "ry" -> "ready";
             case "b", "blk", "blnk", "bnk", "bl", "bla", "baln", "balnk", "blan" -> "blank";
-            case "p", "pr", "pre", "ss", "pres" -> "press";
+            case "p", "pr", "pre", "ss", "pres", "prss", "ress" -> "press";
             case "rig", "righ", "ryt", "rye" -> "right";
             case "mid", "mi", "midd", "middl" -> "middle";
             case "nex", "ne", "xt" -> "next";
@@ -65,24 +65,26 @@ public class OnFirst extends Attribute {
             case "le", "lee" -> "leed";
             case "la", "lea" -> "lead";
             case "li", "ike", "lik", "lke" -> "like";
-            case "r" -> "red";
-            case "ree" -> "reed";
-            case "rad", "rea" -> "read";
+            case "r", "rd" -> "red";
+            case "ree", "re" -> "reed";
+            case "rad", "rea", "ra"-> "read";
             case "ho", "hol" -> "hold";
             case "holdn", "holdon", "hod", "hoon", "holon", "holn" -> "hold on";
             case "d", "di", "dis", "disp", "displ", "displa" -> "display";
             case "do", "don", "dne", "one" -> "done";
             case "uh", "uh u", "uhu", "uhuh" -> "uh uh";
-            case "yre", "y're", "y'r", "yr'", "yu're", "youre" -> "you're";
+            case "yre", "y're", "y'r", "yr'", "yu're", "youre", "yur'", "yor'", "yor'e", "yur'e"-> "you're";
             case "uh h", "uh ", "uhh", "uhhuh" -> "uh huh";
-            case "yur", "yure", "youare", "you ", "you a", "you ar", "youa", "youar", "yare" -> "you are";
+            case "yur", "yure", "youare", "you ", "you a", "you ar", "youa", "youar", "yare", "ya", "yar", "yoare",
+                    "yuare", "yoa", "yoar", "yuar", "yua"-> "you are";
             case "q", "?", "wq", "whatq" -> "what?";
             case "tyre", "th're", "ty're", "t're", "thyr", "thyre", "theyr", "theyre", "eyre" -> "they're";
-            case "tyare", "eyare", "they ar", "they re", "they r", "theya", "theyar", "theyare", "thya", "thy" -> "they are";
+            case "tyare", "eyare", "they ar", "they re", "they r", "theya", "theyar", "theyare",
+                    "thya", "thy" -> "they are";
             case "wht", "wh", "wnq" -> "what";
             case "ye", "es" -> "yes";
             case "yor", "our", "yr" -> "your";
-            case "y", "yo" -> "you";
+            case "y", "yo", "yu" -> "you";
             case "ce" -> "cee";
             case "ok", "oka", "oak", "oaky" -> "okay";
             case "sa", "say", "sys" -> "says";
