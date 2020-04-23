@@ -912,7 +912,7 @@
                               <Line endX="499.0" layoutX="101.0" layoutY="66.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" startX="-100.0" />
-                              <TextField fx:id="memLabel1" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                              <TextField fx:id="memLabel1" disable="true" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -927,7 +927,7 @@
                                     <Font size="18.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="memPos1" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                              <TextField fx:id="memPos1" disable="true" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

@@ -1,9 +1,17 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Simple Wires
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
-
 import java.util.ArrayList;
 
+/**
+ * Simple class refers to the Simple Wires module
+ */
 public class Simple extends Attribute {
     private static final String
             first = " first ",
@@ -13,7 +21,12 @@ public class Simple extends Attribute {
             sixth = " last ",
             wire = "wire ";
 
-
+    /**
+     * conditions() instructs which wire to cut based on the given list of wires.
+     *
+     * @param theList - the list of wires on the module
+     * @return - which wire to cut
+     */
     public static String conditions(ArrayList<SimpleWires> theList){
         String response;
 

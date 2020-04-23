@@ -1,3 +1,9 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Main
+ */
+
 package Game;
 
 import javafx.application.Application;

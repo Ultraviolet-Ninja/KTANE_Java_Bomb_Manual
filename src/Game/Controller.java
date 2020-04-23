@@ -1,3 +1,9 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Controller
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
@@ -16,7 +22,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 
-//TODO - Make complete Java Documentation
+/**
+ * Controller class controls all the code between the Module classes and the FXML code
+ */
 public class Controller {
     private static final boolean YES = true,
             NO = false,
@@ -527,8 +535,6 @@ public class Controller {
     }
 
     //Memory methods
-    //TODO - Indicator 2 on Stage 3 could be wrong, might've misclicked
-    //TODO - When Fields become editable needs to change
     @FXML
     private void displaySet(){
         String sample;
@@ -538,7 +544,7 @@ public class Controller {
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
-                    memStage1.setText("");
+                    memStage1.setText(sample);
                 }
             }
             case 2 -> {
@@ -546,7 +552,7 @@ public class Controller {
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
-                    memStage2.setText("");
+                    memStage2.setText(sample);
                 }
             }
             case 3 -> {
@@ -554,7 +560,7 @@ public class Controller {
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
-                    memStage3.setText("");
+                    memStage3.setText(sample);
                 }
             }
             case 4 -> {
@@ -562,7 +568,7 @@ public class Controller {
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
-                    memStage4.setText("");
+                    memStage4.setText(sample);
                 }
             }
             default -> {
@@ -571,7 +577,7 @@ public class Controller {
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
                 } else {
-                    memStage5.setText("");
+                    memStage5.setText(sample);
                 }
             }
         }
@@ -732,8 +738,6 @@ public class Controller {
                 memLabel1.setDisable(true);
                 memPos1.setDisable(true);
                 memStage2.setDisable(false);
-                memLabel2.setDisable(false);
-                memPos2.setDisable(false);
                 memStage = 2;
             }
             case 2 -> {
@@ -742,8 +746,6 @@ public class Controller {
                 memLabel2.setDisable(true);
                 memPos2.setDisable(true);
                 memStage3.setDisable(false);
-                memLabel3.setDisable(false);
-                memPos3.setDisable(false);
                 memStage = 3;
             }
             case 3 -> {
@@ -752,8 +754,6 @@ public class Controller {
                 memLabel3.setDisable(true);
                 memPos3.setDisable(true);
                 memStage4.setDisable(false);
-                memLabel4.setDisable(false);
-                memPos4.setDisable(false);
                 memStage = 4;
             }
             default -> {
@@ -762,8 +762,6 @@ public class Controller {
                 memLabel4.setDisable(true);
                 memPos4.setDisable(true);
                 memStage5.setDisable(false);
-                memLabel5.setDisable(false);
-                memPos5.setDisable(false);
                 memStage = 5;
             }
         }
@@ -772,47 +770,31 @@ public class Controller {
     private void stageOperation (String[] instruct){
         memInstructions.setText(instruct[0]);
         char which = instruct[1].charAt(0);
-        switch (memStage){
-            case 1:
-                if (which == 'P'){
-                    memPos1.setText(String.valueOf(instruct[1].charAt(1)));
-                    memLabel1.setEditable(true);
-                } else {
-                    memLabel1.setText(String.valueOf(instruct[1].charAt(1)));
-                    memPos1.setEditable(true);
-                }
-                break;
-            case 2:
-                if (which == 'P'){
-                    memPos2.setText(String.valueOf(instruct[1].charAt(1)));
-                    memLabel2.setEditable(true);
-                } else {
-                    memLabel2.setText(String.valueOf(instruct[1].charAt(1)));
-                    memPos2.setEditable(true);
-                }
-                break;
-            case 3:
-                if (which == 'P'){
-                    memPos3.setText(String.valueOf(instruct[1].charAt(1)));
-                    memLabel3.setEditable(true);
-                } else {
-                    memLabel3.setText(String.valueOf(instruct[1].charAt(1)));
-                    memPos3.setEditable(true);
-                }
-                break;
-            case 4:
-                if (which == 'P'){
-                    memPos4.setText(String.valueOf(instruct[1].charAt(1)));
-                    memLabel4.setEditable(true);
-                } else {
-                    memLabel4.setText(String.valueOf(instruct[1].charAt(1)));
-                    memPos4.setEditable(true);
-                }
-                break;
-            default:
+        switch (memStage) {
+            case 1 -> repeated(instruct, which, memPos1, memLabel1);
+            case 2 -> repeated(instruct, which, memPos2, memLabel2);
+            case 3 -> repeated(instruct, which, memPos3, memLabel3);
+            case 4 -> repeated(instruct, which, memPos4, memLabel4);
+            default -> {
                 memLabel5.setText(String.valueOf(instruct[1].charAt(0)));
                 memPos5.setText(String.valueOf(instruct[1].charAt(0)));
-                break;
+            }
+        }
+    }
+
+    private void repeated(String[] instruct, char which, TextField memPosX, TextField memLabelX) {
+        if (which == 'P'){
+            memPosX.setText(String.valueOf(instruct[1].charAt(1)));
+            memLabelX.setText("");
+            memLabelX.setEditable(true);
+            memLabelX.setDisable(false);
+            memPosX.setDisable(true);
+        } else {
+            memLabelX.setText(String.valueOf(instruct[1].charAt(1)));
+            memPosX.setText("");
+            memPosX.setEditable(true);
+            memPosX.setDisable(false);
+            memLabelX.setDisable(true);
         }
     }
 

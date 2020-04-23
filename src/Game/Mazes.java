@@ -1,10 +1,27 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Mazes
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 import javafx.scene.image.Image;
 
+/**
+ * Mazes class refers to the Maze module
+ */
 public class Mazes extends Attribute {
 
+    /**
+     * findMaze() finds the correct maze based on the coordinates of one of the circles
+     * and the format of the coordinate system used by the defuser.
+     *
+     * @param coords - the given coordinates of one circle on the maze
+     * @param which - The format of the coordinate system used
+     * @return - The correct maze
+     */
     public static Image findMaze(String coords, int which){
         String finalLabel = "";
         int[] numbers = cast(coords);

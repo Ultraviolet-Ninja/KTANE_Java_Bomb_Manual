@@ -1,3 +1,9 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Keypads
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
@@ -5,8 +11,18 @@ import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
+/**
+ * Symbols refers to the Keypads module
+ */
 public class Symbols extends Attribute {
 
+    /**
+     * change() highlights or de-highlights the Keypad that was clicked by the user.
+     *
+     * @param toEdit - the Keypad to highlight or return to normal
+     * @param og - the Image of the original keypad appearance
+     * @return - the highlighted or normal image of the keypad
+     */
     public static Image change(Keypads toEdit, Image og) {
         if (toEdit.getFlag()) {
             WritableImage nextImage = new WritableImage((int) og.getWidth(), (int) og.getHeight());

@@ -1,11 +1,28 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Complex
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 import java.util.ArrayList;
 
+/**
+ * Complex class refers to the Complicated Wires module
+ */
 public class Complex extends Attribute {
     private static final String cut = " : Cut",
             dont = " : Don't cut";
+
+    /**
+     * solve() uses the given combinations of wire traits and solves them,
+     * returning whether to cut or not for each one.
+     *
+     * @param sample - Takes in the wire combinations
+     * @return - [Confirmation of the given wire] - [To cut or not to cut]
+     */
     public static String solve(String sample){
         String[] combos = sample.split(" ");
         StringBuilder builder = new StringBuilder();

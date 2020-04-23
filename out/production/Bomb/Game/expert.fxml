@@ -912,7 +912,7 @@
                               <Line endX="499.0" layoutX="101.0" layoutY="66.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0" />
                               <Line endX="499.0" layoutX="101.0" startX="-100.0" />
-                              <TextField fx:id="memLabel1" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                              <TextField fx:id="memLabel1" disable="true" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -927,7 +927,7 @@
                                     <Font size="18.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="memPos1" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                              <TextField fx:id="memPos1" disable="true" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -1012,7 +1012,7 @@
                                     <Font size="24.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets left="20.0" top="10.0" />
+                                    <Insets left="15.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
                               <TextField fx:id="morseLetters" editable="false">
@@ -1055,7 +1055,7 @@
                                           <Font size="24.0" />
                                        </font>
                                        <VBox.margin>
-                                          <Insets left="10.0" />
+                                          <Insets left="20.0" top="30.0" />
                                        </VBox.margin>
                                     </Label>
                                     <TextField fx:id="morseManual" onKeyTyped="#searchWord" promptText="Manual Input">
@@ -1063,7 +1063,7 @@
                                           <Font size="18.0" />
                                        </font>
                                        <VBox.margin>
-                                          <Insets left="20.0" right="20.0" top="30.0" />
+                                          <Insets left="20.0" right="20.0" top="15.0" />
                                        </VBox.margin>
                                     </TextField>
                                     <TextField fx:id="morseManOut" editable="false" promptText="Frequency">
@@ -1074,6 +1074,11 @@
                                           <Font size="18.0" />
                                        </font>
                                     </TextField>
+                                    <Label text="Just in case output isn't found">
+                                       <VBox.margin>
+                                          <Insets left="80.0" top="50.0" />
+                                       </VBox.margin>
+                                    </Label>
                                  </children>
                               </VBox>
                            </children>

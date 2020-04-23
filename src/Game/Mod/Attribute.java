@@ -1,5 +1,15 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Attribute
+ */
+
 package Game.Mod;
 
+/**
+ * Attribute class carries all the important widgets of the current bomb.
+ * This class is extended by the Module classes, and all bomb widgets are accessible by those classes.
+ */
 public class Attribute {
     protected static boolean hasVowel = false,
             lastDigitEven = false,

@@ -1,9 +1,25 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Simon Says
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 
+/**
+ * Simon class deals with the Simon Says module
+ */
 public class Simon extends Attribute {
 
+    /**
+     * next() interprets the next color flash and instructs what to press next.
+     *
+     * @param color - the current color flashing
+     * @param strikes - the number of strikes currently
+     * @return - the color to press next
+     */
     public static String next(SimonSays color, double strikes){
         if (hasVowel) {
             if (strikes == 0){
@@ -44,6 +60,13 @@ public class Simon extends Attribute {
         }
     }
 
+    /**
+     * newOrder() changes the order of the buttons to press on the module when a strike is added or subtracted
+     *
+     * @param oldOrder - the order of the colors that have flashed
+     * @param strikes - current number of strikes on the bomb
+     * @return - the new combination to press on the module
+     */
     public static String newOrder(String oldOrder, double strikes){
         StringBuilder next = new StringBuilder();
         for (char letter : oldOrder.toCharArray()){

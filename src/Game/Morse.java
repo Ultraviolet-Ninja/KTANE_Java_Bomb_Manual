@@ -1,11 +1,26 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Morse Code
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Morse class deals with the Morse Code module.
+ */
 public class Morse extends Attribute {
 
+    /**
+     * predict() predicts a word put into the manual input section of the Morse Code tab.
+     *
+     * @param in - the partial word
+     * @return - the full word if detected
+     */
     public static String predict(String in){
         return switch (in) {
             case "she", "shel" -> "shell";
@@ -27,6 +42,14 @@ public class Morse extends Attribute {
         };
     }
 
+    /**
+     * translate() turns the morse code letters into letters and possible words
+     * with that combination of characters.
+     *
+     * @param sample - the morse code letters
+     * @return - [0] - the resulting words found from those letters.
+     *           [1] - the letters that match their morse code counter parts.
+     */
     public static String[] translate(String sample){
         String[] out = new String[2];
         out[1] = transcode(sample.split(" "), Arrays.asList(MorseCodeLetter.values()));

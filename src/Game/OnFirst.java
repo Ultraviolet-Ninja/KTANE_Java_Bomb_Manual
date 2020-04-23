@@ -1,10 +1,25 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Who's On First
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 import javafx.scene.image.Image;
 
+/**
+ * OnFirst class refers to the Who's on First module.
+ */
 public class OnFirst extends Attribute {
 
+    /**
+     * findPanel() finds the correct panel for Step 1 of the module
+     *
+     * @param text - the partial word
+     * @return - the correct Step 1 Panel
+     */
     public static Image findPanel(String text){
         text = format(text);
         for (WhosOnFirstPictures pic : WhosOnFirstPictures.values()){
@@ -15,6 +30,12 @@ public class OnFirst extends Attribute {
         return null;
     }
 
+    /**
+     * retList() returns the list words associated with given keyword found by the Step 1 Panel
+     *
+     * @param keyword - the button based on the Step 1 panel
+     * @return - the word list associated with the keyword
+     */
     public static String[] retList(String keyword){
         keyword = format(keyword);
 
