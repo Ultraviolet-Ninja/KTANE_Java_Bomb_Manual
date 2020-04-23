@@ -111,7 +111,7 @@ enum Keypads implements Labeled, Flaggable {
     ALIEN_THREE("Alien 3", false), STAR("Star", false),
 
     RUSSIAN_SIX2("Russian 6", false), REVERSE_EURO2("Reverse Euro", false),
-    PUZZLE("Puzzle", false), AE("ae.PNG", false), PSI2("Psi", false),
+    PUZZLE("Puzzle", false), AE("ae", false), PSI2("Psi", false),
     RUSSIAN_NH("Russian NH", false), OMEGA("Omega", false);
 
     private final String imageLocation;
@@ -158,8 +158,8 @@ enum WhosOnFirstPictures implements Labeled{
     SAYS("Says"), NO("No"), NOTHING("Nothing"), EMPTY("Empty"),
     BLANK("Blank"), LED("Led"),LEAD("Lead"), READ("Read"),
     RED("Red"), REED("Reed"), LEED("Leed"), HOLDON("Hold On"),
-    YOU("You"), YOUARE("You Are.PNG"), YOUR("Your"), YOURE("You're"),
-    UR("ur.PNG"),THERE("There"), THEIR("Their"), THEYRE("They're"),
+    YOU("You"), YOUARE("You Are"), YOUR("Your"), YOURE("You're"),
+    UR("ur"),THERE("There"), THEIR("Their"), THEYRE("They're"),
     THEYARE("They Are"), SEE("See"),C("C"),CEE("Cee");
 
     private final String label;
