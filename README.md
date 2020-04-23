@@ -1,6 +1,6 @@
 # Bomb_Manual
  This is the Bomb Manual for Keep Talking and Nobody Explodes Vanilla (No Mods)
- The program is a variant of the original Bomb Manual (http://www.bombmanual.com/) that provides a quick way to solve each module. This project uses JDK 14 and language level 14 - Switch expressions
+ The program is a variant of the original Bomb Manual (http://www.bombmanual.com/) that provides a quick way to solve each module. This project uses JDK 14 and language level 14 - Switch expressions.
 
 ### Widgets Tab
 Tab displays options to toggle the important indicators "FRK" and "CAR", whether there's a parallel port on the bomb, a place to input the number of batteries, and whether the Serial Number contains a vowel and last digit odd number. The batteries TextField does not accept non-number values.
@@ -18,14 +18,13 @@ The tab contains a slider with the current number of wires and "piano keys" of e
 Tab contains a slider for the number of strikes earned during the current defuse and a panel for each color. The output displays the order of colors to press in response to the flashing sequence. Changing the number of strikes will have the sequence change to the correct order as well.
 
 ### Who's On First Tab
-Step 1 will find the correct panel based on what is typed. Step 2 will find the sequence of words that correspond to the typed word. Go through the words to find the one that the defuser has. Also a quick clear area for easy use
+Step 1 will find the correct panel based on what is typed. Step 2 will find the sequence of words that correspond to the typed word. Go through the words to find the one that the defuser has. Also, a quick clear area for easy use
 
 ### Memory Tab
-The top row takes in the given number on the indicator. Based on that number, a label will prompt what button to press next and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules. **Module takes in only number 1-4**
+The top row takes in the given number on the indicator. Based on that number, a label will prompt what button to press next, and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled, and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules. **Module takes in only number 1-4**
 
 ### Morse Code Tab
-Only reads dots, dashes and spaces in the input field (- and .) and outputs possible words in the TextArea.
-**[Module does not display correct results, needs further coding and testing]**
+Only reads dots(hyphens), dashes(periods) and spaces(spaces, duh) in the input field and outputs possible words in the TextArea.
 
 ### Complicated Wires Tab
 Input a letter sequence for each wire, and the output will display what that wire is and whether to cut it or not. Be sure to check the sides of the bomb for parallel port, batteries and the serial number.
@@ -34,7 +33,7 @@ Input a letter sequence for each wire, and the output will display what that wir
 - s - Wire has a star underneath
 - l - Wire has a lit LED
 - w - Only if the wire is completely bare (But we all know that you cut that wire)
-**Spaces are used to seperate wires**
+**Spaces are used to separate wires**
 
 ### Wires Sequences Tab
 Goes through the occurrences of red, blue and black wires to determine which to cut. No more remembering or covering the manual with your fingers.
@@ -47,3 +46,6 @@ Contains 5 input fields to take in the sets of letters in each row. Input the se
 
 ### Knobs Tab
 Displays the orientations for each knob from the original manual, nothing fancy.
+
+###Manual Tab
+Displays all the pages of the original manual. (cropped for space, sorry, a little unreadable)
