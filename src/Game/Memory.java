@@ -1,13 +1,30 @@
+/*
+ * Author: Ultraviolet-Ninja
+ * Project: Bomb Defusal Manual for Keep Talking and Nobody Explodes [Vanilla]
+ * Section: Memory
+ */
+
 package Game;
 
 import Game.Mod.Attribute;
 
+/**
+ * Memory class refers to the Memory module
+ */
 public class Memory extends Attribute {
     private static int[] positions = new int[4],
             labels = new int[4];
 
     private static final String pos = " position", lab = " Label";
 
+    /**
+     * setInstructions() communicates to the user what button to press next on the module
+     * based on the stage and number values of buttons pressed in previous stages.
+     *
+     * @param stage - the current stage of the module
+     * @param display - what the display reads on the current stage
+     * @return - the instructions to tell the user which button to press next
+     */
     public static String[] setInstruction(int stage, int display){
         String[] instructions = new String[2];
         switch (stage){
@@ -94,14 +111,29 @@ public class Memory extends Attribute {
         return instructions;
     }
 
+    /**
+     * setPosition() sets the position of a certain stage for future use.
+     *
+     * @param stage - the stage to set the position to
+     * @param pos - which position the
+     */
     public static void setPosition(int stage, int pos){
         positions[stage] = pos;
     }
 
+    /**
+     * setLabel() sets the label of a certain stage for future use.
+     *
+     * @param stage - the stage to set the label of
+     * @param label - the label on the button pressed
+     */
     public static void setLabel(int stage, int label){
         labels[stage] = label;
     }
 
+    /**
+     * clear() resets the arrays.
+     */
     public static void clear(){
         labels = new int[4];
         positions = new int[4];
