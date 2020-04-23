@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * Complex class refers to the Complicated Wires module
  */
 public class Complex extends Attribute {
-    private static final String cut = " Cut",
-            dont = " Don't cut";
+    private static final String cut = " - Cut",
+            dont = " - Don't cut";
 
     /**
      * solve() uses the given combinations of wire traits and solves them,
@@ -70,51 +70,58 @@ public class Complex extends Attribute {
                 if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.LIT)
                         && traits.contains(ComplexWires.RED)){//Red Blue LED
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                            + ComplexWires.LIT.getLabel() + (lastDigitEven?cut:dont) + " (Last Digit)";
+                            + ComplexWires.LIT.getLabel() + (lastDigitEven?cut:dont) + "        (Last Digit)";
                 } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.RED)
                         && traits.contains(ComplexWires.STAR)){//Red Blue Star
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel() + "/"
-                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont) + " (Parallel)";
+                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont) + "         (Parallel)";
                 } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.STAR)
                         && traits.contains(ComplexWires.LIT)){//Blue Star LED
                     script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont) + " (Parallel)";
+                            + ComplexWires.STAR.getLabel() + (hasParallel?cut:dont) + "        (Parallel)";
                 } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)
                         && traits.contains(ComplexWires.LIT)){//Red Star LED
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel() + "/"
-                            + ComplexWires.STAR.getLabel() + (numBatteries >= 2?cut:dont) + " (Batteries)";
+                            + ComplexWires.STAR.getLabel() + (numBatteries >= 2?cut:dont) + "        (Batteries)";
                 }
                 break;
             case 2:
                 if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)){//Red Star
-                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.STAR.getLabel() + " Guaranteed" + cut;
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.STAR.getLabel() + cut
+                            + "                            (100%)";
                 } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.BLUE)){//Red Blue
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel()
-                            + (lastDigitEven?cut:dont) + " (Last Digit)";
+                            + (lastDigitEven?cut:dont) + "             (Last Digit)";
                 } else if (traits.contains(ComplexWires.BLUE) && traits.contains(ComplexWires.LIT)){//Blue LED
                     script = ComplexWires.BLUE.getLabel() + "/" + ComplexWires.LIT.getLabel()
-                            + (hasParallel?cut:dont) + " (Parallel)";
+                            + (hasParallel?cut:dont) + "              (Parallel)";
                 } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.STAR)){//LED Star
                     script = ComplexWires.LIT.getLabel() + "/" + ComplexWires.STAR.getLabel()
-                            + (numBatteries >= 2?cut:dont) + " (Batteries)";
+                            + (numBatteries >= 2?cut:dont) + "              (Batteries)";
                 } else if (traits.contains(ComplexWires.STAR) && traits.contains(ComplexWires.BLUE)){//Blue Star
-                    script = ComplexWires.STAR.getLabel() + "/" + ComplexWires.BLUE.getLabel() + dont + " (like ever)";
+                    script = ComplexWires.STAR.getLabel() + "/" + ComplexWires.BLUE.getLabel() + dont
+                            + "             (like ever)";
                 } else if (traits.contains(ComplexWires.LIT) && traits.contains(ComplexWires.RED)){//Red LED
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.LIT.getLabel()
-                            + (numBatteries >= 2?cut:dont) + " (Batteries)";
+                            + (numBatteries >= 2?cut:dont) + "              (Batteries)";
                 }
                 break;
             default:
                 if (traits.contains(ComplexWires.BLANK)){//White
-                    script = ComplexWires.BLANK.getLabel() + " Guaranteed" + cut;
+                    script = ComplexWires.BLANK.getLabel() + cut
+                            + "                     (100%)";
                 } else if (traits.contains(ComplexWires.RED)){//Red
-                    script = ComplexWires.RED.getLabel() + (lastDigitEven?cut:dont) + " (Last Digit)";
+                    script = ComplexWires.RED.getLabel() + (lastDigitEven?cut:dont)
+                            + "                  (Last Digit)";
                 } else if (traits.contains(ComplexWires.BLUE)){//Blue
-                    script = ComplexWires.BLUE.getLabel() + (lastDigitEven?cut:dont) + " (Last Digit)";
+                    script = ComplexWires.BLUE.getLabel() + (lastDigitEven?cut:dont)
+                            + "                 (Last Digit)";
                 } else if (traits.contains(ComplexWires.STAR)){//Star
-                    script = ComplexWires.STAR.getLabel() + " Guaranteed" + cut;
+                    script = ComplexWires.STAR.getLabel() + cut
+                            + "                   (100%)";
                 } else if (traits.contains(ComplexWires.LIT)) {//LED
-                    script = ComplexWires.LIT.getLabel() + dont + " (like ever)";
+                    script = ComplexWires.LIT.getLabel() + dont
+                            + "                  (like ever)";
                 }
         }
 

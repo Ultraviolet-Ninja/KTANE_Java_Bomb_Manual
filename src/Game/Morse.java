@@ -23,8 +23,8 @@ public class Morse extends Attribute {
      */
     public static String predict(String in){
         return switch (in) {
-            case "she", "shel" -> "shell";
-            case "ha", "hal", "hall" -> "halls";
+            case "sh", "she", "shel" -> "shell";
+            case "h" ,"ha", "hal", "hall" -> "halls";
             case "sl", "sli", "slic" -> "slick";
             case "t", "tr", "tri", "tric" -> "trick";
             case "box", "boxe" -> "boxes";
@@ -32,12 +32,12 @@ public class Morse extends Attribute {
             case "str", "stro", "strob", "strb" -> "strobe";
             case "f", "fl", "fli", "flic" -> "flick";
             case "bom", "bomb" -> "bombs";
-            case "bre", "brea", "break" -> "breaks";
-            case "bri", "bric", "brick" -> "bricks";
+            case "bre", "brea", "break", "reak" -> "breaks";
+            case "bri", "bric", "brick", "icks" -> "bricks";
             case "ste", "stea" -> "steak";
             case "st", "sti", "stin" -> "sting";
             case "v", "ve", "vec", "vect", "vecto" -> "vector";
-            case "be", "bea", "beat" -> "beats";
+            case "be", "bea", "beat", "eats", "ats"-> "beats";
             default -> in;
         };
     }

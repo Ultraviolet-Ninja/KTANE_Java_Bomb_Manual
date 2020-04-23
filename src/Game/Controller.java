@@ -806,15 +806,20 @@ public class Controller {
 
         if (!input.isEmpty()) {
             StringBuilder builder = new StringBuilder();
-            String[] outputs = Morse.translate(input);
-            for (String words : outputs[0].split("/")) {
-                builder.append(words).append("\n");
+            String[] outputs = Morse.translate(input),
+                    results = outputs[0].split("/");
+            for (int i = 0; i < results.length; i++){
+                builder.append(results[i]);
+                if (i < results.length -1){
+                    builder.append("\n");
+                }
             }
             morseOutput.setText(builder.toString());
             morseLetters.setText(outputs[1]);
         } else {
             morseOutput.setText("");
             morseInput.setText(input);
+            morseLetters.setText("");
         }
     }
 
