@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * Complex class refers to the Complicated Wires module
  */
 public class Complex extends Attribute {
-    private static final String cut = " : Cut",
-            dont = " : Don't cut";
+    private static final String cut = " Cut",
+            dont = " Don't cut";
 
     /**
      * solve() uses the given combinations of wire traits and solves them,
@@ -24,14 +24,17 @@ public class Complex extends Attribute {
      * @return - [Confirmation of the given wire] - [To cut or not to cut]
      */
     public static String solve(String sample){
-        String[] combos = sample.split(" ");
-        StringBuilder builder = new StringBuilder();
+        if (!sample.isEmpty()) {
+            String[] combos = sample.split(" ");
+            StringBuilder builder = new StringBuilder();
 
-        for (String wire : combos){
-            builder.append(solve(translate(wire))).append("\n");
+            for (String wire : combos) {
+                builder.append(solve(translate(wire))).append("\n");
+            }
+
+            return builder.toString();
         }
-
-        return builder.toString();
+        return "";
     }
 
     private static ArrayList<ComplexWires> translate(String wire){
@@ -84,7 +87,7 @@ public class Complex extends Attribute {
                 break;
             case 2:
                 if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.STAR)){//Red Star
-                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.STAR.getLabel() + " Guaranteed " + cut;
+                    script = ComplexWires.RED.getLabel() + "/" + ComplexWires.STAR.getLabel() + " Guaranteed" + cut;
                 } else if (traits.contains(ComplexWires.RED) && traits.contains(ComplexWires.BLUE)){//Red Blue
                     script = ComplexWires.RED.getLabel() + "/" + ComplexWires.BLUE.getLabel()
                             + (lastDigitEven?cut:dont) + " (Last Digit)";
@@ -103,14 +106,14 @@ public class Complex extends Attribute {
                 break;
             default:
                 if (traits.contains(ComplexWires.BLANK)){//White
-                    script = ComplexWires.BLANK.getLabel() + " Guaranteed " + cut;
+                    script = ComplexWires.BLANK.getLabel() + " Guaranteed" + cut;
                 } else if (traits.contains(ComplexWires.RED)){//Red
                     script = ComplexWires.RED.getLabel() + (lastDigitEven?cut:dont) + " (Last Digit)";
                 } else if (traits.contains(ComplexWires.BLUE)){//Blue
                     script = ComplexWires.BLUE.getLabel() + (lastDigitEven?cut:dont) + " (Last Digit)";
                 } else if (traits.contains(ComplexWires.STAR)){//Star
-                    script = ComplexWires.STAR.getLabel() + " Guaranteed " + cut;
-                } else {//LED
+                    script = ComplexWires.STAR.getLabel() + " Guaranteed" + cut;
+                } else if (traits.contains(ComplexWires.LIT)) {//LED
                     script = ComplexWires.LIT.getLabel() + dont + " (like ever)";
                 }
         }

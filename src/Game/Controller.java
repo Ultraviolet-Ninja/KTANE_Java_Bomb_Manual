@@ -850,12 +850,18 @@ public class Controller {
     //Complex method
     @FXML
     private void solveCombos(){
-        complexOutput.setText(Complex.solve(ultimateFilter(complexInput.getText(), complicatedRegex)));
+        String sample = Complex.solve(ultimateFilter(complexInput.getText(), complicatedRegex));
+        if (!sample.isEmpty()) {
+            complexOutput.setText(sample);
+        } else {
+            complexOutput.setText("No wires = No problem");
+        }
     }
 
     @FXML
     private void quickClear(){
         complexInput.setText("");
+        complexOutput.setText("");
     }
 
     //Sequence methods

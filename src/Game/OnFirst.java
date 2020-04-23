@@ -73,7 +73,7 @@ public class OnFirst extends Attribute {
             case "yur", "yure", "youare", "you ", "you a", "you ar" -> "you are";
             case "q", "?", "wq", "whatq" -> "what?";
             case "tyre", "th're", "ty're", "t're", "thyr", "thyre", "theyr", "theyre" -> "they're";
-            case "tyare", "eyre", "eyare", "they ar", "they re", "they r", "theya", "theyar", "theyare" -> "they are";
+            case "tyare", "eyre", "eyare", "they ar", "they re", "they r", "theya", "theyar", "theyare", "thya", "thy" -> "they are";
             case "wht", "wh", "wnq" -> "what";
             case "ye", "es" -> "yes";
             case "yor", "our", "yr" -> "your";
