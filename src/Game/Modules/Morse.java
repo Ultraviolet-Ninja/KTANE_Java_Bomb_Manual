@@ -4,9 +4,10 @@
  * Section: Morse Code
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.MorseCodeFrequencies;
+import Game.Objects.MorseCodeLetter;
 import java.util.Arrays;
 import java.util.List;
 

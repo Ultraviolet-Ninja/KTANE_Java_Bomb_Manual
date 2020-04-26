@@ -4,9 +4,10 @@
  * Section: Who's On First
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.WhosOnFirstPictures;
+import Game.Objects.WhosOnFirstWords;
 import javafx.scene.image.Image;
 
 /**

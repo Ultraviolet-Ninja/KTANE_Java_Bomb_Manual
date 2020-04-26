@@ -4,9 +4,9 @@
  * Section: Button
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.TheButton;
 
 /**
  * Button class deals with a button module

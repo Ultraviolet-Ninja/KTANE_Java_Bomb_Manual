@@ -4,7 +4,7 @@
  * Section: Attribute
  */
 
-package Game.Mod;
+package Game.Modules;
 
 /**
  * Attribute class carries all the important widgets of the current bomb.

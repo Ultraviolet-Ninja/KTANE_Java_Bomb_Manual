@@ -4,9 +4,9 @@
  * Section: Simon Says
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.SimonSays;
 
 /**
  * Simon class deals with the Simon Says module

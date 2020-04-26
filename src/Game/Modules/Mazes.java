@@ -4,9 +4,11 @@
  * Section: Mazes
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.MazeBottom;
+import Game.Objects.MazeLetNum;
+import Game.Objects.MazeTop;
 import javafx.scene.image.Image;
 
 /**

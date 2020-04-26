@@ -4,9 +4,7 @@
  * Section: Memory
  */
 
-package Game;
-
-import Game.Mod.Attribute;
+package Game.Modules;
 
 /**
  * Memory class refers to the Memory module

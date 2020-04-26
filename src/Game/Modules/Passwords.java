@@ -4,9 +4,8 @@
  * Section: Password
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,7 +19,7 @@ public class Passwords extends Attribute {
             "could", "every", "first", "found", "great", "house", "large",
             "learn", "never", "other", "place", "plant", "point", "right",
             "small", "sound", "spell", "still", "study", "their", "there",
-            "these","thing", "think", "three", "water","where", "which",
+            "these","thing", "think", "three", "water", "where", "which",
             "world", "would", "write"};
 
     /**

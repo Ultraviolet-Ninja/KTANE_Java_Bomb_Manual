@@ -4,9 +4,9 @@
  * Section: Simple Wires
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.SimpleWires;
 import java.util.ArrayList;
 
 /**

@@ -4,15 +4,16 @@
  * Section: Wire Sequences
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.SequencedWires;
 import javafx.scene.image.Image;
 
 /**
  * Sequences class refers to the Wire Sequences module
  */
 public class Sequences extends Attribute {
+    private static final String stem = "file:src\\Occurrences\\";
     private static final String[] redOcc = {"C", "B", "A", "AC", "B", "AC", "All","AB", "B"},
             blueOcc = {"B", "AC", "B", "A", "B", "BC", "C", "AC","A"},
             blackOcc = {"All", "AC", "B", "AC", "B", "BC", "AB", "C", "C"};
@@ -44,13 +45,13 @@ public class Sequences extends Attribute {
     private static Image guessColor(SequencedWires currentWire){
         switch (currentWire) {
             case RED -> {
-                return new Image(currentWire.getLabel() + redOcc[currentWire.getIdx()] + ".PNG");
+                return new Image(stem + redOcc[currentWire.getIdx()] + ".PNG");
             }
             case BLUE -> {
-                return new Image(currentWire.getLabel() + blueOcc[currentWire.getIdx()] + ".PNG");
+                return new Image(stem + blueOcc[currentWire.getIdx()] + ".PNG");
             }
             default -> {
-                return new Image(currentWire.getLabel() + blackOcc[currentWire.getIdx()] + ".PNG");
+                return new Image(stem + blackOcc[currentWire.getIdx()] + ".PNG");
             }
         }
     }

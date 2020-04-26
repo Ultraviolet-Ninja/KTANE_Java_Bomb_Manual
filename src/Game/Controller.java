@@ -6,7 +6,8 @@
 
 package Game;
 
-import Game.Mod.Attribute;
+import Game.Modules.*;
+import Game.Objects.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -237,7 +238,7 @@ public class Controller {
         }
 
         if (traits[0] != null && traits[1] != null){
-            String goingIn = Game.Button.evaluate(traits);
+            String goingIn = Game.Modules.Button.evaluate(traits);
 
             isHold(goingIn);
             buttonLabel.setText(goingIn + " the Button");

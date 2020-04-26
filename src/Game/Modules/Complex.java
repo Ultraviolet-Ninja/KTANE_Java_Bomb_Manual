@@ -4,9 +4,9 @@
  * Section: Complex
  */
 
-package Game;
+package Game.Modules;
 
-import Game.Mod.Attribute;
+import Game.Objects.ComplexWires;
 import java.util.ArrayList;
 
 /**
