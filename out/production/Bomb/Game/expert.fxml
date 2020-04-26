@@ -8,1660 +8,1513 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
-  <tabs>
-    <Tab text="Widgets">
-        <content>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="695.0" prefWidth="888.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane prefHeight="609.0" prefWidth="438.0" GridPane.columnIndex="1">
-                           <children>
-                              <Label layoutX="16.0" layoutY="55.0" text="Parallel Port:">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font></Label>
-                              <ToggleButton fx:id="parallelPort" layoutX="134.0" layoutY="54.0" mnemonicParsing="false" onAction="#togglePort" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="None">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></ToggleButton>
-                              <ToggleButton fx:id="vowel" layoutX="142.0" layoutY="184.0" mnemonicParsing="false" onAction="#toggleVowel" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="No">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></ToggleButton>
-                              <ToggleButton fx:id="lastDigit" layoutX="150.0" layoutY="243.0" mnemonicParsing="false" onAction="#toggleDigit" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="Odd">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></ToggleButton>
-                              <Label layoutX="90.0" layoutY="125.0" text="Serial Code">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="41.0" layoutY="185.0" text="Vowel:">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="244.0" text="Last Number:">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Rectangle fx:id="initializer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="368.0" layoutX="-40.0" layoutY="-4.0" onMouseEntered="#initialize" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="165.0" />
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Label layoutX="61.0" layoutY="63.0" text="FRK">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="98.0" layoutY="14.0" text="Indicators">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="202.0" layoutY="63.0" text="CAR">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="car" layoutX="207.0" layoutY="100.0" prefHeight="20.0" prefWidth="35.0" textFill="BLUE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="frk" layoutX="63.0" layoutY="100.0" prefHeight="20.0" prefWidth="35.0" textFill="BLUE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Button layoutX="44.0" layoutY="133.0" mnemonicParsing="false" onAction="#toggleFRK" text="Toggle">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button layoutX="187.0" layoutY="133.0" mnemonicParsing="false" onAction="#toggleCAR" text="Toggle">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <TextField fx:id="batteries" layoutX="76.0" layoutY="252.0" onKeyTyped="#updateBatteries" onMouseClicked="#clearBatField" promptText="Number of Batteries" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-        </content>
-    </Tab>
-    <Tab text="Button">
-      <content>
-        <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="436.0" prefWidth="864.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <RadioButton fx:id="press" layoutX="120.0" layoutY="15.0" mnemonicParsing="false" onAction="#scanButtons" prefHeight="36.0" prefWidth="103.0" text="Press">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="hold" layoutX="120.0" layoutY="71.0" mnemonicParsing="false" onAction="#scanButtons" text="Hold">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="detonate" layoutX="353.0" layoutY="15.0" mnemonicParsing="false" onAction="#scanButtons" prefHeight="35.0" prefWidth="150.0" text="Detonate">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="abort" layoutX="353.0" layoutY="71.0" mnemonicParsing="false" onAction="#scanButtons" text="Abort">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <children>
-                              <RadioButton fx:id="buttonRed" layoutX="121.0" layoutY="14.0" mnemonicParsing="false" onAction="#scanButtons" text="Red" textFill="RED">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="buttonBlue" layoutX="346.0" layoutY="14.0" mnemonicParsing="false" onAction="#scanButtons" text="Blue" textFill="#1500ff">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="buttonYellow" layoutX="121.0" layoutY="76.0" mnemonicParsing="false" onAction="#scanButtons" text="Yellow" textFill="#c9cd59">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                              <RadioButton fx:id="buttonWhite" layoutX="346.0" layoutY="76.0" mnemonicParsing="false" onAction="#scanButtons" text="White">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </RadioButton>
-                           </children>
-                        </Pane>
-                        <Pane prefHeight="153.0" prefWidth="834.0" GridPane.rowIndex="2">
-                           <children>
-                              <Label fx:id="buttonLabel" layoutX="138.0" layoutY="27.0" prefHeight="35.0" prefWidth="180.0" textAlignment="CENTER">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="stripNumTop" layoutX="448.0" layoutY="27.0" opacity="0.0" prefHeight="17.0" prefWidth="124.0" text="1                        1">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></Label>
-                              <Label fx:id="stripNumBottom" layoutX="447.0" layoutY="83.0" opacity="0.0" prefHeight="17.0" prefWidth="127.0" text="4                         5">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></Label>
-                              <Rectangle fx:id="stripBlue" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="61.0" layoutX="415.0" layoutY="61.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
-                              <Rectangle fx:id="stripYellow" arcHeight="5.0" arcWidth="5.0" fill="#fff800" height="61.0" layoutX="511.0" layoutY="62.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
-                              <Rectangle fx:id="stripWhite" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="61.0" layoutX="511.0" layoutY="5.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
-                              <Rectangle fx:id="stripRed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="61.0" layoutX="415.0" layoutY="5.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
-                              <Label fx:id="cautionButton" layoutX="42.0" layoutY="95.0" text="Careful of Indicators" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-    </Tab>
-      <Tab text="Keypads">
-        <content>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="431.0" prefWidth="863.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <ImageView fx:id="emptyRacket1" fitHeight="53.0" fitWidth="177.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Empty Racket.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                           <children>
-                              <ImageView fx:id="backEuro1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Reverse Euro.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="aT" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/A_T.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="lambda1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Lambda.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="emptyRacket2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Empty Racket.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="backC2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/BackwardsC.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="disneyQ1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Disney Q.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="harryPotter" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Harry Potter.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="russianCat1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian Cat.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="hollowStar1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Hollow Star.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="curvyH1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Curvy H.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="backC1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/BackwardsC.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="spanish1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Spanish Question.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="curvyH2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Curvy H.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-                           <children>
-                              <ImageView fx:id="copyright" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Copyright.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="disneyQ2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Disney Q.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="leSac" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Sac.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="russianX1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian X.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="not3" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Not3.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="lambda2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Lambda.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="hollowStar2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Hollow Star.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
-                           <children>
-                              <ImageView fx:id="russianSix1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian 6.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox onMouseClicked="#keyPressed" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="paragraph1" fitHeight="53.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Paragraph.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="tB1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Tb.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="russianCat2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian Cat.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="paragraph2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Paragraph.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="tB2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Tb.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="cDot" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/C.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="russianX2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian X.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="spanish2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Spanish Question.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="smile1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Smily.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
-                           <children>
-                              <ImageView fx:id="psi1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Psi.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="smile2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Smily.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="star" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Star.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="shrek3" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Alien 3.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5">
-                           <children>
-                              <ImageView fx:id="russianSix2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian 6.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                           <children>
-                              <ImageView fx:id="backEuro2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Reverse Euro.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
-                           <children>
-                              <ImageView fx:id="puzzle" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Puzzle.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
-                           <children>
-                              <ImageView fx:id="aeyyLmao" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/ae.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
-                           <children>
-                              <ImageView fx:id="psi2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Psi.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
-                           <children>
-                              <ImageView fx:id="russianHN" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Russian NH.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="67.0" prefWidth="218.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
-                           <children>
-                              <ImageView fx:id="ohms" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Symbols/Omega.PNG" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-        </content>
-      </Tab>
-      <Tab text="Wires">
-         <content>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="461.0" prefWidth="690.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="465.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="135.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="283.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <HBox prefHeight="283.0" prefWidth="442.0">
-                           <children>
-                              <Rectangle fx:id="simpleWireRed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                              <Rectangle fx:id="simpleWireYellow" arcHeight="5.0" arcWidth="5.0" fill="#eeff00" height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                              <Rectangle fx:id="simpleWireBlue" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                              <Rectangle fx:id="simpleWireWhite" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                              <Rectangle fx:id="simpleWireBlack" arcHeight="5.0" arcWidth="5.0" height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                           </children>
-                        </HBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                           <children>
-                              <Label text="Wire Number">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="5.0" top="75.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Slider fx:id="wireCounter" majorTickUnit="1.0" max="6.0" min="3.0" minorTickCount="0" prefHeight="38.0" prefWidth="163.0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
-                              </Slider>
-                              <TextArea fx:id="wireConfirmation" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Confirmation" />
-                           </children>
-                        </VBox>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <children>
-                              <TextField fx:id="wireResponse" editable="false" layoutX="44.0" layoutY="19.0" prefHeight="42.0" prefWidth="236.0" promptText="Result">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="91.0" layoutX="282.0" onMouseEntered="#clearWires" opacity="0.22" stroke="BLACK" strokeType="INSIDE" width="183.0" />
-                              <Label layoutX="322.0" layoutY="34.0" text="Quick Clear Area">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <Label fx:id="cautionSimple" text="Careful of Serial Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-         </content>
-      </Tab>
-      <Tab text="Simon Says">
-         <content>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="411.0" prefWidth="610.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="236.0" layoutY="20.0" onKeyPressed="#bluePress" onMousePressed="#bluePress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff1f" height="90.0" layoutX="300.0" layoutY="84.0" onKeyPressed="#yellowPress" onMousePressed="#yellowPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff231f" height="90.0" layoutX="172.0" layoutY="84.0" onKeyPressed="#redPress" onMousePressed="#redPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0fa435" height="90.0" layoutX="236.0" layoutY="148.0" onKeyPressed="#greenPress" onMousePressed="#greenPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-                              <Slider fx:id="strikes" layoutX="447.0" layoutY="43.0" majorTickUnit="1.0" max="2.0" minorTickCount="0" onMouseReleased="#sliderMoved" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-                              <Label layoutX="446.0" layoutY="14.0" text="Number of Strikes" />
-                              <Label layoutX="498.0" layoutY="57.0" prefHeight="17.0" prefWidth="37.0" textAlignment="CENTER" />
-                              <Label fx:id="cautionSimon" layoutX="447.0" layoutY="239.0" text="Careful of Vowel">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                           <children>
-                              <TextField fx:id="simonResults" editable="false" prefHeight="35.0" prefWidth="600.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7d1fff" height="72.0" onMouseEntered="#clearOrder" opacity="0.27" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-         </content>
-      </Tab>
-      <Tab text="Who's on First">
-         <content>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="527.0" prefWidth="766.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <VBox prefHeight="388.0" prefWidth="252.0">
-                           <children>
-                              <Label text="Step 1">
-                                 <VBox.margin>
-                                    <Insets left="130.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="step1In" onKeyTyped="#findPanel" prefHeight="25.0" prefWidth="210.0" promptText="Search">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="25.0" />
-                                 </VBox.margin>
-                              </TextField>
-                              <ImageView fx:id="currentPanel" fitHeight="375.0" fitWidth="354.0" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets left="14.0" top="40.0" />
-                                 </VBox.margin>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                           <children>
-                              <TextField fx:id="step2In" layoutX="63.0" layoutY="52.0" onKeyTyped="#logWord" promptText="Search Word">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                              <Label layoutX="116.0" layoutY="1.0" text="Step 2 ">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="whosButtonTabForward" disable="true" layoutX="212.0" layoutY="174.0" mnemonicParsing="false" onAction="#tabThrough" text="&gt;">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="whosButtonTabBack" disable="true" layoutX="38.0" layoutY="174.0" mnemonicParsing="false" onAction="#tabThrough" text="&lt;">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Button>
-                              <TextField fx:id="step2Out" disable="true" editable="false" layoutX="75.0" layoutY="181.0" prefHeight="25.0" prefWidth="136.0" promptText="Results" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#686868" height="83.0" layoutX="-1.0" layoutY="308.0" onMouseEntered="#clearStreams" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="303.0" />
-                              <Label layoutX="113.0" layoutY="357.0" text="Quick Clear" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-         </content>
-      </Tab>
-      <Tab text="Memory">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="480.0" prefWidth="737.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-                           <children>
-                              <Button fx:id="memButton" mnemonicParsing="false" onAction="#clearMem" style="-fx-background-color: lightgray;" text="Reset">
-                                 <HBox.margin>
-                                    <Insets left="50.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Button>
-                              <Label fx:id="memInstructions">
-                                 <HBox.margin>
-                                    <Insets left="100.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="memStage1" layoutX="90.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="1st">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memStage2" disable="true" layoutX="194.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="2nd">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memStage3" disable="true" layoutX="300.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="3rd">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memStage4" disable="true" layoutX="398.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="4th">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memStage5" disable="true" layoutX="497.0" layoutY="29.0" onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="5th">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </TextField>
-                           </children></Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="Label">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="82.0" text="Pos">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Label>
-                              <Line endX="499.0" layoutX="101.0" layoutY="66.0" startX="-100.0" />
-                              <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0" />
-                              <Line endX="499.0" layoutX="101.0" startX="-100.0" />
-                              <TextField fx:id="memLabel1" disable="true" editable="false" layoutX="91.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memPos5" disable="true" editable="false" layoutX="500.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memLabel5" disable="true" editable="false" layoutX="500.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memPos1" disable="true" editable="false" layoutX="91.0" layoutY="76.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memPos2" disable="true" editable="false" layoutX="198.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memLabel2" disable="true" editable="false" layoutX="198.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memLabel4" disable="true" editable="false" layoutX="401.0" layoutY="12.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memPos4" disable="true" editable="false" layoutX="401.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memPos3" disable="true" editable="false" layoutX="300.0" layoutY="74.0" onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <TextField fx:id="memLabel3" disable="true" editable="false" layoutX="300.0" layoutY="14.0" onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </TextField>
-                              <Line endX="-100.0" endY="-114.5" layoutX="284.0" layoutY="115.0" startX="-100.0" startY="10.5" />
-                              <Line endX="-100.0" endY="-98.5" layoutX="388.0" layoutY="99.0" startX="-100.0" startY="26.5" />
-                              <Line endX="-100.0" endY="-108.5" layoutX="489.0" layoutY="109.0" startX="-100.0" startY="17.5" />
-                              <Line endX="-100.0" endY="-135.5" layoutX="589.0" layoutY="136.0" startX="-100.0" startY="-10.5" />
-                              <Line endX="-100.0" endY="-108.5" layoutX="704.0" layoutY="109.0" startX="-100.0" startY="16.5" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Morse Code">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="485.0" prefWidth="650.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="181.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="236.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Label text="Input Morse:">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="15.0" top="25.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <TextField fx:id="morseInput" onKeyTyped="#typeTrigger" promptText="Dots and Dashes">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></TextField>
-                              <Label text="Resulting Letters:">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="15.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <TextField fx:id="morseLetters" editable="false">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <GridPane prefHeight="325.0" prefWidth="664.0" GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="375.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="241.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label text="Result List:">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="15.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextArea fx:id="morseOutput" editable="false" onMouseClicked="#clearMorseFields" prefHeight="252.0" prefWidth="389.0" promptText="Output Signals">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </TextArea>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="311.0" prefWidth="259.0" GridPane.columnIndex="1">
-                                 <children>
-                                    <Label text="Manual Override:">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="20.0" top="30.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextField fx:id="morseManual" onKeyTyped="#searchWord" promptText="Manual Input">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="20.0" right="20.0" top="15.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                    <TextField fx:id="morseManOut" editable="false" promptText="Frequency">
-                                       <VBox.margin>
-                                          <Insets left="20.0" right="20.0" top="40.0" />
-                                       </VBox.margin>
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </TextField>
-                                    <Label text="Just in case output isn't found">
-                                       <VBox.margin>
-                                          <Insets left="80.0" top="50.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </GridPane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Comp Wires">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="507.0" prefWidth="691.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <HBox onMouseClicked="#quickClear" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <children>
-                              <TextArea fx:id="complexOutput" editable="false" prefHeight="185.0" prefWidth="303.0" promptText="Output Results">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="50.0" />
-                                 </HBox.margin>
-                              </TextArea>
-                              <Label fx:id="cautionComplex" prefHeight="55.0" prefWidth="238.0" text="Careful of Parallel, batteries and Serial No.">
-                                 <HBox.margin>
-                                    <Insets left="10.0" top="125.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="complexInput" prefHeight="30.0" prefWidth="385.0" promptText="Input Wires">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" top="75.0" />
-                                 </HBox.margin>
-                              </TextField>
-                              <Button mnemonicParsing="false" onAction="#solveCombos" text="Solve">
-                                 <HBox.margin>
-                                    <Insets left="25.0" top="75.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </HBox>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Wire Seq">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="665.0" prefWidth="850.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Label text="Red" textFill="RED">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="75.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Button fx:id="seqPrevRed" alignment="TOP_CENTER" disable="true" mnemonicParsing="false" onAction="#prevOcc" text="▲▲▲">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="50.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <ImageView fx:id="seqRed" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                                 <image>
-                                    <Image url="@../Occurrences/C.PNG" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="seqNextRed" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="20.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Label fx:id="seqLabelRed" text="1st" textFill="RED">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="85.0" />
-                                 </VBox.margin></Label>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                           <children>
-                              <Label text="Blue" textFill="BLUE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="75.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Button fx:id="seqPrevBlue" alignment="TOP_CENTER" disable="true" mnemonicParsing="false" onAction="#prevOcc" text="▲▲▲">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="50.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <ImageView fx:id="seqBlue" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                                 <image>
-                                    <Image url="@../Occurrences/B.PNG" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="seqNextBlue" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="20.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Label fx:id="seqLabelBlue" text="1st" textFill="BLUE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="85.0" />
-                                 </VBox.margin></Label>
-                              <Button mnemonicParsing="false" onAction="#resetSequence" text="Reset">
-                                 <VBox.margin>
-                                    <Insets left="68.0" top="20.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-                           <children>
-                              <Label text="Black">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="75.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Button fx:id="seqPrevBlack" alignment="TOP_CENTER" disable="true" mnemonicParsing="false" onAction="#prevOcc" text="▲▲▲">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="50.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <ImageView fx:id="seqBlack" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                                 <image>
-                                    <Image url="@../Occurrences/All.PNG" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="seqNextBlack" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="20.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Label fx:id="seqLabelBlack" text="1st">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="85.0" />
-                                 </VBox.margin></Label>
-                           </children>
-                        </VBox>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Mazes">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <BorderPane prefHeight="491.0" prefWidth="647.0">
-                     <center>
-                        <ImageView fx:id="currentMaze" fitHeight="349.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-                     </center>
-                     <left>
-                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <Label text="Notation">
-                                 <VBox.margin>
-                                    <Insets top="110.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <RadioButton fx:id="mazeTop" mnemonicParsing="false" selected="true" text="(1,1) Top">
-                                 <VBox.margin>
-                                    <Insets top="10.0" />
-                                 </VBox.margin></RadioButton>
-                              <RadioButton fx:id="mazeBottom" mnemonicParsing="false" text="(1,1) Bottom">
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin></RadioButton>
-                              <RadioButton fx:id="mazeLetNum" mnemonicParsing="false" text="Letter Number">
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin></RadioButton>
-                           </children></VBox>
-                     </left>
-                     <right>
-                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <TextField fx:id="mazeCoords" promptText="Find Dot">
-                                 <VBox.margin>
-                                    <Insets top="125.0" />
-                                 </VBox.margin></TextField>
-                              <Button mnemonicParsing="false" onAction="#findMaze" prefHeight="37.0" prefWidth="75.0" text="Select">
-                                 <VBox.margin>
-                                    <Insets left="15.0" top="30.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font></Button>
-                           </children></VBox>
-                     </right>
-                     <bottom>
-                        <HBox prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <Label text="Notes">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="360.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <TextField fx:id="mazeWhiteDot" onKeyTyped="#formatCoords" onMouseClicked="#clearCoords" prefHeight="25.0" prefWidth="68.0" promptText="White Dot">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </TextField>
-                              <TextField fx:id="mazeTarget" layoutX="10.0" layoutY="10.0" onKeyTyped="#formatCoords" onMouseClicked="#clearCoords" prefHeight="25.0" prefWidth="68.0" promptText="Target">
-                                 <HBox.margin>
-                                    <Insets left="35.0" />
-                                 </HBox.margin>
-                              </TextField>
-                           </children>
-                        </HBox>
-                     </bottom>
-                  </BorderPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Pass">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <GridPane prefHeight="508.0" prefWidth="897.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <GridPane>
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <Label prefHeight="53.0" prefWidth="91.0" text="First Set">
-                                       <VBox.margin>
-                                          <Insets left="40.0" />
-                                       </VBox.margin>
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="password1st" promptText="1st">
-                                       <VBox.margin>
-                                          <Insets top="45.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                                 <children>
-                                    <Label prefHeight="53.0" prefWidth="123.0" text="Second Set">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="25.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextField fx:id="password2nd" promptText="2nd">
-                                       <VBox.margin>
-                                          <Insets top="45.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-                                 <children>
-                                    <Label prefHeight="53.0" prefWidth="108.0" text="Third Set">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="30.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextField fx:id="password3rd" promptText="3rd">
-                                       <VBox.margin>
-                                          <Insets top="45.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
-                                 <children>
-                                    <Label prefHeight="53.0" prefWidth="96.0" text="Forth Set">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="30.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextField fx:id="password4th" promptText="4th">
-                                       <VBox.margin>
-                                          <Insets top="45.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
-                                 <children>
-                                    <Label prefHeight="54.0" prefWidth="87.0" text="Fifth Set">
-                                       <VBox.margin>
-                                          <Insets left="35.0" />
-                                       </VBox.margin>
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="password5th" promptText="5th">
-                                       <VBox.margin>
-                                          <Insets top="45.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </GridPane>
-                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button mnemonicParsing="false" onAction="#passwordSolve" prefHeight="39.0" prefWidth="81.0" text="Solve">
-                                 <HBox.margin>
-                                    <Insets left="100.0" top="75.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <textFill>
-                                    <RadialGradient centerX="0.5277777777777778" centerY="0.5142857142857142" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="1.0" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color green="0.01666666753590107" blue="1.0" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
-                              </Button>
-                              <TextArea fx:id="passwordResults" editable="false" prefHeight="185.0" prefWidth="345.0" promptText="Output">
-                                 <HBox.margin>
-                                    <Insets left="75.0" />
-                                 </HBox.margin>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                           <children>
-                              <Label layoutX="115.0" layoutY="15.0" text="Quickly Clear Text Areas" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="113.0" onMouseDragEntered="#clearFields" onMouseEntered="#clearFields" opacity="0.16" stroke="BLACK" strokeType="INSIDE" width="850.0" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children></GridPane>
-      </content>
-      </Tab>
-      <Tab text="Knobs">
-      <content>
-          <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-               </rowConstraints>
-               <children>
-                  <Pane prefHeight="520.0" prefWidth="766.0">
-                     <children>
-                        <Label layoutX="295.0" layoutY="28.0" text="Up">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Up1.PNG" />
-                           </image></ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Up2.PNG" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Left1.PNG" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Down1.PNG" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/RIght1.PNG" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="290.0" layoutY="130.0" text="Left">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="279.0" layoutY="216.0" text="Down">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="281.0" layoutY="308.0" text="Right">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Left2.PNG" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Down2.PNG" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Knobs/Right2.PNG" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-               </children></GridPane>
-      </content>
-      </Tab>
-     <Tab text="Manual">
-        <GridPane>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+         prefWidth="850.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
+   <Tab text="Widgets">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="695.0" prefWidth="888.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
             </columnConstraints>
             <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
             </rowConstraints>
-            <children>
-               <Pane prefHeight="601.0" prefWidth="906.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                  <children>
-                     <ImageView fx:id="manual" fitHeight="573.0" fitWidth="542.0" layoutX="204.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../Manual/Manual-1.png" />
-                        </image>
-                     </ImageView>
-                     <Rectangle fx:id="manualPrev" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="574.0" onMouseClicked="#tabManual" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="405.0" />
-                     <Rectangle fx:id="manualNext" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="574.0" layoutX="425.0" layoutY="-1.0" onMouseClicked="#tabManual" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
-                  </children>
-               </Pane>
-            </children></GridPane>
-     </Tab>
-  </tabs>
+            <Pane prefHeight="609.0" prefWidth="438.0" GridPane.columnIndex="1">
+               <Label layoutX="16.0" layoutY="55.0" text="Parallel Port:">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <ToggleButton fx:id="parallelPort" layoutX="134.0" layoutY="54.0" mnemonicParsing="false"
+                             onAction="#togglePort"
+                             style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="None">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </ToggleButton>
+               <ToggleButton fx:id="vowel" layoutX="142.0" layoutY="184.0" mnemonicParsing="false"
+                             onAction="#toggleVowel"
+                             style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="No">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </ToggleButton>
+               <ToggleButton fx:id="lastDigit" layoutX="150.0" layoutY="243.0" mnemonicParsing="false"
+                             onAction="#toggleDigit"
+                             style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="Odd">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </ToggleButton>
+               <Label layoutX="90.0" layoutY="125.0" text="Serial Code">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </Label>
+               <Label layoutX="41.0" layoutY="185.0" text="Vowel:">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <Label layoutX="14.0" layoutY="244.0" text="Last Number:">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <Rectangle fx:id="initializer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE"
+                          height="368.0" layoutX="-40.0" layoutY="-4.0" onMouseEntered="#initialize"
+                          opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="165.0"/>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <Label layoutX="61.0" layoutY="63.0" text="FRK">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <Label layoutX="98.0" layoutY="14.0" text="Indicators">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </Label>
+               <Label layoutX="202.0" layoutY="63.0" text="CAR">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <Label fx:id="car" layoutX="207.0" layoutY="100.0" prefHeight="20.0" prefWidth="35.0"
+                      textFill="BLUE">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+               <Label fx:id="frk" layoutX="63.0" layoutY="100.0" prefHeight="20.0" prefWidth="35.0"
+                      textFill="BLUE">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+               <Button layoutX="44.0" layoutY="133.0" mnemonicParsing="false" onAction="#toggleFRK"
+                       text="Toggle">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Button>
+               <Button layoutX="187.0" layoutY="133.0" mnemonicParsing="false" onAction="#toggleCAR"
+                       text="Toggle">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Button>
+               <TextField fx:id="batteries" layoutX="76.0" layoutY="252.0" onKeyTyped="#updateBatteries"
+                          onMouseClicked="#clearBatField" promptText="Number of Batteries"/>
+            </Pane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Button">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="436.0" prefWidth="864.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <RadioButton fx:id="press" layoutX="120.0" layoutY="15.0" mnemonicParsing="false"
+                            onAction="#scanButtons" prefHeight="36.0" prefWidth="103.0" text="Press">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="hold" layoutX="120.0" layoutY="71.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="Hold">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="detonate" layoutX="353.0" layoutY="15.0" mnemonicParsing="false"
+                            onAction="#scanButtons" prefHeight="35.0" prefWidth="150.0" text="Detonate">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="abort" layoutX="353.0" layoutY="71.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="Abort">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <RadioButton fx:id="buttonRed" layoutX="121.0" layoutY="14.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="Red" textFill="RED">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="buttonBlue" layoutX="346.0" layoutY="14.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="Blue" textFill="#1500ff">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="buttonYellow" layoutX="121.0" layoutY="76.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="Yellow" textFill="#c9cd59">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="buttonWhite" layoutX="346.0" layoutY="76.0" mnemonicParsing="false"
+                            onAction="#scanButtons" text="White">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </RadioButton>
+            </Pane>
+            <Pane prefHeight="153.0" prefWidth="834.0" GridPane.rowIndex="2">
+               <Label fx:id="buttonLabel" layoutX="138.0" layoutY="27.0" prefHeight="35.0" prefWidth="180.0"
+                      textAlignment="CENTER">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </Label>
+               <Label fx:id="stripNumTop" layoutX="448.0" layoutY="27.0" opacity="0.0" prefHeight="17.0"
+                      prefWidth="124.0" text="1                        1">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+               <Label fx:id="stripNumBottom" layoutX="447.0" layoutY="83.0" opacity="0.0" prefHeight="17.0"
+                      prefWidth="127.0" text="4                         5">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+               <Rectangle fx:id="stripBlue" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="61.0"
+                          layoutX="415.0" layoutY="61.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE"
+                          width="80.0"/>
+               <Rectangle fx:id="stripYellow" arcHeight="5.0" arcWidth="5.0" fill="#fff800" height="61.0"
+                          layoutX="511.0" layoutY="62.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE"
+                          width="80.0"/>
+               <Rectangle fx:id="stripWhite" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="61.0"
+                          layoutX="511.0" layoutY="5.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE"
+                          width="80.0"/>
+               <Rectangle fx:id="stripRed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="61.0"
+                          layoutX="415.0" layoutY="5.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE"
+                          width="80.0"/>
+               <Label fx:id="cautionButton" layoutX="42.0" layoutY="95.0" text="Careful of Indicators"/>
+            </Pane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Keypads">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="431.0" prefWidth="863.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <ImageView fx:id="emptyRacket1" fitHeight="53.0" fitWidth="177.0"
+                          onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Empty Racket.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <ImageView fx:id="backEuro1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Reverse Euro.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <ImageView fx:id="aT" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/A_T.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <ImageView fx:id="lambda1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Lambda.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <ImageView fx:id="emptyRacket2" fitHeight="53.0" fitWidth="100.0"
+                          onMouseClicked="#keyPressed" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Empty Racket.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <ImageView fx:id="backC2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/BackwardsC.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <ImageView fx:id="disneyQ1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Disney Q.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <ImageView fx:id="harryPotter" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Harry Potter.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+               <ImageView fx:id="russianCat1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian Cat.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <ImageView fx:id="hollowStar1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Hollow Star.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
+               <ImageView fx:id="curvyH1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Curvy H.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="6">
+               <ImageView fx:id="backC1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/BackwardsC.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <ImageView fx:id="spanish1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Spanish Question.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <ImageView fx:id="curvyH2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Curvy H.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <ImageView fx:id="copyright" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Copyright.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <ImageView fx:id="disneyQ2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Disney Q.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <ImageView fx:id="leSac" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Sac.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <ImageView fx:id="russianX1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian X.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <ImageView fx:id="not3" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Not3.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <ImageView fx:id="lambda2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Lambda.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <ImageView fx:id="hollowStar2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Hollow Star.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+               <ImageView fx:id="russianSix1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian 6.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox onMouseClicked="#keyPressed" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3"
+                  GridPane.rowIndex="1">
+               <ImageView fx:id="paragraph1" fitHeight="53.0" fitWidth="100.0" pickOnBounds="true"
+                          preserveRatio="true">
+                  <Image url="@../Symbols/Paragraph.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <ImageView fx:id="tB1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Tb.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <ImageView fx:id="russianCat2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian Cat.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <ImageView fx:id="paragraph2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Paragraph.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <ImageView fx:id="tB2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Tb.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <ImageView fx:id="cDot" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/C.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <ImageView fx:id="russianX2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian X.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <ImageView fx:id="spanish2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Spanish Question.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <ImageView fx:id="smile1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Smily.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
+               <ImageView fx:id="psi1" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Psi.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <ImageView fx:id="smile2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Smily.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <ImageView fx:id="star" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Star.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <ImageView fx:id="shrek3" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Alien 3.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5">
+               <ImageView fx:id="russianSix2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian 6.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <ImageView fx:id="backEuro2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Reverse Euro.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <ImageView fx:id="puzzle" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Puzzle.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <ImageView fx:id="aeyyLmao" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/ae.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <ImageView fx:id="psi2" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Psi.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <ImageView fx:id="russianHN" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Russian NH.PNG"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="67.0" prefWidth="218.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <ImageView fx:id="ohms" fitHeight="53.0" fitWidth="100.0" onMouseClicked="#keyPressed"
+                          pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Symbols/Omega.PNG"/>
+               </ImageView>
+            </VBox>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Wires">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="461.0" prefWidth="690.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="465.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="135.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="283.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <HBox prefHeight="283.0" prefWidth="442.0">
+               <Rectangle fx:id="simpleWireRed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="200.0"
+                          onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
+                  <HBox.margin>
+                     <Insets left="15.0" top="15.0"/>
+                  </HBox.margin>
+               </Rectangle>
+               <Rectangle fx:id="simpleWireYellow" arcHeight="5.0" arcWidth="5.0" fill="#eeff00"
+                          height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE"
+                          width="70.0">
+                  <HBox.margin>
+                     <Insets left="15.0" top="15.0"/>
+                  </HBox.margin>
+               </Rectangle>
+               <Rectangle fx:id="simpleWireBlue" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE"
+                          height="200.0" onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE"
+                          width="70.0">
+                  <HBox.margin>
+                     <Insets left="15.0" top="15.0"/>
+                  </HBox.margin>
+               </Rectangle>
+               <Rectangle fx:id="simpleWireWhite" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0"
+                          onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
+                  <HBox.margin>
+                     <Insets left="15.0" top="15.0"/>
+                  </HBox.margin>
+               </Rectangle>
+               <Rectangle fx:id="simpleWireBlack" arcHeight="5.0" arcWidth="5.0" height="200.0"
+                          onMouseClicked="#sWirePressed" stroke="BLACK" strokeType="INSIDE" width="70.0">
+                  <HBox.margin>
+                     <Insets left="15.0" top="15.0"/>
+                  </HBox.margin>
+               </Rectangle>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <Label text="Wire Number">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="5.0" top="75.0"/>
+                  </VBox.margin>
+               </Label>
+               <Slider fx:id="wireCounter" majorTickUnit="1.0" max="6.0" min="3.0" minorTickCount="0"
+                       prefHeight="38.0" prefWidth="163.0" showTickLabels="true" showTickMarks="true"
+                       snapToTicks="true">
+                  <VBox.margin>
+                     <Insets top="15.0"/>
+                  </VBox.margin>
+               </Slider>
+               <TextArea fx:id="wireConfirmation" editable="false" prefHeight="200.0" prefWidth="200.0"
+                         promptText="Confirmation"/>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <TextField fx:id="wireResponse" editable="false" layoutX="44.0" layoutY="19.0"
+                          prefHeight="42.0" prefWidth="236.0" promptText="Result">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="91.0" layoutX="282.0"
+                          onMouseEntered="#clearWires" opacity="0.22" stroke="BLACK" strokeType="INSIDE"
+                          width="183.0"/>
+               <Label layoutX="322.0" layoutY="34.0" text="Quick Clear Area">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+            </Pane>
+            <Label fx:id="cautionSimple" text="Careful of Serial Number" GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"/>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Simon Says">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="411.0" prefWidth="610.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="236.0"
+                          layoutY="20.0" onKeyPressed="#bluePress" onMousePressed="#bluePress" rotate="45.0"
+                          stroke="BLACK" strokeType="INSIDE" width="90.0"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff1f" height="90.0" layoutX="300.0"
+                          layoutY="84.0" onKeyPressed="#yellowPress" onMousePressed="#yellowPress"
+                          rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff231f" height="90.0" layoutX="172.0"
+                          layoutY="84.0" onKeyPressed="#redPress" onMousePressed="#redPress" rotate="45.0"
+                          stroke="BLACK" strokeType="INSIDE" width="90.0"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0fa435" height="90.0" layoutX="236.0"
+                          layoutY="148.0" onKeyPressed="#greenPress" onMousePressed="#greenPress"
+                          rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0"/>
+               <Slider fx:id="strikes" layoutX="447.0" layoutY="43.0" majorTickUnit="1.0" max="2.0"
+                       minorTickCount="0" onMouseReleased="#sliderMoved" showTickLabels="true"
+                       showTickMarks="true" snapToTicks="true"/>
+               <Label layoutX="446.0" layoutY="14.0" text="Number of Strikes"/>
+               <Label layoutX="498.0" layoutY="57.0" prefHeight="17.0" prefWidth="37.0"
+                      textAlignment="CENTER"/>
+               <Label fx:id="cautionSimon" layoutX="447.0" layoutY="239.0" text="Careful of Vowel">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Label>
+            </Pane>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <TextField fx:id="simonResults" editable="false" prefHeight="35.0" prefWidth="600.0"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7d1fff" height="72.0"
+                          onMouseEntered="#clearOrder" opacity="0.27" stroke="BLACK" strokeType="INSIDE"
+                          width="600.0"/>
+            </VBox>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Who's on First">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="527.0" prefWidth="766.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox prefHeight="388.0" prefWidth="252.0">
+               <Label text="Step 1">
+                  <VBox.margin>
+                     <Insets left="130.0"/>
+                  </VBox.margin>
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <TextField fx:id="step1In" onKeyTyped="#findPanel" prefHeight="25.0" prefWidth="210.0"
+                          promptText="Search">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets top="25.0"/>
+                  </VBox.margin>
+               </TextField>
+               <ImageView fx:id="currentPanel" fitHeight="375.0" fitWidth="354.0" pickOnBounds="true"
+                          preserveRatio="true">
+                  <VBox.margin>
+                     <Insets left="14.0" top="40.0"/>
+                  </VBox.margin>
+               </ImageView>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <TextField fx:id="step2In" layoutX="63.0" layoutY="52.0" onKeyTyped="#logWord"
+                          promptText="Search Word">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </TextField>
+               <Label layoutX="116.0" layoutY="1.0" text="Step 2 ">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Label>
+               <Button fx:id="whosButtonTabForward" disable="true" layoutX="212.0" layoutY="174.0"
+                       mnemonicParsing="false" onAction="#tabThrough" text="&gt;">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Button>
+               <Button fx:id="whosButtonTabBack" disable="true" layoutX="38.0" layoutY="174.0"
+                       mnemonicParsing="false" onAction="#tabThrough" text="&lt;">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Button>
+               <TextField fx:id="step2Out" disable="true" editable="false" layoutX="75.0" layoutY="181.0"
+                          prefHeight="25.0" prefWidth="136.0" promptText="Results"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#686868" height="83.0" layoutX="-1.0"
+                          layoutY="308.0" onMouseEntered="#clearStreams" opacity="0.13" stroke="BLACK"
+                          strokeType="INSIDE" width="303.0"/>
+               <Label layoutX="113.0" layoutY="357.0" text="Quick Clear"/>
+            </Pane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Memory">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="480.0" prefWidth="737.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <Button fx:id="memButton" mnemonicParsing="false" onAction="#clearMem"
+                       style="-fx-background-color: lightgray;" text="Reset">
+                  <HBox.margin>
+                     <Insets left="50.0"/>
+                  </HBox.margin>
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </Button>
+               <Label fx:id="memInstructions">
+                  <HBox.margin>
+                     <Insets left="100.0"/>
+                  </HBox.margin>
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </Label>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <TextField fx:id="memStage1" layoutX="90.0" layoutY="29.0" onKeyTyped="#displaySet"
+                          prefHeight="69.0" prefWidth="80.0" promptText="1st">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memStage2" disable="true" layoutX="194.0" layoutY="29.0"
+                          onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="2nd">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memStage3" disable="true" layoutX="300.0" layoutY="29.0"
+                          onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="3rd">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memStage4" disable="true" layoutX="398.0" layoutY="29.0"
+                          onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="4th">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memStage5" disable="true" layoutX="497.0" layoutY="29.0"
+                          onKeyTyped="#displaySet" prefHeight="69.0" prefWidth="80.0" promptText="5th">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+               </TextField>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <Label layoutX="14.0" layoutY="14.0" text="Label">
+                  <font>
+                     <Font size="22.0"/>
+                  </font>
+               </Label>
+               <Label layoutX="14.0" layoutY="82.0" text="Pos">
+                  <font>
+                     <Font size="22.0"/>
+                  </font>
+               </Label>
+               <Line endX="499.0" layoutX="101.0" layoutY="66.0" startX="-100.0"/>
+               <Line endX="499.0" layoutX="101.0" layoutY="126.0" startX="-100.0"/>
+               <Line endX="499.0" layoutX="101.0" startX="-100.0"/>
+               <TextField fx:id="memLabel1" disable="true" editable="false" layoutX="91.0" layoutY="14.0"
+                          onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memPos5" disable="true" editable="false" layoutX="500.0" layoutY="76.0"
+                          onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memLabel5" disable="true" editable="false" layoutX="500.0" layoutY="14.0"
+                          onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memPos1" disable="true" editable="false" layoutX="91.0" layoutY="76.0"
+                          onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memPos2" disable="true" editable="false" layoutX="198.0" layoutY="74.0"
+                          onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memLabel2" disable="true" editable="false" layoutX="198.0" layoutY="14.0"
+                          onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memLabel4" disable="true" editable="false" layoutX="401.0" layoutY="12.0"
+                          onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memPos4" disable="true" editable="false" layoutX="401.0" layoutY="74.0"
+                          onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memPos3" disable="true" editable="false" layoutX="300.0" layoutY="74.0"
+                          onKeyTyped="#positionSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <TextField fx:id="memLabel3" disable="true" editable="false" layoutX="300.0" layoutY="14.0"
+                          onKeyTyped="#labelSet" prefHeight="45.0" prefWidth="77.0">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <Line endX="-100.0" endY="-114.5" layoutX="284.0" layoutY="115.0" startX="-100.0"
+                     startY="10.5"/>
+               <Line endX="-100.0" endY="-98.5" layoutX="388.0" layoutY="99.0" startX="-100.0"
+                     startY="26.5"/>
+               <Line endX="-100.0" endY="-108.5" layoutX="489.0" layoutY="109.0" startX="-100.0"
+                     startY="17.5"/>
+               <Line endX="-100.0" endY="-135.5" layoutX="589.0" layoutY="136.0" startX="-100.0"
+                     startY="-10.5"/>
+               <Line endX="-100.0" endY="-108.5" layoutX="704.0" layoutY="109.0" startX="-100.0"
+                     startY="16.5"/>
+            </Pane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Morse Code">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="485.0" prefWidth="650.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="181.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="236.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <Label text="Input Morse:">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="15.0" top="25.0"/>
+                  </VBox.margin>
+               </Label>
+               <TextField fx:id="morseInput" onKeyTyped="#typeTrigger" promptText="Dots and Dashes">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </TextField>
+               <Label text="Resulting Letters:">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="15.0" top="10.0"/>
+                  </VBox.margin>
+               </Label>
+               <TextField fx:id="morseLetters" editable="false">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </TextField>
+            </VBox>
+            <GridPane prefHeight="325.0" prefWidth="664.0" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="375.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="241.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+               </rowConstraints>
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                  <Label text="Result List:">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="morseOutput" editable="false" onMouseClicked="#clearMorseFields"
+                            prefHeight="252.0" prefWidth="389.0" promptText="Output Signals">
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                  </TextArea>
+               </VBox>
+               <VBox prefHeight="311.0" prefWidth="259.0" GridPane.columnIndex="1">
+                  <Label text="Manual Override:">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="morseManual" onKeyTyped="#searchWord" promptText="Manual Input">
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="15.0"/>
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="morseManOut" editable="false" promptText="Frequency">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="40.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                  </TextField>
+                  <Label text="Just in case output isn't found">
+                     <VBox.margin>
+                        <Insets left="80.0" top="50.0"/>
+                     </VBox.margin>
+                  </Label>
+               </VBox>
+            </GridPane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Comp Wires">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="507.0" prefWidth="691.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <HBox onMouseClicked="#quickClear" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <TextArea fx:id="complexOutput" editable="false" prefHeight="185.0" prefWidth="303.0"
+                         promptText="Output Results">
+                  <font>
+                     <Font size="16.0"/>
+                  </font>
+                  <HBox.margin>
+                     <Insets left="50.0"/>
+                  </HBox.margin>
+               </TextArea>
+               <Label fx:id="cautionComplex" prefHeight="55.0" prefWidth="238.0"
+                      text="Careful of Parallel, batteries and Serial No.">
+                  <HBox.margin>
+                     <Insets left="10.0" top="125.0"/>
+                  </HBox.margin>
+               </Label>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <TextField fx:id="complexInput" prefHeight="30.0" prefWidth="385.0" promptText="Input Wires">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+                  <HBox.margin>
+                     <Insets left="25.0" top="75.0"/>
+                  </HBox.margin>
+               </TextField>
+               <Button mnemonicParsing="false" onAction="#solveCombos" text="Solve">
+                  <HBox.margin>
+                     <Insets left="25.0" top="75.0"/>
+                  </HBox.margin>
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Button>
+            </HBox>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Wire Seq">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="665.0" prefWidth="850.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <Label text="Red" textFill="RED">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="75.0"/>
+                  </VBox.margin>
+               </Label>
+               <Button fx:id="seqPrevRed" alignment="TOP_CENTER" disable="true" mnemonicParsing="false"
+                       onAction="#prevOcc" text="▲▲▲">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="50.0"/>
+                  </VBox.margin>
+               </Button>
+               <ImageView fx:id="seqRed" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
+                          preserveRatio="true">
+                  <VBox.margin>
+                     <Insets top="20.0"/>
+                  </VBox.margin>
+                  <Image url="@../Occurrences/C.PNG"/>
+               </ImageView>
+               <Button fx:id="seqNextRed" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="20.0"/>
+                  </VBox.margin>
+               </Button>
+               <Label fx:id="seqLabelRed" text="1st" textFill="RED">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="85.0"/>
+                  </VBox.margin>
+               </Label>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <Label text="Blue" textFill="BLUE">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="75.0"/>
+                  </VBox.margin>
+               </Label>
+               <Button fx:id="seqPrevBlue" alignment="TOP_CENTER" disable="true" mnemonicParsing="false"
+                       onAction="#prevOcc" text="▲▲▲">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="50.0"/>
+                  </VBox.margin>
+               </Button>
+               <ImageView fx:id="seqBlue" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
+                          preserveRatio="true">
+                  <VBox.margin>
+                     <Insets top="20.0"/>
+                  </VBox.margin>
+                  <Image url="@../Occurrences/B.PNG"/>
+               </ImageView>
+               <Button fx:id="seqNextBlue" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="20.0"/>
+                  </VBox.margin>
+               </Button>
+               <Label fx:id="seqLabelBlue" text="1st" textFill="BLUE">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="85.0"/>
+                  </VBox.margin>
+               </Label>
+               <Button mnemonicParsing="false" onAction="#resetSequence" text="Reset">
+                  <VBox.margin>
+                     <Insets left="68.0" top="20.0"/>
+                  </VBox.margin>
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+               </Button>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <Label text="Black">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="75.0"/>
+                  </VBox.margin>
+               </Label>
+               <Button fx:id="seqPrevBlack" alignment="TOP_CENTER" disable="true" mnemonicParsing="false"
+                       onAction="#prevOcc" text="▲▲▲">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="50.0"/>
+                  </VBox.margin>
+               </Button>
+               <ImageView fx:id="seqBlack" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
+                          preserveRatio="true">
+                  <VBox.margin>
+                     <Insets top="20.0"/>
+                  </VBox.margin>
+                  <Image url="@../Occurrences/All.PNG"/>
+               </ImageView>
+               <Button fx:id="seqNextBlack" mnemonicParsing="false" onAction="#nextOcc" text="▼▼▼">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="60.0" top="20.0"/>
+                  </VBox.margin>
+               </Button>
+               <Label fx:id="seqLabelBlack" text="1st">
+                  <font>
+                     <Font size="14.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets left="85.0"/>
+                  </VBox.margin>
+               </Label>
+            </VBox>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Mazes">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <BorderPane prefHeight="491.0" prefWidth="647.0">
+            <center>
+               <ImageView fx:id="currentMaze" fitHeight="349.0" fitWidth="340.0" pickOnBounds="true"
+                          preserveRatio="true" BorderPane.alignment="CENTER"/>
+            </center>
+            <left>
+               <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                  <Label text="Notation">
+                     <VBox.margin>
+                        <Insets top="110.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="mazeTop" mnemonicParsing="false" selected="true" text="(1,1) Top">
+                     <VBox.margin>
+                        <Insets top="10.0"/>
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="mazeBottom" mnemonicParsing="false" text="(1,1) Bottom">
+                     <VBox.margin>
+                        <Insets top="15.0"/>
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="mazeLetNum" mnemonicParsing="false" text="Letter Number">
+                     <VBox.margin>
+                        <Insets top="15.0"/>
+                     </VBox.margin>
+                  </RadioButton>
+               </VBox>
+            </left>
+            <right>
+               <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                  <TextField fx:id="mazeCoords" promptText="Find Dot">
+                     <VBox.margin>
+                        <Insets top="125.0"/>
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#findMaze" prefHeight="37.0" prefWidth="75.0"
+                          text="Select">
+                     <VBox.margin>
+                        <Insets left="15.0" top="30.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                  </Button>
+               </VBox>
+            </right>
+            <bottom>
+               <HBox prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                  <Label text="Notes">
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                     <HBox.margin>
+                        <Insets left="360.0"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="mazeWhiteDot" onKeyTyped="#formatCoords" onMouseClicked="#clearCoords"
+                             prefHeight="25.0" prefWidth="68.0" promptText="White Dot">
+                     <HBox.margin>
+                        <Insets left="10.0"/>
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="mazeTarget" layoutX="10.0" layoutY="10.0" onKeyTyped="#formatCoords"
+                             onMouseClicked="#clearCoords" prefHeight="25.0" prefWidth="68.0"
+                             promptText="Target">
+                     <HBox.margin>
+                        <Insets left="35.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </HBox>
+            </bottom>
+         </BorderPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Pass">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <GridPane prefHeight="508.0" prefWidth="897.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               </rowConstraints>
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                  <Label prefHeight="53.0" prefWidth="91.0" text="First Set">
+                     <VBox.margin>
+                        <Insets left="40.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="password1st" promptText="1st">
+                     <VBox.margin>
+                        <Insets top="45.0"/>
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                  <Label prefHeight="53.0" prefWidth="123.0" text="Second Set">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="password2nd" promptText="2nd">
+                     <VBox.margin>
+                        <Insets top="45.0"/>
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                  <Label prefHeight="53.0" prefWidth="108.0" text="Third Set">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="password3rd" promptText="3rd">
+                     <VBox.margin>
+                        <Insets top="45.0"/>
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                  <Label prefHeight="53.0" prefWidth="96.0" text="Forth Set">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="password4th" promptText="4th">
+                     <VBox.margin>
+                        <Insets top="45.0"/>
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
+                  <Label prefHeight="54.0" prefWidth="87.0" text="Fifth Set">
+                     <VBox.margin>
+                        <Insets left="35.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="password5th" promptText="5th">
+                     <VBox.margin>
+                        <Insets top="45.0"/>
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+            </GridPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <Button mnemonicParsing="false" onAction="#passwordSolve" prefHeight="39.0" prefWidth="81.0"
+                       text="Solve">
+                  <HBox.margin>
+                     <Insets left="100.0" top="75.0"/>
+                  </HBox.margin>
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+                  <textFill>
+                     <RadialGradient centerX="0.5277777777777778" centerY="0.5142857142857142" radius="0.5">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="1.0"/>
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color green="0.01666666753590107" blue="1.0"/>
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </textFill>
+               </Button>
+               <TextArea fx:id="passwordResults" editable="false" prefHeight="185.0" prefWidth="345.0"
+                         promptText="Output">
+                  <HBox.margin>
+                     <Insets left="75.0"/>
+                  </HBox.margin>
+               </TextArea>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <Label layoutX="115.0" layoutY="15.0" text="Quickly Clear Text Areas"/>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="113.0"
+                          onMouseDragEntered="#clearFields" onMouseEntered="#clearFields" opacity="0.16"
+                          stroke="BLACK" strokeType="INSIDE" width="850.0"/>
+            </Pane>
+         </GridPane>
+      </GridPane>
+   </Tab>
+   <Tab text="Knobs">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+         </rowConstraints>
+         <Pane prefHeight="520.0" prefWidth="766.0">
+            <Label layoutX="295.0" layoutY="28.0" text="Up">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="14.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Up1.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="13.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Up2.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="116.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Left1.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="202.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Down1.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutY="293.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Right1.PNG"/>
+            </ImageView>
+            <Label layoutX="290.0" layoutY="130.0" text="Left">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="216.0" text="Down">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="308.0" text="Right">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="115.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Left2.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="201.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Down2.PNG"/>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="269.0" layoutX="350.0" layoutY="293.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../Knobs/Right2.PNG"/>
+            </ImageView>
+         </Pane>
+      </GridPane>
+   </Tab>
+   <Tab text="Manual">
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+         </rowConstraints>
+         <Pane prefHeight="601.0" prefWidth="906.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <ImageView fx:id="manual" fitHeight="573.0" fitWidth="542.0" layoutX="204.0" layoutY="-1.0"
+                       pickOnBounds="true" preserveRatio="true">
+               <Image url="@../Manual/Manual-1.png"/>
+            </ImageView>
+            <Rectangle fx:id="manualPrev" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="574.0"
+                       onMouseClicked="#tabManual" opacity="0.0" stroke="BLACK" strokeType="INSIDE"
+                       width="405.0"/>
+            <Rectangle fx:id="manualNext" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="574.0"
+                       layoutX="425.0" layoutY="-1.0" onMouseClicked="#tabManual" opacity="0.0" stroke="BLACK"
+                       strokeType="INSIDE" width="433.0"/>
+         </Pane>
+      </GridPane>
+   </Tab>
 </TabPane>
