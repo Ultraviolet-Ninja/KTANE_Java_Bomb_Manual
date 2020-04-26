@@ -1,6 +1,9 @@
 # Bomb_Manual
  This is the Bomb Manual for Keep Talking and Nobody Explodes Vanilla (No Mods)
  The program is a variant of the original Bomb Manual (http://www.bombmanual.com/) that provides a quick way to solve each module. This project uses JDK 14 and language level 14 - Switch expressions.
+ 
+ ## ***Disclaimer***
+ ***I understand that creating a program that solves modules near instantly can diminish the feel of the game on the side of the expert. I took on this project to show myself how much I understood the game and its Vanilla modules as well as refining my skills with Java. I won't stop anyone from using this, but please understand what you're doing by using this "manual", thanks!***
 
 ### Widgets Tab
 Tab displays options to toggle the important indicators "FRK" and "CAR", whether there's a parallel port on the bomb, a place to input the number of batteries, and whether the Serial Number contains a vowel and last digit odd number. The batteries TextField does not accept non-number values.
