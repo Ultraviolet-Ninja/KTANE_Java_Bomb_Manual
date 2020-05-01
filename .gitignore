@@ -1,2 +1,4 @@
 out/artifacts
 src/META-INF
+.idea/
+Bomb.iml

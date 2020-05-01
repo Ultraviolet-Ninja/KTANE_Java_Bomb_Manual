@@ -73,7 +73,7 @@ public class Controller {
             mazeTop, mazeBottom, mazeLetNum;
 
     @FXML
-    private Rectangle initializer,
+    private Rectangle
             stripRed, stripYellow, stripBlue, stripWhite,
             simpleWireRed, simpleWireYellow, simpleWireBlack, simpleWireBlue, simpleWireWhite,
             manualPrev, manualNext;
@@ -104,6 +104,26 @@ public class Controller {
     @FXML
     private ToggleButton vowel, parallelPort, lastDigit;
 
+    public void initialize(){
+        for (int idx = 0; idx < 3; idx++){
+            allGroups.add(new ToggleGroup());
+        }
+
+        buttonBlue.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
+        buttonRed.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
+        buttonWhite.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
+        buttonYellow.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
+        abort.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
+        press.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
+        hold.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
+        detonate.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
+        mazeTop.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
+        mazeBottom.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
+        mazeLetNum.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
+
+        traits[0] = null;
+        traits[1] = null;
+    }
     //Traits methods
     @FXML
     private void toggleVowel(){
@@ -188,30 +208,6 @@ public class Controller {
     @FXML
     private void clearBatField(){
         batteries.setText("");
-    }
-
-    @FXML
-    private void initialize(){
-        for (int idx = 0; idx < 3; idx++){
-            allGroups.add(new ToggleGroup());
-        }
-
-        buttonBlue.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
-        buttonRed.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
-        buttonWhite.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
-        buttonYellow.setToggleGroup(allGroups.get(RadioGroup.BUTTON_COLOR.getIdx()));
-        abort.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
-        press.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
-        hold.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
-        detonate.setToggleGroup(allGroups.get(RadioGroup.BUTTON_LABEL.getIdx()));
-        mazeTop.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
-        mazeBottom.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
-        mazeLetNum.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
-
-        traits[0] = null;
-        traits[1] = null;
-
-        initializer.setDisable(true);
     }
 
     //Button method
