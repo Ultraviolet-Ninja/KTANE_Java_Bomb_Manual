@@ -57,7 +57,7 @@ public class Passwords extends Attribute {
                 }
             }
         } else {
-            solutions.append("You realize I need inputs to work, right?");
+            return "You realize I need inputs to work, right?";
         }
         return solutions.toString();
     }
