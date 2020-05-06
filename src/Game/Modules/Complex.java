@@ -14,7 +14,8 @@ import java.util.ArrayList;
  */
 public class Complex extends Attribute {
     private static final String cut = " - Cut",
-            dont = " - Don't cut";
+            dont = " - Don't cut",
+            allScript = "rbls rsl rbl bls rbs rs rl rb bl bs sl s l r b w";
 
     /**
      * solve() uses the given combinations of wire traits and solves them,
@@ -24,9 +25,14 @@ public class Complex extends Attribute {
      * @return - [Confirmation of the given wire] - [To cut or not to cut]
      */
     public static String solve(String sample){
-        if (!sample.isEmpty()) {
+        StringBuilder builder = new StringBuilder();
+        if (sample.contains("all")){
+            for (String wire : allScript.split(" ")) {
+                builder.append(solve(translate(wire))).append("\n");
+            }
+            return builder.toString();
+        } else if (!sample.isEmpty()) {
             String[] combos = sample.split(" ");
-            StringBuilder builder = new StringBuilder();
 
             for (String wire : combos) {
                 builder.append(solve(translate(wire))).append("\n");

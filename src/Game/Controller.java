@@ -36,7 +36,7 @@ public class Controller {
     private int step2Iterator = 0, memStage = 1, manualPage = 1;
     private StringBuilder simonColors = new StringBuilder();
     private String[] whosCurrentList;
-    private final String[] complicatedRegex = {"r", "w", "b", "s", "l", " "},
+    private final String[] complicatedRegex = {"r", "w", "b", "s", "l", "a", " "},
             lowercaseRegex = {"a","b","c","d","e","f","g","h","i","j","k","l",
             "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
     private final TheButton[] traits = new TheButton[2];
@@ -849,7 +849,7 @@ public class Controller {
         morseLetters.setText("");
     }
 
-    //Complex method
+    //Complex methods
     @FXML
     private void solveCombos(){
         String sample = Complex.solve(ultimateFilter(complexInput.getText(), complicatedRegex));
