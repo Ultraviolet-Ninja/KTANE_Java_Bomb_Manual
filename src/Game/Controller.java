@@ -280,7 +280,7 @@ public class Controller {
         }
         wireConfirmation.setText(builder.toString());
 
-        if (wireList.size() == wireCounter.getValue()){
+        if (wireList.size() >= wireCounter.getValue()){
             wireResponse.setText(Simple.conditions(wireList));
             wireList.clear();
         } else {
