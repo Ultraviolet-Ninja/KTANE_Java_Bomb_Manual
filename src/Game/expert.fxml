@@ -33,17 +33,17 @@
                      <Font size="18.0" />
                   </font>
                </Label>
-               <ToggleButton fx:id="parallelPort" layoutX="134.0" layoutY="54.0" mnemonicParsing="false" onAction="#togglePort" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="None">
+               <ToggleButton fx:id="parallelPort" layoutX="134.0" layoutY="54.0" mnemonicParsing="false" onAction="#togglePort" style="-fx-base: crimson; -fx-text-fill: seashell;" text="None">
                   <font>
                      <Font size="14.0" />
                   </font>
                </ToggleButton>
-               <ToggleButton fx:id="vowel" layoutX="142.0" layoutY="184.0" mnemonicParsing="false" onAction="#toggleVowel" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="No">
+               <ToggleButton fx:id="vowel" layoutX="142.0" layoutY="184.0" mnemonicParsing="false" onAction="#toggleVowel" style="-fx-base: crimson; -fx-text-fill: seashell;" text="No">
                   <font>
                      <Font size="14.0" />
                   </font>
                </ToggleButton>
-               <ToggleButton fx:id="lastDigit" layoutX="150.0" layoutY="243.0" mnemonicParsing="false" onAction="#toggleDigit" style="-fx-background-color: crimson; -fx-text-fill: seashell;" text="Odd">
+               <ToggleButton fx:id="lastDigit" layoutX="150.0" layoutY="243.0" mnemonicParsing="false" onAction="#toggleDigit" style="-fx-base: crimson; -fx-text-fill: seashell;" text="Odd">
                   <font>
                      <Font size="14.0" />
                   </font>
