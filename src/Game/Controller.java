@@ -57,7 +57,7 @@ public class Controller {
             backEuro1, emptyRacket2, backC2, disneyQ1, hollowStar1, curvyH2, spanish1,
             copyright, leSac, disneyQ2, russianX1, not3, lambda2, hollowStar2,
             russianSix1, paragraph1, tB1, russianCat2, russianX2, spanish2, smile1,
-            psi1, smile2,tB2, cDot, paragraph2, shrek3, star,
+            psi1, smile2, tB2, cDot, paragraph2, shrek3, star,
             russianSix2, backEuro2, puzzle, aeyyLmao, psi2, russianHN, ohms,
             currentPanel,
             seqRed, seqBlue, seqBlack,
@@ -167,29 +167,30 @@ public class Controller {
 
     @FXML
     private void toggleCAR(){
-        //TODO - Redo functionality
         if(!tempCar){
             Attribute.setCAR(YES);
             tempCar = YES;
-            carCircle.setStyle("-fx-background-color: white");
+            carCircle.setStyle("-fx-fill: white");
             cautionButton.setOpacity(0);
         } else {
-            tempCar = NO;
             Attribute.setCAR(NO);
-            carCircle.setStyle("-fx-background-color: #323232");
+            tempCar = NO;
+            carCircle.setStyle("-fx-fill: linear-gradient(to bottom right, #aeaeae, #2c2c2c 30%)");
         }
     }
 
     @FXML
     private void toggleFRK(){
-        //TODO - Redo functionality
-//        if(){
-//
-//            Attribute.setFRK(YES);
-//            cautionButton.setOpacity(0);
-//        } else {
-//            Attribute.setFRK(NO);
-//        }
+        if(!tempFrk){
+            tempFrk = YES;
+            Attribute.setFRK(YES);
+            cautionButton.setOpacity(0);
+            frkCircle.setStyle("-fx-fill: white");
+        } else {
+            tempFrk = NO;
+            Attribute.setFRK(NO);
+            frkCircle.setStyle("-fx-fill: linear-gradient(to bottom right, #aeaeae, #2c2c2c 28%)");
+        }
     }
 
     @FXML

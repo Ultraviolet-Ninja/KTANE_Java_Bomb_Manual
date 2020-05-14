@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
@@ -47,7 +48,7 @@
                      <Font size="14.0" />
                   </font>
                </ToggleButton>
-               <Label layoutX="90.0" layoutY="125.0" text="Serial Code">
+               <Label layoutX="90.0" layoutY="125.0" text="Serial Code" id="majorTitles">
                   <font>
                      <Font size="24.0" />
                   </font>
@@ -64,23 +65,144 @@
                </Label>
             </Pane>
             <Pane id="transparentPane" prefHeight="200.0" prefWidth="200.0">
-               <Label layoutX="66.0" layoutY="51.0" text="Important Indicators">
+               <Label id="majorTitles" layoutX="6.0" layoutY="45.0" text="Important Indicators">
                   <font>
                      <Font size="24.0" />
                   </font>
                </Label>
                <TextField fx:id="batteries" layoutX="159.0" layoutY="475.0" onKeyTyped="#updateBatteries" onMouseClicked="#clearBatField" promptText="Number of Batteries" />
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#541d1c" height="86.0" layoutX="83.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
-               <Circle fill="#82776d" layoutX="130.0" layoutY="159.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-               <Circle fx:id="carCircle" fill="#323232" layoutX="130.0" layoutY="159.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#541d1c" height="86.0" layoutX="83.0" layoutY="116.0" strokeType="INSIDE" strokeWidth="3.0" width="181.0">
+                  <stroke>
+                     <LinearGradient endX="0.45238095238095233" startX="0.02857142857142857" startY="0.22380952380952382">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.6196078658103943" green="0.41960784792900085" blue="0.41960784792900085" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color red="0.6196078658103943" green="0.41960784792900085" blue="0.41960784792900085" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color red="0.6196078658103943" green="0.41960784792900085" blue="0.41960784792900085" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.18431372940540314" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </stroke></Rectangle>
+               <Circle fill="#82776d" layoutX="130.0" layoutY="159.0" radius="36.0" strokeType="INSIDE" strokeWidth="2.0">
+                  <stroke>
+                     <LinearGradient endX="0.2904761904761904" endY="0.42857142857142855" startY="0.05238095238095236">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.6399999856948853" green="0.6399999856948853" blue="0.6399999856948853" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color red="0.75" green="0.75" blue="0.75" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.18421052396297455" green="0.1561383157968521" blue="0.11683723330497742" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </stroke></Circle>
+               <Circle fx:id="carCircle" layoutX="130.0" layoutY="159.0" radius="29.0" stroke="#00000071" strokeType="INSIDE">
+                  <fill>
+                     <LinearGradient endX="0.2904761904761904" endY="0.42857142857142855" startY="0.05238095238095236">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.6399999856948853" green="0.6399999856948853" blue="0.6399999856948853" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color red="0.6823529601097107" green="0.6823529601097107" blue="0.6823529601097107" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.1725490242242813" green="0.1725490242242813" blue="0.1725490242242813" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </fill></Circle>
                <Button id="indicator" layoutX="174.0" layoutY="134.0" mnemonicParsing="false" onAction="#toggleCAR" prefHeight="50.0" prefWidth="82.0" text="CAR">
                   <font>
                      <Font size="20.0" />
                   </font>
                </Button>
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#541d1c" height="86.0" layoutX="83.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
-               <Circle fill="#82776d" layoutX="129.0" layoutY="309.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
-               <Circle fx:id="frkCircle" fill="#323232" layoutX="129.0" layoutY="309.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#541d1c" height="86.0" layoutX="83.0" layoutY="266.0" strokeType="INSIDE" strokeWidth="4.0" width="181.0">
+                  <stroke>
+                     <LinearGradient endX="0.45238095238095233" startX="0.02857142857142857" startY="0.22380952380952382">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.6196078658103943" green="0.41960784792900085" blue="0.41960784792900085" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color red="0.6196078658103943" green="0.41960784792900085" blue="0.41960784792900085" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.18431372940540314" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </stroke></Rectangle>
+               <Circle fill="#82776d" layoutX="129.0" layoutY="309.0" radius="36.0" strokeType="INSIDE" strokeWidth="2.0">
+                  <stroke>
+                     <LinearGradient endX="0.45238095238095233" endY="1.0" startX="0.02857142857142857" startY="0.22380952380952382">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.7254902124404907" green="0.6823529601097107" blue="0.6470588445663452" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.09210526198148727" green="0.09210526198148727" blue="0.09210526198148727" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </stroke></Circle>
+               <Circle fx:id="frkCircle" layoutX="129.0" layoutY="309.0" radius="29.0" stroke="#000000a2" strokeType="INSIDE">
+                  <fill>
+                     <LinearGradient endX="0.2904761904761904" endY="0.34285714285714286" startX="0.009523809523809525" startY="0.05238095238095236">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.7254902124404907" green="0.6823529601097107" blue="0.6470588445663452" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.09210526198148727" green="0.09210526198148727" blue="0.09210526198148727" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </fill></Circle>
                <Button id="indicator" layoutX="173.0" layoutY="284.0" mnemonicParsing="false" onAction="#toggleFRK" prefHeight="50.0" prefWidth="82.0" text="FRK">
                   <font>
                      <Font size="20.0" />

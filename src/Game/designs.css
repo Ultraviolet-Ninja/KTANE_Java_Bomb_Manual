@@ -1,6 +1,5 @@
 /* General Use style*/
 .tab-pane{
-
 }
 
 #background {
@@ -18,13 +17,21 @@
 }
 
 #majorTitles{
-
+    -fx-font-family: "Courier New";
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
 }
+
 /* Widgets styles*/
 #indicator{
+    -fx-font-family: Verdana;
+    -fx-font-size: 20;
     -fx-text-fill: whitesmoke;
     -fx-base: #280000;
     -fx-focus-color: #1c0000;
+    -fx-border-color: #110000;
+    -fx-border-width: 3;
 }
 
 .toggle-button {
@@ -36,6 +43,7 @@
     -fx-base: forestgreen;
     -fx-text-fill: black;
 }
+
 /* Morse styles */
 #morseInput{
     -fx-background-color: linear-gradient(to bottom, #C57A29, #E1CF4A, #C57A29);
