@@ -46,6 +46,7 @@ public class OnFirst extends Attribute {
                 return word.getWords();
             }
         }
+        //TODO - Change to a Tree
 
         return null;
     }

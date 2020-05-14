@@ -129,11 +129,11 @@ public class Controller {
     private void toggleVowel(){
         if (vowel.isSelected()){
             vowel.setText("Yes");
-            vowel.setStyle("-fx-background-color: forestgreen; -fx-text-fill: black");
+            vowel.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             Attribute.setVowel(YES);
             cautionSimon.setOpacity(0);
         } else {
-            vowel.setStyle("-fx-background-color: crimson; -fx-text-fill: seashell");
+            vowel.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
             vowel.setText("No");
             Attribute.setVowel(NO);
         }
@@ -143,12 +143,12 @@ public class Controller {
     private void togglePort(){
         if (parallelPort.isSelected()){
             parallelPort.setText("Yes");
-            parallelPort.setStyle("-fx-background-color: forestgreen; -fx-text-fill: black");
+            parallelPort.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             Attribute.setParallel(YES);
         } else {
             parallelPort.setText("None");
             Attribute.setParallel(NO);
-            parallelPort.setStyle("-fx-background-color: crimson; -fx-text-fill: seashell");
+            parallelPort.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
         }
         cautionComplex.setText("");
     }
@@ -158,11 +158,11 @@ public class Controller {
         if (lastDigit.isSelected()){
             Attribute.setLastDigitEven(EVEN);
             lastDigit.setText("Even");
-            lastDigit.setStyle("-fx-background-color: forestgreen; -fx-text-fill: black");
+            lastDigit.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             cautionSimple.setOpacity(0);
         } else {
             Attribute.setLastDigitEven(ODD);
-            lastDigit.setStyle("-fx-background-color: crimson; -fx-text-fill: seashell");
+            lastDigit.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
             lastDigit.setText("Odd");
         }
     }

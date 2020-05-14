@@ -67,6 +67,7 @@ public class Morse extends Attribute {
                     results.append(morseCodeLetter.getLetter());
                 }
             }
+            //TODO - Change to a Tree
         }
 
         return results.toString();

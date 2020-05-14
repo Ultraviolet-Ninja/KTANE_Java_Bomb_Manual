@@ -27,7 +27,7 @@ Step 1 will find the correct panel based on what is typed. Step 2 will find the 
 The top row takes in the given number on the indicator. Based on that number, a label will prompt what button to press next, and the expert will input the label/position into the empty field of that row. The next row of fields will be enabled, and the process repeats until the module is solved. (Or you blow up, but that won't happen.... I think) There's a reset button for wrong answers or new modules. **Module takes in only number 1-4**
 
 ### Morse Code Tab
-Only reads dots(hyphens), dashes(periods) and spaces(spaces, duh) in the input field and outputs possible words in the TextArea.
+Only reads dots(hyphens), dashes(periods) and spaces(spaces, duh) in the input field and outputs possible words in the TextArea. There's also an output for all the letters found from the given morse code. If no results appear, the **Manual Override** allows you to type in a word to find the frequency.
 
 ### Complicated Wires Tab
 Input a letter sequence for each wire, and the output will display what that wire is and whether to cut it or not. Be sure to check the sides of the bomb for parallel port, batteries and the serial number.
@@ -36,6 +36,7 @@ Input a letter sequence for each wire, and the output will display what that wir
 - s - Wire has a star underneath
 - l - Wire has a lit LED
 - w - Only if the wire is completely bare (But we all know that you cut that wire)
+- all - For when the user wants a list of all wire combinations\
 **Spaces are used to separate wires**
 
 ### Wires Sequences Tab
