@@ -19,9 +19,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("expert.fxml"));
         primaryStage.setTitle("Keep Talking and Nobody Explodes");
-        Scene scene = new Scene(root, 850, 600);
-        scene.getStylesheets().add(getClass().getResource("designs.css").toExternalForm());
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root, 850, 600));
         primaryStage.getIcons().add(new Image("file:src\\KTANE logo.png"));
         primaryStage.show();
     }

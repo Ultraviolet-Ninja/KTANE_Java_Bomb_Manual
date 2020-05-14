@@ -20,6 +20,7 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 
@@ -33,6 +34,7 @@ public class Controller {
             EVEN = true;
     private final ArrayList<ToggleGroup> allGroups = new ArrayList<>();
     private final ArrayList<SimpleWires> wireList = new ArrayList<>();
+    private boolean tempCar = false, tempFrk = false;
     private int step2Iterator = 0, memStage = 1, manualPage = 1;
     private StringBuilder simonColors = new StringBuilder();
     private String[] whosCurrentList;
@@ -45,6 +47,9 @@ public class Controller {
     private Button whosButtonTabBack, whosButtonTabForward,
             memButton,
             seqPrevRed, seqPrevBlue, seqPrevBlack, seqNextRed, seqNextBlue, seqNextBlack;
+
+    @FXML
+    private Circle carCircle, frkCircle;
 
     @FXML
     private ImageView
@@ -60,8 +65,7 @@ public class Controller {
             manual;
 
     @FXML
-    private Label frk, car,
-            stripNumTop, stripNumBottom,
+    private Label stripNumTop, stripNumBottom,
             buttonLabel,
             memInstructions,
             seqLabelRed, seqLabelBlue, seqLabelBlack,
@@ -129,11 +133,9 @@ public class Controller {
     private void toggleVowel(){
         if (vowel.isSelected()){
             vowel.setText("Yes");
-            vowel.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             Attribute.setVowel(YES);
             cautionSimon.setOpacity(0);
         } else {
-            vowel.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
             vowel.setText("No");
             Attribute.setVowel(NO);
         }
@@ -143,12 +145,10 @@ public class Controller {
     private void togglePort(){
         if (parallelPort.isSelected()){
             parallelPort.setText("Yes");
-            parallelPort.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             Attribute.setParallel(YES);
         } else {
             parallelPort.setText("None");
             Attribute.setParallel(NO);
-            parallelPort.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
         }
         cautionComplex.setText("");
     }
@@ -158,37 +158,38 @@ public class Controller {
         if (lastDigit.isSelected()){
             Attribute.setLastDigitEven(EVEN);
             lastDigit.setText("Even");
-            lastDigit.setStyle("-fx-base: forestgreen; -fx-text-fill: black");
             cautionSimple.setOpacity(0);
         } else {
             Attribute.setLastDigitEven(ODD);
-            lastDigit.setStyle("-fx-base: crimson; -fx-text-fill: seashell");
             lastDigit.setText("Odd");
         }
     }
 
     @FXML
     private void toggleCAR(){
-        if(car.getText().isEmpty()){
-            car.setText("LIT");
+        //TODO - Redo functionality
+        if(!tempCar){
             Attribute.setCAR(YES);
+            tempCar = YES;
+            carCircle.setStyle("-fx-background-color: white");
             cautionButton.setOpacity(0);
         } else {
-            car.setText("");
+            tempCar = NO;
             Attribute.setCAR(NO);
+            carCircle.setStyle("-fx-background-color: #323232");
         }
     }
 
     @FXML
     private void toggleFRK(){
-        if(frk.getText().isEmpty()){
-            frk.setText("LIT");
-            Attribute.setFRK(YES);
-            cautionButton.setOpacity(0);
-        } else {
-            frk.setText("");
-            Attribute.setFRK(NO);
-        }
+        //TODO - Redo functionality
+//        if(){
+//
+//            Attribute.setFRK(YES);
+//            cautionButton.setOpacity(0);
+//        } else {
+//            Attribute.setFRK(NO);
+//        }
     }
 
     @FXML

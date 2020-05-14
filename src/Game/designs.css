@@ -1,10 +1,60 @@
-.button{
-    -fx-text-fill: black;
-    -fx-border-color: maroon;
-    -fx-border-radius: 10;
-    -fx-base: white;
+/* General Use style*/
+.tab-pane{
+
 }
 
-.background {
-    -fx-background-color: radial-gradient(radius 100%, #BFF6FB, #B3B9C9)
+#background {
+    -fx-background-color: #B3B9C9;
+    -fx-border-color: rgba(191, 246, 251, 0.5);
+    -fx-border-width: 10;
+}
+
+#background2{
+    -fx-background-color: #0B234C;
+}
+
+#transparentPane {
+    -fx-background-color: transparent;
+}
+
+#majorTitles{
+
+}
+/* Widgets styles*/
+#indicator{
+    -fx-text-fill: whitesmoke;
+    -fx-base: #280000;
+    -fx-focus-color: #1c0000;
+}
+
+.toggle-button {
+    -fx-base: crimson;
+    -fx-text-fill: seashell;
+}
+
+.toggle-button:selected{
+    -fx-base: forestgreen;
+    -fx-text-fill: black;
+}
+/* Morse styles */
+#morseInput{
+    -fx-background-color: linear-gradient(to bottom, #C57A29, #E1CF4A, #C57A29);
+    -fx-prompt-text-fill: #191919;
+    -fx-text-fill: black;
+}
+
+#morseOutputs{
+    -fx-base: black;
+    -fx-prompt-text-fill: #d4d4d4;
+    -fx-text-fill: #dd8932;
+    -fx-font-family: Consolas;
+}
+
+/* Password styles*/
+#passwordInputs{
+    -fx-background-color: #A0FF03;
+    -fx-text-fill: #191919;
+    -fx-font-family: Consolas;
+    -fx-border-color: #0e132f;
+    -fx-border-width: 2;
 }
