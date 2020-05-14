@@ -569,7 +569,7 @@ public class Controller {
                 }
             }
             default -> {
-                memButton.setStyle("-fx-background-color: orangered; -fx-text-fill: aliceblue");
+                memButton.setStyle("-fx-base: orangered; -fx-text-fill: aliceblue");
                 sample = memoryBuffer(memStage5.getText());
                 if (sample.length() == 1) {
                     stageOperation(Memory.setInstruction(memStage, Integer.parseInt(sample)));
@@ -657,7 +657,7 @@ public class Controller {
                     memPos3.setText("");
                 }
                 break;
-            case 4:
+                case 4:
                 label = memoryBuffer(memPos4.getText());
                 if (!label.isEmpty()){
                     Memory.setPosition(memStage-1, Integer.parseInt(label));
@@ -675,7 +675,7 @@ public class Controller {
 
     @FXML
     private void clearMem(){
-        memButton.setStyle("-fx-background-color: grey; -fx-text-fill: black");
+        memButton.setStyle("-fx-base: grey; -fx-text-fill: black");
         memStage = 1;
         memInstructions.setText("");
         Memory.clear();
@@ -689,11 +689,11 @@ public class Controller {
         memStage3.setText("");
         memStage4.setText("");
         memStage5.setText("");
-        memStage1.setStyle("-fx-background-color: white");
-        memStage2.setStyle("-fx-background-color: white");
-        memStage3.setStyle("-fx-background-color: white");
-        memStage4.setStyle("-fx-background-color: white");
-        memStage5.setStyle("-fx-background-color: white");
+        memStage1.setStyle("-fx-base: white");
+        memStage2.setStyle("-fx-base: white");
+        memStage3.setStyle("-fx-base: white");
+        memStage4.setStyle("-fx-base: white");
+        memStage5.setStyle("-fx-base: white");
         memPos1.setText("");
         memPos2.setText("");
         memPos3.setText("");

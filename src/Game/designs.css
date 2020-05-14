@@ -1,0 +1,10 @@
+.button{
+    -fx-text-fill: black;
+    -fx-border-color: maroon;
+    -fx-border-radius: 10;
+    -fx-base: white;
+}
+
+.background {
+    -fx-background-color: radial-gradient(radius 100%, #BFF6FB, #B3B9C9)
+}
