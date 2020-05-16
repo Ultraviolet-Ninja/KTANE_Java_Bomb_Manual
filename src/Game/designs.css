@@ -1,26 +1,22 @@
 /* General Use style*/
 .tab-pane{
-}
-
-#background {
-    -fx-background-color: #B3B9C9;
-    -fx-border-color: rgba(191, 246, 251, 0.5);
-    -fx-border-width: 10;
-}
-
-#background2{
-    -fx-background-color: #0B234C;
-}
-
-#transparentPane {
-    -fx-background-color: transparent;
+    -fx-base: #0B234C;
+    -fx-font-weight: bold;
 }
 
 #majorTitles{
     -fx-font-family: "Courier New";
     -fx-font-size: 30;
     -fx-font-weight: bold;
-    -fx-text-fill: black;
+    -fx-text-fill: white;
+}
+
+#buttonSelector{
+    -fx-base: #FFCD99;
+    -fx-text-fill: #43332e;
+    -fx-font-weight: lighter;
+    -fx-font-family: Impact;
+    -fx-font-size: 20;
 }
 
 /* Widgets styles*/
@@ -32,6 +28,11 @@
     -fx-focus-color: #1c0000;
     -fx-border-color: #110000;
     -fx-border-width: 3;
+}
+
+#batteries{
+    -fx-prompt-text-fill: seashell;
+    -fx-font-size: 14;
 }
 
 .toggle-button {
@@ -62,6 +63,7 @@
 #passwordInputs{
     -fx-background-color: #A0FF03;
     -fx-text-fill: #191919;
+    -fx-font-size: 14;
     -fx-font-family: Consolas;
     -fx-border-color: #0e132f;
     -fx-border-width: 2;

@@ -52,4 +52,5 @@ Contains 5 input fields to take in the sets of letters in each row. Input the se
 Displays the orientations for each knob from the original manual, nothing fancy.
 
 ### Manual Tab
-Displays all the pages of the original manual. (cropped for space, sorry, a little unreadable)
+Displays all the pages of the original manual. (cropped for space, sorry, a little unreadable)\
+**Side Note - Elevator Certified**

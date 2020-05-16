@@ -46,6 +46,7 @@ public class Complex extends Attribute {
     private static ArrayList<ComplexWires> translate(String wire){
         ArrayList<ComplexWires> properties = new ArrayList<>();
         if (!wire.toLowerCase().equals("w")) {
+            wire = wire.replace("w", "");
             if (wire.toLowerCase().contains("r")) {
                 properties.add(ComplexWires.RED);
             }
