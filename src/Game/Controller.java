@@ -125,6 +125,8 @@ public class Controller {
         mazeBottom.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
         mazeLetNum.setToggleGroup(allGroups.get(RadioGroup.MAZE.getIdx()));
 
+        Morse.initialize();
+
         traits[0] = null;
         traits[1] = null;
     }
@@ -827,16 +829,11 @@ public class Controller {
         String takeIn = ultimateFilter(morseManual.getText().toLowerCase(), lowercaseRegex);
         if (!takeIn.isEmpty()){
             takeIn = Morse.predict(takeIn);
-            MorseCodeFrequencies[] freqs = MorseCodeFrequencies.values();
 
-            for (int i = 0; i < freqs.length; i++){
-                if (takeIn.equals(freqs[i].getLabel())){
-                    morseManOut.setText(freqs[i].getLabel() + " - " + freqs[i].frequency() + "MHz");
-                    i = MorseCodeFrequencies.values().length;
-                } else {
-                    morseManOut.setText("");
-                }
-            }
+            if (Morse.freqs.get(takeIn) != null){
+                morseManOut.setText(takeIn + " - " + Morse.freqs.get(takeIn) + "MHz");
+            } else
+                morseManOut.setText("");
         } else {
             morseManOut.setText("");
         }
