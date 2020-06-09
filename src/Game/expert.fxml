@@ -622,23 +622,123 @@
          <rowConstraints>
             <RowConstraints />
          </rowConstraints>
-         <GridPane prefHeight="411.0" prefWidth="610.0">
+         <GridPane prefHeight="517.0" prefWidth="667.0">
             <columnConstraints>
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-               <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
-               <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="304.0" minHeight="10.0" prefHeight="304.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <Pane prefHeight="200.0" prefWidth="200.0">
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="236.0" layoutY="20.0" onKeyPressed="#bluePress" onMousePressed="#bluePress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff1f" height="90.0" layoutX="300.0" layoutY="84.0" onKeyPressed="#yellowPress" onMousePressed="#yellowPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff231f" height="90.0" layoutX="172.0" layoutY="84.0" onKeyPressed="#redPress" onMousePressed="#redPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0fa435" height="90.0" layoutX="236.0" layoutY="148.0" onKeyPressed="#greenPress" onMousePressed="#greenPress" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" height="197.0" layoutX="182.0" layoutY="54.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="197.0" />
+               <Rectangle fx:id="simonBlue" arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="236.0" layoutY="39.0" onKeyPressed="#bluePress" onMousePressed="#bluePress" rotate="45.0" stroke="#000170" strokeType="INSIDE" strokeWidth="3.0" width="90.0">
+                  <fill>
+                     <RadialGradient centerX="0.5555555555555556" centerY="0.5380952380952381" radius="0.5">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.05882352963089943" green="0.3921568691730499" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color green="0.003921568859368563" blue="0.43921568989753723" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color green="0.03529411926865578" blue="0.7215686440467834" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </fill></Rectangle>
+               <Rectangle fx:id="simonYellow" arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="303.0" layoutY="108.0" onKeyPressed="#yellowPress" onMousePressed="#yellowPress" rotate="45.0" stroke="#806800" strokeType="INSIDE" strokeWidth="3.0" width="90.0">
+                  <fill>
+                     <RadialGradient centerX="0.5277777777777778" centerY="0.5142857142857143" radius="0.5">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.5058823823928833" green="0.4156862795352936" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.5287356321839078">
+                              <color>
+                                 <Color red="0.5058823823928833" green="0.4156862795352936" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.535292491211439">
+                              <color>
+                                 <Color red="0.501960813999176" green="0.40784314274787903" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.7960784435272217" green="0.5764706134796143" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </fill></Rectangle>
+               <Rectangle fx:id="simonRed" arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="169.0" layoutY="108.0" onKeyPressed="#redPress" onMousePressed="#redPress" rotate="45.0" stroke="#6a0103" strokeType="INSIDE" strokeWidth="3.0" width="90.0">
+                  <fill>
+                     <RadialGradient centerX="0.5611111111111111" centerY="0.5380952380952381" radius="0.5">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.4156862795352936" green="0.003921568859368563" blue="0.0117647061124444" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.44061302681992337">
+                              <color>
+                                 <Color red="0.4156862795352936" green="0.003921568859368563" blue="0.0117647061124444" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.6333688825690246">
+                              <color>
+                                 <Color red="0.46052631735801697" green="0.01492446381598711" blue="0.029777858406305313" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.615686297416687" green="0.019607843831181526" blue="0.07450980693101883" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </fill></Rectangle>
+               <Rectangle fx:id="simonGreen" arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="236.0" layoutY="175.0" onKeyPressed="#greenPress" onMousePressed="#greenPress" rotate="45.0" stroke="#0f6400" strokeType="INSIDE" strokeWidth="3.0" width="90.0">
+                  <fill>
+                     <RadialGradient centerX="0.5555555555555556" centerY="0.5380952380952381" radius="0.5">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.05882352963089943" green="0.3921568691730499" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.281786941580756">
+                              <color>
+                                 <Color red="0.05882352963089943" green="0.3921568691730499" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.524904214559387">
+                              <color>
+                                 <Color red="0.05882352963089943" green="0.3921568691730499" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.14509804546833038" green="0.5803921818733215" blue="0.0117647061124444" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </fill></Rectangle>
                <Slider fx:id="strikes" layoutX="447.0" layoutY="43.0" majorTickUnit="1.0" max="2.0" minorTickCount="0" onMouseReleased="#sliderMoved" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
                <Label layoutX="446.0" layoutY="14.0" text="Number of Strikes" />
                <Label layoutX="498.0" layoutY="57.0" prefHeight="17.0" prefWidth="37.0" textAlignment="CENTER" />
-               <Label fx:id="cautionSimon" layoutX="447.0" layoutY="239.0" text="Careful of Vowel">
+               <Label fx:id="cautionSimon" layoutX="447.0" layoutY="268.0" text="Careful of Vowel">
                   <font>
                      <Font size="14.0" />
                   </font>
@@ -726,7 +826,7 @@
          <rowConstraints>
             <RowConstraints />
          </rowConstraints>
-         <GridPane prefHeight="480.0" prefWidth="737.0">
+         <GridPane prefHeight="639.0" prefWidth="973.0">
             <columnConstraints>
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
@@ -848,7 +948,7 @@
                <Line endX="-100.0" endY="-98.5" layoutX="388.0" layoutY="99.0" startX="-100.0" startY="26.5" />
                <Line endX="-100.0" endY="-108.5" layoutX="489.0" layoutY="109.0" startX="-100.0" startY="17.5" />
                <Line endX="-100.0" endY="-135.5" layoutX="589.0" layoutY="136.0" startX="-100.0" startY="-10.5" />
-               <Line endX="-100.0" endY="-108.5" layoutX="704.0" layoutY="109.0" startX="-100.0" startY="16.5" />
+               <Line endX="-100.0" endY="-108.5" layoutX="701.0" layoutY="108.0" startX="-100.5" startY="18.5" />
             </Pane>
          </GridPane>
       </GridPane>
@@ -920,7 +1020,7 @@
                      </font>
                   </TextArea>
                </VBox>
-               <VBox prefHeight="311.0" prefWidth="259.0" GridPane.columnIndex="1">
+               <VBox prefHeight="275.0" prefWidth="290.0" GridPane.columnIndex="1">
                   <Label text="Manual Override:">
                      <font>
                         <Font size="24.0" />
@@ -963,13 +1063,13 @@
          <rowConstraints>
             <RowConstraints />
          </rowConstraints>
-         <GridPane prefHeight="507.0" prefWidth="691.0">
+         <GridPane prefHeight="601.0" prefWidth="879.0">
             <columnConstraints>
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="281.0" minHeight="10.0" prefHeight="262.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="309.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <HBox onMouseClicked="#quickClear" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <TextArea fx:id="complexOutput" editable="false" prefHeight="185.0" prefWidth="303.0" promptText="Output Results">
@@ -980,7 +1080,7 @@
                      <Insets left="50.0" />
                   </HBox.margin>
                </TextArea>
-               <Label fx:id="cautionComplex" prefHeight="55.0" prefWidth="238.0" text="Careful of Parallel, batteries and Serial No.">
+               <Label fx:id="cautionComplex" prefHeight="55.0" prefWidth="269.0" text="Careful of Parallel, batteries and Serial No.">
                   <HBox.margin>
                      <Insets left="10.0" top="125.0" />
                   </HBox.margin>

@@ -80,6 +80,7 @@ public class Controller {
     private Rectangle
             stripRed, stripYellow, stripBlue, stripWhite,
             simpleWireRed, simpleWireYellow, simpleWireBlack, simpleWireBlue, simpleWireWhite,
+            simonRed, simonYellow, simonGreen, simonBlue,
             manualPrev, manualNext;
 
     @FXML
