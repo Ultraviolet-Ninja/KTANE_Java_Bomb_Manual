@@ -10,6 +10,10 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
 }
+#minorTitles{
+    -fx-font-weight: bold;
+    -fx-font-size: 18 ;
+}
 
 #buttonSelector{
     -fx-base: #FFCD99;
@@ -30,19 +34,28 @@
     -fx-border-width: 3;
 }
 
+#serialText{
+    -fx-font-size: 20;
+    -fx-text-fill: #111111, #111111;
+    -fx-font-weight: bold;
+}
+
 #batteries{
     -fx-prompt-text-fill: seashell;
-    -fx-font-size: 14;
+    -fx-font-size: 22;
+    -fx-background-color: transparent;
 }
 
 .toggle-button {
-    -fx-base: crimson;
+    -fx-base: #6b1308;
     -fx-text-fill: seashell;
+    -fx-font-size: 16;
 }
 
 .toggle-button:selected{
     -fx-base: forestgreen;
     -fx-text-fill: black;
+    -fx-font-size: 16;
 }
 
 /* Morse styles */
@@ -57,6 +70,7 @@
     -fx-prompt-text-fill: #d4d4d4;
     -fx-text-fill: #dd8932;
     -fx-font-family: Consolas;
+    -fx-font-size: 18;
 }
 
 /* Password styles*/

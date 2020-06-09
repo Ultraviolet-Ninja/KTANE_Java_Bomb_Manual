@@ -8,6 +8,7 @@ package Game;
 
 import Game.Modules.*;
 import Game.Objects.*;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -22,6 +23,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
+
 import java.util.ArrayList;
 
 /**
@@ -80,7 +83,7 @@ public class Controller {
     private Rectangle
             stripRed, stripYellow, stripBlue, stripWhite,
             simpleWireRed, simpleWireYellow, simpleWireBlack, simpleWireBlue, simpleWireWhite,
-            simonRed, simonYellow, simonGreen, simonBlue,
+            simonRedPressed, simonYellowPressed, simonGreenPressed, simonBluePressed,
             manualPrev, manualNext;
 
     @FXML
@@ -433,26 +436,41 @@ public class Controller {
     @FXML
     private void redPress(){
         write(SimonSays.RED);
+        fade(simonRedPressed);
     }
 
     @FXML
     private void bluePress(){
         write(SimonSays.BLUE);
+        fade(simonBluePressed);
     }
 
     @FXML
     private void yellowPress(){
         write(SimonSays.YELLOW);
+        fade(simonYellowPressed);
     }
 
     @FXML
-    private void greenPress(){
+    private void greenPress() {
         write(SimonSays.GREEN);
+        fade(simonGreenPressed);
     }
 
     private void write(SimonSays color){
         simonColors.append(Simon.next(color, strikes.getValue()));
         simonResults.setText(simonColors.toString());
+    }
+
+    private void fade(Rectangle current) {
+        FadeTransition fade = new FadeTransition();
+        fade.setDuration(Duration.millis(75));
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.setCycleCount(2);
+        fade.setAutoReverse(true);
+        fade.setNode(current);
+        fade.play();
     }
 
     @FXML
@@ -502,7 +520,6 @@ public class Controller {
                 step2Out.setText("");
             }
         }
-
     }
 
     @FXML
@@ -626,7 +643,6 @@ public class Controller {
             default:
                 break;
         }
-
     }
 
     @FXML
