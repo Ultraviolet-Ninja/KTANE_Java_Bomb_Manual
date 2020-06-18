@@ -6,15 +6,57 @@
 
 package Game.Modules;
 
-import Game.Objects.MorseCodeFrequencies;
-import Game.Objects.MorseCodeLetter;
-import java.util.Arrays;
-import java.util.List;
+import Game.Tools.AVLTree;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Morse class deals with the Morse Code module.
  */
 public class Morse extends Attribute {
+    public static final HashMap<String, Double> freqs = new HashMap<>();
+
+    private static final AVLTree<String> code = new AVLTree<>();
+
+    public static void initialize(){
+        initDots();
+        initWords();
+    }
+
+    private static void initDots(){
+        try {
+            Scanner middleMan = new Scanner(new File("src\\Game\\Resources\\Morsecode.txt"));
+            while (middleMan.hasNextLine()){
+                String[] buffer = middleMan.nextLine().split(" ");
+                code.addNode(buffer[1], buffer[0]);
+            }
+        } catch (IOException ioException){
+            System.err.println("Wrong");
+        }
+    }
+
+    private static void initWords(){
+        freqs.put("shell", 3.505);
+        freqs.put("halls", 3.515);
+        freqs.put("slick", 3.522);
+        freqs.put("trick", 3.532);
+        freqs.put("boxes", 3.535);
+        freqs.put("leaks", 3.542);
+        freqs.put("strobe", 3.545);
+        freqs.put("bistro", 3.552);
+        freqs.put("flick", 3.555);
+        freqs.put("bombs", 3.565);
+        freqs.put("break", 3.572);
+        freqs.put("brick", 3.575);
+        freqs.put("steak", 3.582);
+        freqs.put("sting", 3.592);
+        freqs.put("vector", 3.595);
+        freqs.put("beats", 3.6);
+    }
 
     /**
      * predict() predicts a word put into the manual input section of the Morse Code tab.
@@ -39,6 +81,7 @@ public class Morse extends Attribute {
             case "st", "sti", "stin" -> "sting";
             case "v", "ve", "vec", "vect", "vecto" -> "vector";
             case "be", "bea", "beat", "eats", "ats"-> "beats";
+            case "bi", "bis", "bist", "bistr" -> "bistro";
             default -> in;
         };
     }
@@ -53,32 +96,27 @@ public class Morse extends Attribute {
      */
     public static String[] translate(String sample){
         String[] out = new String[2];
-        out[1] = transcode(sample.split(" "), Arrays.asList(MorseCodeLetter.values()));
-        out[0] = findWords(out[1], Arrays.asList(MorseCodeFrequencies.values()));
+        out[1] = transcode(sample.split(" "));
+        out[0] = findWords(out[1]);
         return out;
     }
 
-    private static String transcode(String[] inputs, List<MorseCodeLetter> list){
+    private static String transcode(String[] inputs){
         StringBuilder results = new StringBuilder();
 
         for (String input : inputs) {
-            for (MorseCodeLetter morseCodeLetter : list) {
-                if (input.equals(morseCodeLetter.getLabel())) {
-                    results.append(morseCodeLetter.getLetter());
-                }
-            }
-            //TODO - Change to a Tree
+            results.append(code.dig(input));
         }
 
         return results.toString();
     }
 
-    private static String findWords(String letters, List<MorseCodeFrequencies> frequencies){
+    private static String findWords(String letters){
         StringBuilder finalWords = new StringBuilder();
 
-        for (MorseCodeFrequencies frequency : frequencies){
-            if (frequency.getLabel().contains(letters)){
-                finalWords.append(frequency.getLabel()).append(" - ").append(frequency.frequency())
+        for (Map.Entry<String, Double> buffer : freqs.entrySet()) {
+            if (buffer.getKey().contains(letters)) {
+                finalWords.append(buffer.getKey()).append(" - ").append(buffer.getValue())
                         .append("MHz").append("/");
             }
         }
