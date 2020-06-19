@@ -39,7 +39,7 @@ public class Controller {
     private final ArrayList<SimpleWires> wireList = new ArrayList<>();
     private boolean tempCar = false, tempFrk = false;
     private int step2Iterator = 0, memStage = 1, manualPage = 1;
-    private StringBuilder simonColors = new StringBuilder();
+    private StringBuilder simonColors = new StringBuilder(), simonPressed = new StringBuilder();
     private String[] whosCurrentList;
     private final String[] complicatedRegex = {"r", "w", "b", "s", "l", "a", " "},
             lowercaseRegex = {"a","b","c","d","e","f","g","h","i","j","k","l",
@@ -460,6 +460,7 @@ public class Controller {
     }
 
     private void write(SimonSays color){
+        simonPressed.append(color.getLabel());
         simonColors.append(Simon.next(color, strikes.getValue()));
         simonResults.setText(simonColors.toString());
     }
@@ -477,13 +478,14 @@ public class Controller {
 
     @FXML
     private void sliderMoved(){
-        simonColors = new StringBuilder(Simon.newOrder(simonColors.toString(), strikes.getValue()));
+        simonColors = new StringBuilder(Simon.newOrder(simonPressed.toString(), strikes.getValue()));
         simonResults.setText(simonColors.toString());
     }
 
     @FXML
     private void clearOrder(){
         simonColors = new StringBuilder();
+        simonPressed = new StringBuilder();
         simonResults.setText("");
     }
 
