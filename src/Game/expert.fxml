@@ -503,7 +503,7 @@
                      <Font size="18.0" />
                   </font>
                </Label>
-               <ToggleButton fx:id="parallelPort" layoutX="152.0" layoutY="486.0" mnemonicParsing="false" onAction="#togglePort" text="None">
+               <ToggleButton fx:id="parallelPort" layoutX="181.0" layoutY="479.0" mnemonicParsing="false" onAction="#togglePort" text="None">
                   <font>
                      <Font size="14.0" />
                   </font>
