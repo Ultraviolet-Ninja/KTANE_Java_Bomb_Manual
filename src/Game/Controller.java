@@ -221,25 +221,25 @@ public class Controller {
     //Button method
     @FXML
     private void scanButtons(){
-        if (buttonBlue.isSelected()){
+        if (buttonBlue.isSelected())
             traits[0] = TheButton.BLUE;
-        } else if (buttonRed.isSelected()){
+        else if (buttonRed.isSelected())
             traits[0] = TheButton.RED;
-        } else if (buttonYellow.isSelected()){
+        else if (buttonYellow.isSelected())
             traits[0] = TheButton.YELLOW;
-        } else if (buttonWhite.isSelected()){
+        else if (buttonWhite.isSelected())
             traits[0] = TheButton.WHITE;
-        }
 
-        if (abort.isSelected()){
+
+        if (abort.isSelected())
             traits[1] = TheButton.ABORT;
-        } else if (press.isSelected()){
+        else if (press.isSelected())
             traits[1] = TheButton.PRESS;
-        } else if (detonate.isSelected()){
+        else if (detonate.isSelected())
             traits[1] = TheButton.DETONATE;
-        } else if (hold.isSelected()){
+        else if (hold.isSelected())
             traits[1] = TheButton.HOLD;
-        }
+
 
         if (traits[0] != null && traits[1] != null){
             String goingIn = Game.Modules.Button.evaluate(traits);
@@ -271,17 +271,17 @@ public class Controller {
     @FXML
     private void sWirePressed(){
         StringBuilder builder = new StringBuilder();
-        if (simpleWireBlack.isHover()){
+        if (simpleWireBlack.isHover())
             wireList.add(SimpleWires.BLACK);
-        } else if (simpleWireWhite.isHover()){
+        else if (simpleWireWhite.isHover())
             wireList.add(SimpleWires.WHITE);
-        } else if (simpleWireBlue.isHover()){
+        else if (simpleWireBlue.isHover())
             wireList.add(SimpleWires.BLUE);
-        } else if (simpleWireYellow.isHover()){
+        else if (simpleWireYellow.isHover())
             wireList.add(SimpleWires.YELLOW);
-        } else if (simpleWireRed.isHover()){
+        else if (simpleWireRed.isHover())
             wireList.add(SimpleWires.RED);
-        }
+
 
         for (SimpleWires wire : wireList){
             builder.append(wire.getLabel());
@@ -291,9 +291,8 @@ public class Controller {
         if (wireList.size() >= wireCounter.getValue()){
             wireResponse.setText(Simple.conditions(wireList));
             wireList.clear();
-        } else {
+        } else
             wireResponse.setText("");
-        }
     }
 
     @FXML
@@ -305,133 +304,131 @@ public class Controller {
     //Keypad methods
     @FXML
     private void keyPressed(){
-        if (emptyRacket1.isHover()) {
+        if (emptyRacket1.isHover())
             emptyRacket1.setImage(Symbols.change(Keypads.RACKET1,
-                    emptyRacket1.getImage()));
-        } else if (aT.isHover()) {
+                emptyRacket1.getImage()));
+        else if (aT.isHover())
             aT.setImage(Symbols.change(Keypads.A_T, aT.getImage()));
-        } else if (lambda1.isHover()) {
+        else if (lambda1.isHover())
            lambda1.setImage(Symbols.change(Keypads.STROKED_LAMBDA1,
                    lambda1.getImage()));
-        } else if (harryPotter.isHover()) {
+        else if (harryPotter.isHover())
             harryPotter.setImage(Symbols.change(Keypads.HARRY_POTTER,
                     harryPotter.getImage()));
-        } else if (russianCat1.isHover()) {
+        else if (russianCat1.isHover())
             russianCat1.setImage(Symbols.change(Keypads.RUSSIAN_CAT1,
                     russianCat1.getImage()));
-        } else if (curvyH1.isHover()) {
+        else if (curvyH1.isHover())
             curvyH1.setImage(Symbols.change(Keypads.CURVY_H1,
                     curvyH1.getImage()));
-        } else if (backC1.isHover()) {
+        else if (backC1.isHover())
             backC1.setImage(Symbols.change(Keypads.BACK_C1,
                     backC1.getImage()));
-        } else if (backEuro1.isHover()) {
+        else if (backEuro1.isHover())
             backEuro1.setImage(Symbols.change(Keypads.REVERSE_EURO1,
                     backEuro1.getImage()));
-        } else if (emptyRacket2.isHover()) {
+        else if (emptyRacket2.isHover())
             emptyRacket2.setImage(Symbols.change(Keypads.RACKET2,
                     emptyRacket2.getImage()));
-        } else if (backC2.isHover()) {
+        else if (backC2.isHover())
             backC2.setImage(Symbols.change(Keypads.BACK_C2,
                     backC2.getImage()));
-        } else if (disneyQ1.isHover()) {
+        else if (disneyQ1.isHover())
             disneyQ1.setImage(Symbols.change(Keypads.DISNEY_Q1,
                     disneyQ1.getImage()));
-        } else if (hollowStar1.isHover()) {
+        else if (hollowStar1.isHover())
             hollowStar1.setImage(Symbols.change(Keypads.HOLLOW_STAR1,
                     hollowStar1.getImage()));
-        } else if (curvyH2.isHover()) {
+        else if (curvyH2.isHover())
             curvyH2.setImage(Symbols.change(Keypads.CURVY_H2,
                     curvyH2.getImage()));
-        } else if (spanish1.isHover()) {
+        else if (spanish1.isHover())
             spanish1.setImage(Symbols.change(Keypads.SPANISH_QUESTION1,
                     spanish1.getImage()));
-        } else if (copyright.isHover()) {
+        else if (copyright.isHover())
             copyright.setImage(Symbols.change(Keypads.COPYRIGHT,
                     copyright.getImage()));
-        } else if (leSac.isHover()) {
+        else if (leSac.isHover())
             leSac.setImage(Symbols.change(Keypads.THE_SAC,
                     leSac.getImage()));
-        } else if (disneyQ2.isHover()) {
+        else if (disneyQ2.isHover())
             disneyQ2.setImage(Symbols.change(Keypads.DISNEY_Q2,
                     disneyQ2.getImage()));
-        } else if (russianX1.isHover()) {
+        else if (russianX1.isHover())
             russianX1.setImage(Symbols.change(Keypads.RUSSIAN_X1,
                     russianX1.getImage()));
-        } else if (not3.isHover()) {
+        else if (not3.isHover())
             not3.setImage(Symbols.change(Keypads.NOT_THREE,
                     not3.getImage()));
-        } else if (lambda2.isHover()) {
+        else if (lambda2.isHover())
             lambda2.setImage(Symbols.change(Keypads.STROKED_LAMBDA2,
                     lambda2.getImage()));
-        } else if (hollowStar2.isHover()) {
+        else if (hollowStar2.isHover())
             hollowStar2.setImage(Symbols.change(Keypads.HOLLOW_STAR2,
                     hollowStar2.getImage()));
-        } else if (russianSix1.isHover()) {
+        else if (russianSix1.isHover())
             russianSix1.setImage(Symbols.change(Keypads.RUSSIAN_SIX1,
                     russianSix1.getImage()));
-        } else if (paragraph1.isHover()) {
+        else if (paragraph1.isHover())
             paragraph1.setImage(Symbols.change(Keypads.PARAGRAPH1,
                     paragraph1.getImage()));
-        } else if (tB1.isHover()) {
+        else if (tB1.isHover())
             tB1.setImage(Symbols.change(Keypads.TB_1,
                     tB1.getImage()));
-        } else if (russianCat2.isHover()) {
+        else if (russianCat2.isHover())
             russianCat2.setImage(Symbols.change(Keypads.RUSSIAN_CAT2,
                     russianCat2.getImage()));
-        } else if (russianX2.isHover()) {
+        else if (russianX2.isHover())
             russianX2.setImage(Symbols.change(Keypads.RUSSIAN_X2,
                     russianX2.getImage()));
-        } else if (spanish2.isHover()) {
+        else if (spanish2.isHover())
             spanish2.setImage(Symbols.change(Keypads.SPANISH_QUESTION2,
                     spanish2.getImage()));
-        } else if (smile1.isHover()) {
+        else if (smile1.isHover())
             smile1.setImage(Symbols.change(Keypads.SMILEY1,
                     smile1.getImage()));
-        } else if (psi1.isHover()) {
+        else if (psi1.isHover())
             psi1.setImage(Symbols.change(Keypads.PSI1,
                     psi1.getImage()));
-        } else if (smile2.isHover()) {
+        else if (smile2.isHover())
             smile2.setImage(Symbols.change(Keypads.SMILEY2,
                     smile2.getImage()));
-        } else if (tB2.isHover()) {
+        else if (tB2.isHover())
             tB2.setImage(Symbols.change(Keypads.TB_2,
                     tB2.getImage()));
-        } else if (cDot.isHover()) {
+        else if (cDot.isHover())
             cDot.setImage(Symbols.change(Keypads.C_DOT,
                     cDot.getImage()));
-        } else if (paragraph2.isHover()) {
+        else if (paragraph2.isHover())
             paragraph2.setImage(Symbols.change(Keypads.PARAGRAPH2,
                     paragraph2.getImage()));
-        } else if (shrek3.isHover()) {
+        else if (shrek3.isHover())
             shrek3.setImage(Symbols.change(Keypads.ALIEN_THREE,
                     shrek3.getImage()));
-        } else if (star.isHover()) {
+        else if (star.isHover())
             star.setImage(Symbols.change(Keypads.STAR,
                     star.getImage()));
-        } else if (russianSix2.isHover()) {
+        else if (russianSix2.isHover())
             russianSix2.setImage(Symbols.change(Keypads.RUSSIAN_SIX2,
                     russianSix2.getImage()));
-        } else if (backEuro2.isHover()) {
+        else if (backEuro2.isHover())
             backEuro2.setImage(Symbols.change(Keypads.REVERSE_EURO2,
                     backEuro2.getImage()));
-        } else if (puzzle.isHover()) {
+        else if (puzzle.isHover())
             puzzle.setImage(Symbols.change(Keypads.PUZZLE,
                     puzzle.getImage()));
-        } else if (aeyyLmao.isHover()) {
+        else if (aeyyLmao.isHover())
             aeyyLmao.setImage(Symbols.change(Keypads.AE,
                     aeyyLmao.getImage()));
-        } else if (psi2.isHover()) {
+        else if (psi2.isHover())
             psi2.setImage(Symbols.change(Keypads.PSI2,
                     psi2.getImage()));
-        } else if (russianHN.isHover()) {
+        else if (russianHN.isHover())
             russianHN.setImage(Symbols.change(Keypads.RUSSIAN_NH,
                     russianHN.getImage()));
-        } else if (ohms.isHover()) {
+        else if (ohms.isHover())
             ohms.setImage(Symbols.change(Keypads.OMEGA,
                     ohms.getImage()));
-        }
-
     }
 
     //Simon Says methods
@@ -493,11 +490,10 @@ public class Controller {
     @FXML
     private void findPanel(){
         Image sample = OnFirst.findPanel(step1In.getText());
-        if (sample == null || step1In.getText().isEmpty()) {
+        if (sample == null || step1In.getText().isEmpty())
             currentPanel.imageProperty().set(null);
-        } else {
+        else
             currentPanel.setImage(sample);
-        }
     }
 
     @FXML
@@ -516,7 +512,6 @@ public class Controller {
                     whosButtonTabForward.setDisable(true);
                 }
                 whosButtonTabBack.setDisable(true);
-
             } else {
                 whosButtonTabBack.setDisable(true);
                 whosButtonTabForward.setDisable(true);
@@ -607,45 +602,43 @@ public class Controller {
     @FXML
     private void labelSet(){
         String label;
-        switch (memStage){
-            case 1:
+        switch (memStage) {
+            case 1 -> {
                 label = memoryBuffer(memLabel1.getText());
-                if (!label.isEmpty()){
-                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                if (!label.isEmpty()) {
+                    Memory.setLabel(memStage - 1, Integer.parseInt(label));
                     nextStage();
                 } else {
                     memLabel1.setText("");
                 }
-                break;
-            case 2:
+            }
+            case 2 -> {
                 label = memoryBuffer(memLabel2.getText());
-                if (!label.isEmpty()){
-                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                if (!label.isEmpty()) {
+                    Memory.setLabel(memStage - 1, Integer.parseInt(label));
                     nextStage();
                 } else {
                     memLabel2.setText("");
                 }
-                break;
-            case 3:
+            }
+            case 3 -> {
                 label = memoryBuffer(memLabel3.getText());
-                if (!label.isEmpty()){
-                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                if (!label.isEmpty()) {
+                    Memory.setLabel(memStage - 1, Integer.parseInt(label));
                     nextStage();
                 } else {
                     memLabel3.setText("");
                 }
-                break;
-            case 4:
+            }
+            case 4 -> {
                 label = memoryBuffer(memLabel4.getText());
-                if (!label.isEmpty()){
-                    Memory.setLabel(memStage-1, Integer.parseInt(label));
+                if (!label.isEmpty()) {
+                    Memory.setLabel(memStage - 1, Integer.parseInt(label));
                     nextStage();
                 } else {
                     memLabel4.setText("");
                 }
-                break;
-            default:
-                break;
+            }
         }
     }
 
@@ -830,9 +823,8 @@ public class Controller {
                     results = outputs[0].split("/");
             for (int i = 0; i < results.length; i++){
                 builder.append(results[i]);
-                if (i < results.length -1){
+                if (i < results.length -1)
                     builder.append("\n");
-                }
             }
             morseOutput.setText(builder.toString());
             morseLetters.setText(outputs[1]);
@@ -848,11 +840,9 @@ public class Controller {
         String takeIn = ultimateFilter(morseManual.getText().toLowerCase(), lowercaseRegex);
         if (!takeIn.isEmpty()){
             takeIn = Morse.predict(takeIn);
-
-            if (Morse.freqs.get(takeIn) != null){
-                morseManOut.setText(takeIn + " - " + Morse.freqs.get(takeIn) + "MHz");
-            } else
-                morseManOut.setText("");
+            morseManOut.setText(Morse.freqs.get(takeIn) != null ?
+                    takeIn + " - " + Morse.freqs.get(takeIn) + "MHz" :
+                    "");
         } else {
             morseManOut.setText("");
         }
@@ -871,11 +861,9 @@ public class Controller {
     @FXML
     private void solveCombos(){
         String sample = Complex.solve(ultimateFilter(complexInput.getText(), complicatedRegex));
-        if (!sample.isEmpty()) {
-            complexOutput.setText(sample);
-        } else {
-            complexOutput.setText("No wires = No problem");
-        }
+        complexOutput.setText(!sample.isEmpty() ?
+                sample :
+                "No wires = No problem");
     }
 
     @FXML
@@ -981,13 +969,12 @@ public class Controller {
     private void findMaze(){
         try {
             if (mazeCoords.getText().length() == 2) {
-                if (mazeTop.isSelected()) {
+                if (mazeTop.isSelected())
                     currentMaze.setImage(Mazes.findMaze(mazeCoords.getText(), 0));
-                } else if (mazeBottom.isSelected()) {
+                else if (mazeBottom.isSelected())
                     currentMaze.setImage(Mazes.findMaze(mazeCoords.getText(), 1));
-                } else {
+                else
                     currentMaze.setImage(Mazes.findMaze(letNumNotation(mazeCoords.getText()), 2));
-                }
             }
         } catch (IllegalArgumentException illegal){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -1015,19 +1002,16 @@ public class Controller {
     @FXML
     private void formatCoords(){
         if (mazeTarget.getText().length() == 2){
-            if (numberCheck(mazeTarget.getText())){
+            if (numberCheck(mazeTarget.getText()))
                 mazeTarget.setText("(" + mazeTarget.getText().charAt(0) + ","
                         + mazeTarget.getText().charAt(1) + ")");
-            } else {
-                mazeTarget.setText("");
-            }
+             else mazeTarget.setText("");
+
         } else if (mazeWhiteDot.getText().length() == 2){
-            if (numberCheck(mazeWhiteDot.getText())){
+            if (numberCheck(mazeWhiteDot.getText()))
                 mazeWhiteDot.setText("(" + mazeWhiteDot.getText().charAt(0) + ","
                         + mazeWhiteDot.getText().charAt(1) + ")");
-            } else {
-                mazeWhiteDot.setText("");
-            }
+            else mazeWhiteDot.setText("");
         }
     }
 
@@ -1071,15 +1055,12 @@ public class Controller {
 
     @FXML
     private void tabManual(){
-        if (manualPrev.isHover()){
-            if (manualPage != 1){
-                manualPage--;
-            }
-        } else if (manualNext.isHover()){
-            if (manualPage != 23){
-                manualPage++;
-            }
-        }
+        if (manualPrev.isHover())
+            if (manualPage != 1) manualPage--;
+
+        else if (manualNext.isHover())
+            if (manualPage != 23) manualPage++;
+
         manual.setImage(new Image("file:src\\Manual\\Manual-" + manualPage + ".png"));
     }
 
@@ -1087,9 +1068,9 @@ public class Controller {
         StringBuilder builder = new StringBuilder();
         for (char in : input.toCharArray()){
             for (String exception : exceptions){
-                if (String.valueOf(in).equals(exception)){
+                if (String.valueOf(in).equals(exception))
                     builder.append(in);
-                }
+
             }
         }
         return builder.toString();
