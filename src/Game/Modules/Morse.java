@@ -75,7 +75,7 @@ public class Morse extends Attribute {
             case "str", "stro", "strob", "strb" -> "strobe";
             case "f", "fl", "fli", "flic" -> "flick";
             case "bom", "bomb" -> "bombs";
-            case "bre", "brea", "break", "reak" -> "breaks";
+            case "bre", "brea", "reak", "br" -> "break";
             case "bri", "bric", "brick", "icks" -> "bricks";
             case "ste", "stea" -> "steak";
             case "st", "sti", "stin" -> "sting";
